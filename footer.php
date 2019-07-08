@@ -28,13 +28,13 @@
 	</div>
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
-			<div class="row row-pb-md">
+			<div class="row row-pb-md" style="font-family: 'Open Sans', sans-serif;">
 				<div class="col-md-4 fh5co-widget">
-					<h3 style = "color:black" >Salozone</h3>
-					<p style = "color:black">Salozone’s prime motive is redefining beauty services in Patna with maximum customer returns and satisfaction which is why we promise all these facilities and benefits at the cheapest price so that you can avail all these services without second thoughts.</p>
+					<h3 style = "color:black; text-decoration: underline;font-family: 'EB Garamond', serif;font-size: 20px;" >Salozone</h3>
+					<p style = "color:black ;padding-top:9px;">Salozone’s prime motive is redefining beauty services in Patna with maximum customer returns and satisfaction which is why we promise all these facilities and benefits at the cheapest price so that you can avail all these services without second thoughts.</p>
 				</div>
 				<div class="col-md-2 col-sm-3 col-xs-12 col-md-push-1 mb-3 mb-md-0">
-					<h4 style = "color:black;font-weight:600;" >Pages</h4>
+					<h4 style = "color:black;font-weight:600;text-decoration: underline;font-family: 'EB Garamond', serif;font-size: 22px;" >Pages</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="about.php">About Us</a></li>
 						<li><a href="https://salozone.blogspot.com/" target="_blank">Blog</a></li>
@@ -48,7 +48,7 @@
 					</ul>
 				</div>
 				<div class="col-md-2 col-sm-3 col-xs-12 col-md-push-1 mb-3 mb-md-0">
-					<h4 style = "color:black;font-weight:600;" >Pages</h4>
+					<h4 style = "color:black;font-weight:600;text-decoration: underline;font-family: 'EB Garamond', serif;font-size: 22px;" >Pages</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="complaints.php">Any complaints or Special Requests?</a></li>
 						<li><a href="terms.php">Terms of Use</a></li>
@@ -58,7 +58,7 @@
 				</div>
 
 				<div class="col-md-2 col-sm-3 col-xs-12 col-md-push-1 mb-3 mb-md-0">
-					<h4 style = "color:black;font-weight:600;" >Services</h4>
+					<h4 style = "color:black;font-weight:600;text-decoration: underline;font-family: 'EB Garamond', serif;font-size: 22px;" >Services</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="single.php">Threading</a></li>
 						<li><a href="waxing.php">Waxing</a></li>
@@ -70,7 +70,7 @@
 				</div>
 
 				<div class="col-md-2 col-sm-3 col-xs-12 col-md-push-1 mb-3 mb-md-0">
-					<h4 style = "color:black;font-weight:600;" >Services</h4>
+					<h4 style = "color:black;font-weight:600;text-decoration: underline;font-family: 'EB Garamond', serif;font-size: 22px;" >Services</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="haricut.php">Haircut</a></li>
 						<li><a href="hairstyling.php">Hair Styling</a></li>
@@ -86,13 +86,13 @@
 				<div class="col-md-12 text-center">
 					<p style = "color:black" class="text-center">
 						<small class="block">&copy; Salozone. All Rights Reserved.</small> 
-						<small class="block">Designed by: AugWorld</a> 
+						<small class="block">Designed by: <u>AugWorld</u></a> 
 					</p>
 					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="https://www.instagram.com/salozoneofficial/"><i class="icon-instagram"></i></a></li>
-							<li><a href="https://www.facebook.com/salozoneofficial/"><i class="icon-facebook"></i></a></li>
-							<li><a href="https://salozone.blogspot.com/"><i class="icon-paper-plane"></i></a></li>
+						<ul class="fh5co-social-icons" id="lala" >
+							<li><a href="https://www.instagram.com/salozoneofficial/"><i class="icon-instagram" style="color:#C13584;"></i></a></li>
+							<li><a href="https://www.facebook.com/salozoneofficial/"><i class="icon-facebook" style="color:#3b5998;" ></i></a></li>
+							<li><a href="https://salozone.blogspot.com/"><i class="icon-paper-plane" style="color:#0088cc;"></i></a></li>
 						</ul>
 					</p>
 				</div>

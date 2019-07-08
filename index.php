@@ -12,6 +12,7 @@ if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
 <link rel="stylesheet" href="jss/owl.theme.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="jss/style.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="jss/custom.css" type="text/css" media="all"/>
+
 	<!-- SLIDESHOW. -->
 	<div>
         <div class="section bg-light">
@@ -344,11 +345,11 @@ text-align:center; }
 	
 	<div id="fh5co-services" class="fh5co-bg-section">
 		<div class="container">
-			<div class="row">
+			<div class="row" id="homeicon">
 				<div class="col-md-4 col-sm-4 text-center">
 					<div class="feature-center " data-animate-effect="fadeIn">
 						<span class="icon">
-							<i class="icon-credit-card"></i>
+							<i class="icon-credit-card" ></i>
 						</span>
 						<h3>SALON AT HOME</h3>
 						<p>Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied we are bringing best of the salon services at your doorstep.</p>
@@ -358,7 +359,7 @@ text-align:center; }
 				<div class="col-md-4 col-sm-4 text-center">
 					<div class="feature-center " data-animate-effect="fadeIn">
 						<span class="icon">
-							<i class="icon-wallet"></i>
+							<i class="icon-wallet" ></i>
 						</span>
 						<h3>NO TRUST ISSUES</h3>
 						<p>We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and familiar only with added training and expertise.</p>
@@ -367,7 +368,7 @@ text-align:center; }
 				<div class="col-md-4 col-sm-4 text-center">
 					<div class="feature-center " data-animate-effect="fadeIn">
 						<span class="icon">
-							<i class="icon-paper-plane"></i>
+							<i class="icon-paper-plane"  style="transition: scale(1.3);"></i>
 						</span>
 						<h3>CHEAPEST PRICE GUARANTEED</h3>
 						<p>Salozone’s prime motive is redefining beauty services in Patna with maximum customer returns and satisfaction which is why we promise all these facilities and benefits at the cheapest price so that you can avail all these services without second thoughts. Our services will be cheaper than your local salon service provide and that’s our Guarantee.</p>

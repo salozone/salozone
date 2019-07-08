@@ -50,10 +50,18 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<!-- Font Awesome-->
+	<script src="https://kit.fontawesome.com/5878a489f6.js"></script>
+	<!-- Font Awesome ends here-->
+	<!-- Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300&display=swap" rel="stylesheet">
+	<!-- Google Fonts ends here-->
 	</head>
 	<body>
 <style>
