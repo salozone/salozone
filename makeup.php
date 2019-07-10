@@ -13,7 +13,7 @@ include('header.php');
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
-								<h1 style="font size:300px">BRIDAL, PRE-BRIDAL AND OTHERS </h1>
+								<h1 style="font size:300px;font-family: 'Cinzel', serif;text-shadow: 2px 2px #FF5733;color:#F4F0EC;">BRIDAL, PRE-BRIDAL AND OTHERS </h1>
 								
 							</div>
 						</div>
