@@ -13,7 +13,7 @@ include('header.php');
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
-								<h1>Threading</h1>
+								<h1 style="font-family: 'Cinzel', serif;text-shadow: 2px 2px #FF5733;color:#F4F0EC;">Threading</h1>
 								
 							</div>
 						</div>
@@ -21,6 +21,7 @@ include('header.php');
 				</div>
 			</div>
 		</header>
+		
 <?php sliderMenu($slider); ?>
 
 	<div id="fh5co-product">

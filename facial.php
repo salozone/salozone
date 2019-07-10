@@ -14,7 +14,7 @@ include('header.php');
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
-								<h1>Facial</h1>
+								<h1 style="font-family: 'Cinzel', serif;text-shadow: 2px 2px #FF5733;color:#F4F0EC;">Facial</h1>
 								
 							</div>
 						</div>

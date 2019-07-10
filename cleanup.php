@@ -7,21 +7,21 @@ $slider = 'cleanup';
 include('header.php');
 ?>
 
-		<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(withouttext/cleanup1.jpg);">
+	 <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(withouttext/cleanup1.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
-								<h1>Cleanup</h1>
+								<h1 style="font-family: 'Cinzel', serif;text-shadow: 2px 2px #FF5733;color:#F4F0EC;">Cleanup</h1>
 								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</header>
+		</header>	
 
 <?php sliderMenu($slider); ?>
 
