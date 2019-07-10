@@ -1,4 +1,4 @@
-<?php 
+<?php
 #header.php
 session_start();
 ob_start();
@@ -47,7 +47,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-	
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
@@ -92,20 +92,20 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	.menu-1 { margin-top:30px; }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	
+
 	<!--<div class="fh5co-loader"></div>-->
-	
+
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation" style>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-3 col-xs-4">
-					<div id="fh5co-logo"><a href="index.php"><img src="withouttext/logobw2.png" style="max-width:100%; height:auto" class="log" ></a>
+					<div id="fh5co-logo"><a href="index.php"><img src="withouttext/logobw2.png" style="max-width:70%; height:auto" class="log" ></a>
 					</div>
 				</div>
-				
+
 				<div class="whatsapp col-xs-3" >
-					
+
 				</div>
 				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
 					<ul>
@@ -166,7 +166,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 $products = array("Eyebrow", "Eyebrow + Forehead", "Upper Lip", "Full Face", "UnderArm-HoneyBee", "UnderArm-Chocolate", "FullHand-HoneyBee", "FullHand-Chocolate", "HalfLegs-HoneyBee", "HalfLegs-Chocolate", "FullLegs-HoneyBee", "FullLegs-Chocolate", "FullHands+FullLegs-Honeybee", "FullHands+FullLegs-Chocolate", "FullHands+FullLegs+Underarms-Honeybee", "FullHands+FullLegs+Underarms-Chocolate", "FullFace-Honeybee", "FullFace-Chocolate", "UpperLip-Honeybee", "UpperLip-Chocolate", "FullBody-Honeybee", "FullBody-Chocolate", "FullBack(upper)-Honeybee", "FullBack(upper)-Chocolate", "Stomach-Honeybee", "Stomach-Chocolate", "Forehead-Honeybee", "Forehead-Chocolate", "Fruit-Face", "Fruit-Hand", "Anti Tan-Face", "Anti Tan-Hand", "VLCC-Face", "VLCC-Hand", "Lotus-Face", "Lotus-Hand", "Shehnaz-Face", "Shehnaz-Hand", "Whitening-Face", "Whitening-Hand", "Charcoal-Face", "Charcoal-Hand", "Gold-Face", "Gold-Hand", "Diamond-Face", "Diamond-Hand", "Pearl-Face", "Pearl-Hand" , "Gold", "Diamond", "Pearl", "Charcoal", "Shehnaaz Gold", "Fruit", "Whitening", "Anti Tan","Lotus", "VLCC", "Aroma", "Oxy-Face","Oxy-Hand","Oxy-Face+Hand","Diamond-Face","Diamond-Hand","Diamond-Face+Hand","Gold-Face","Gold-Hand","Gold-Face+Hand","Fem-Face", "Fem-Hand", "Fem-Face+Hand","Pedicure","Manicure","Straight","U","V","Layer- 2 Step","Layer- 3 Step", "Laser", "Feather", "Chinese Cut", "Princess Cut", "Blunt Cut", "Boy Cut", "Sadhna Cut", "Half Hair Curls", "Full Hair Curls", "Hair Style Designer", "Waxing(full hand + full legs + underarms)+Clean Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling", "Waxing(full hand + full legs + underarms)+Clean Up+Make Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling +Make Up","Light","Bridal","Dress Up","Simple","Bridal","Threading + Full Hand Waxing + Clean Up(Fruit)","Facial(Gold) + Pedicure + Manicure","Facial(Gold) + Pedicure","Bleach(Oxy) + Hair Style Designer + Pedicure","Threading + Full Waxing(Hands+Legs+Under Arms) + Clean Up(Fruit)" ,"Air Brush","Body Polishing","Bridal Facial","Engagement","Reception","Pre-Bridal","Bridal HD", "Hair Spa-LOreal","Hair Spa-Body care","Hair Massage");
 $amounts = array("15","25", "10","80","30","50","119","199","119","149","199","249","299","449","329","499","99","119","20","25","599","799","149","175","149","175","30","45","99","180","199","299","149","249","249","349","449","599","199","299","449","599","199","299","299", "399", "199", "299","499","649","499","649","1499","199","299","299", "499", "299", "499","99","199","299","119","259","379","99","199","349","75","149","199","199","149","30","50","100","100","120","100","100","100","100","50","50","50","149","199","149","450","550","600","700","199","4999","200","149","4999","250","650","620","420","420","399","2999","799","1999","1999","3499","7999","549","449","249");
 ?>
-<?php function footerCart() { ?>	
+<?php function footerCart() { ?>
 	<?php if ( isset($_SESSION["cart"]) ) { ?>
 		<div id="cartFooter" class="_1LETt-B9P8OaDZEUDWkA1R clearfix">
 			<div class="_2hEPDSDdzr7qDls1i-ha_E clearfix">
@@ -216,8 +216,8 @@ $amounts = array("15","25", "10","80","30","50","119","199","119","149","199","2
 			</div>
 		</div>
 	<?php } ?>
-	
-<?php } ?>	
+
+<?php } ?>
 <?php function sliderMenu($slider = ''){ ?>
 <link rel="stylesheet" href="jss/owl.carousel.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="jss/owl.theme.css" type="text/css" media="all"/>
@@ -318,7 +318,7 @@ h3 {
     font-family: Axiforma-Regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
 </style>
-	
+
 
 	<!-- Slider menu -->
 <div class="clearBoth">
@@ -477,13 +477,13 @@ h3 {
 		</div>
 	</div>
 </div>
-	<!-- Slider menu -->	
+	<!-- Slider menu -->
 <?php } ?>
 <!--Send Mail Function Start --->
-<?php 
-	
+<?php
+
 	function sendEmail($from, $fromName, $to, $toName, $subject, $body, $signature){
-		
+
 		$companyWeb = 'https://salozone.com';
 		$companyName = 'SALOZONE';
 		$companyEmail = 'contact@salozone.com';
@@ -539,7 +539,7 @@ h3 {
 							<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;
 								padding-top: 20px;" class="hero"><a target="_blank" style="text-decoration: none;"
 								href="$companyWeb"><img border="0" vspace="0" hspace="0"
-								src="$companyWeb/images/s1.png" 
+								src="$companyWeb/images/s1.png"
 								alt="Please enable images to view this content" title="$companyName"
 								width="560" style="
 								width: 100%;
@@ -548,7 +548,7 @@ h3 {
 						</tr>
 						<tr>
 							<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 17px; font-weight: 700; line-height: 160%;
-								padding-top: 25px; 
+								padding-top: 25px;
 								color: #000000;
 								font-family: sans-serif;" class="paragraph">
 									$subject
@@ -556,12 +556,12 @@ h3 {
 						</tr>
 						<tr>
 							<td valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 17px; font-weight: 400; line-height: 160%;
-								padding-top: 25px; 
+								padding-top: 25px;
 								color: #000000;
 								font-family: sans-serif;" class="paragraph">
-								
+
 EOD;
-		$emailMessageEnd='				
+		$emailMessageEnd='
 
 							</td>
 						</tr>
@@ -579,9 +579,9 @@ EOD;
 					</td></tr></table>
 				</body>
 			</html>';
-		
-		$body1 = $emailMessageStart . $body . $emailMessageEnd;	
-		
+
+		$body1 = $emailMessageStart . $body . $emailMessageEnd;
+
 		$headers = "MIME-Version: 1.0\r\n";
 		$headers .= "Content-type: text/html\r\n";
 		$headers .= 'From: '.strip_tags($companyEmail). "\r\n" .
@@ -595,6 +595,6 @@ EOD;
 			return false;
 		}
 	}
-	
+
 ?>
 <!-- Send Mail Function End --->
