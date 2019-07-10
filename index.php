@@ -1,4 +1,4 @@
-<?php 
+<?php
 #index.php
 $pageTitle = 'Index Page';
 include('header.php');
@@ -12,6 +12,12 @@ if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
 <link rel="stylesheet" href="jss/owl.theme.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="jss/style.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="jss/custom.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/animate.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/media-queries.css">
 
 	<!-- SLIDESHOW. -->
 	<div>
@@ -166,7 +172,7 @@ if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
 							</a>
 						</div>
 					</div>
-				
+
 					<div class="product-item text-center">
 						<div class="">
 							<a href="dressup.php">
@@ -187,198 +193,283 @@ if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
 
 .center {
 text-align:center; }
-</style>	
-	<div id="fh5co-product">
-		<div class="container">
+</style>
+
+
+<div class="row">
+		<div class="col section-1 section-description wow fadeIn">
+				<h1>Salozone Home Salon Services</h1>
+				<div class="divider-1 wow fadeInUp"><span></span>
+					<p>
+						We are people from <strong>Salozone</strong> who are based in <strong>Patna,Bihar.</strong> we are here
+						to <strong>Redefine</strong> beauty services. At comfort of your home.
+					</p>
+				</div>
+
+		</div>
+</div>
+
+			<div class="container combo">
 			<div class="row">
 			  <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
-				<div class="card center">
+				<div class="card center" style="border-radius: 0px;">
 				  <div class="card-body">
 					<p class="card-text text-center" style="margin-top:15px;">OFFERS<br> (Promo)</p>
-					<a href="offers.php" class="btn btn-danger">View</a>
+					<a href="offers.php"><button type="button" class="btn btn-info">View</button></a>
 				  </div>
 				</div>
 			  </div>
 
 			  <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
-				<div class="card center">
+				<div class="card center" style="border-radius: 0px;">
 				  <div class="card-body">
 					<p class="card-text text-center" style="margin-top:15px;">EXCLUSIVE<br> COMBOS<br></p>
-					<a href="combos.php" class="btn btn-danger">View</a>
+					<a href="combos.php"><button type="button" class="btn btn-info">View</button></a>
 				  </div>
 				</div>
 			  </div>
-			  
+
 			  <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
-				<div class="card center">
+				<div class="card center" style="border-radius: 0px;">
 				  <div class="card-body">
 					<p class="card-text text-center" style="margin-top:15px;">SPECIAL<br> DEALS<br></p>
-					<a href="deals.php" class="btn btn-danger">View</a>
+					<a href="deals.php"><button type="button" class="btn btn-info">View</button></a>
 				  </div>
 				</div>
 			  </div>
-			  
 			</div>
-			<div class="row ">
+		</div>
+			<div class="row mt-5">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h4>Please Choose your Service(s)..</h4>
+					<h4 style="color:black">Please Choose your Service(s)..</h4>
 					<!--<p class="text-center">Book expert services at salozone.com</p>-->
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="single.php"><div class="product-grid" style="background-image:url(images/product-1.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="single.php">Threading</a></h3>
+
+
+			<div class="container mt-5">
+				<div class="row">
+					<a href="dressup.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+									<img src="withouttext/makeup1.jpg" alt="Makeup">
+							</div>
+							<div class="container mt-3">
+								<h2>Makeup</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
 						</div>
+					</a>
 					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						 <a href="waxing.php"><div class="product-grid" style="background-image:url(images/product-2.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="waxing.php">Waxing</a></h3>
+
+				<a href="manicure.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+							<img src="withouttext/manicure1.jpg" alt="Manicure">
+							</div>
+							<div class="container mt-3">
+								<h2>Manicure</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
 						</div>
+					</a>
 					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="cleanup.php"><div class="product-grid" style="background-image:url(images/product-3.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="cleanup.php">Cleanup</a></h3>
+
+					<a href="mehendi.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+							<img src="withouttext/Mehendi1.jpg" alt="Mehendi">
+							</div>
+							<div class="container mt-3">
+								<h2>Mehendi</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
 						</div>
+					</a>
 					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="facial.php"><div class="product-grid" style="background-image:url(images/product-4.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="facial.php">Facial</a></h3>
+
+
+					<a href="waxing.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/waxing1.jpg" alt="Waxing">
+							</div>
+							<div class="container mt-3">
+								<h2>Waxing</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
 						</div>
+					</a>
+					</div>
+
+					<a href="single.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/threading1.jpg" alt="Threading">
+							</div>
+							<div class="container mt-3">
+								<h2>Threading</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
+					</div>
+
+				 <a href="cleanup.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/cleanup1.jpg" alt="CleanUp">
+							</div>
+							<div class="container mt-3">
+								<h2>Clean Up</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
+					</div>
+
+
+					<a href="facial.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/facial1.jpg" alt="Facial">
+							</div>
+							<div class="container mt-3">
+								<h2>Facial</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
+					</div>
+
+				<a href="bleach.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/bleach1.jpg" alt="Bleach" style="width:100%;min-height:200px">
+							</div>
+							<div class="container mt-3">
+								<h2>Bleach</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
+					</div>
+
+					<a href="haricut.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/haircut1.jpg" alt="Haircut" style="width:100%;min-height:200px">
+							</div>
+							<div class="container mt-3">
+								<h2>Haircut</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
+					</div>
+
+				<a href="hairstyling.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/hairstyle1.jpg" alt="Hair Care" style="width:100%;min-height:200px">
+							</div>
+							<div class="container mt-3">
+								<h2>Hair Care</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
+					</div>
+
+
+				<a href="partyready.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/partyready1.jpg" alt="Party Ready" style="width:100%;min-height:200px">
+							</div>
+							<div class="container mt-3">
+								<h2>Party Ready</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
+					</div>
+
+					<a href="bridal.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/bridal12.jpg" alt="Bridal" style="width:100%;min-height:200px">
+							</div>
+							<div class="container mt-3">
+								<h2>Bridal</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="bleaching.php"><div class="product-grid" style="background-image:url(images/product-5.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="bleaching.php">Bleach</a></h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="pedicure.php"><div class="product-grid" style="background-image:url(images/product-6.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="pedicure.php">Pedicure/Manicure</a></h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="haricut.php"><div class="product-grid" style="background-image:url(images/product-7.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="haricut.php">Haircut</a></h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="hairstyling.php"><div class="product-grid" style="background-image:url(images/product-8.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="hairstyling.php">Hair Care</a></h3>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="partyready.php"><div class="product-grid" style="background-image:url(images/product-9.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="partyready.php">Party Ready</a></h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="makeup.php"><div class="product-grid" style="background-image:url(withouttext/bridal12.jpg);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="makeup.php">Bridal & Pre-Bridal</a></h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="dressup.php"><div class="product-grid" style="background-image:url(withouttext/makeup1.jpg);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="dressup.php">Make Up/Dress Up</a></h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 text-center ">
-					<div class="product">
-						<a href="mehandi.php"><div class="product-grid" style="background-image:url(images/product-12.png);">
-						</div></a>
-						<div class="desc">
-							<h3><a href="mehandi.php">Mehandi</a></h3>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
+
+
+
+
 	<div id="fh5co-services" class="fh5co-bg-section">
-		<div class="container">
-			<div class="row" id="homeicon">
-				<div class="col-md-4 col-sm-4 text-center">
-					<div class="feature-center " data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-credit-card" ></i>
-						</span>
-						<h3>SALON AT HOME</h3>
-						<p>Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied we are bringing best of the salon services at your doorstep.</p>
-						
+
+		<div class="col-md-4 section-1-box wow fadeInUp">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="section-1-box-icon">
+						<i class="fas mt-4 fa-home"></i>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-4 text-center">
-					<div class="feature-center " data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-wallet" ></i>
-						</span>
-						<h3>NO TRUST ISSUES</h3>
-						<p>We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and familiar only with added training and expertise.</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4 text-center">
-					<div class="feature-center " data-animate-effect="fadeIn">
-						<span class="icon">
-							<i class="icon-paper-plane"  style="transition: scale(1.3);"></i>
-						</span>
-						<h3>CHEAPEST PRICE GUARANTEED</h3>
-						<p>Salozone’s prime motive is redefining beauty services in Patna with maximum customer returns and satisfaction which is why we promise all these facilities and benefits at the cheapest price so that you can avail all these services without second thoughts. Our services will be cheaper than your local salon service provide and that’s our Guarantee.</p>
+				<div class="col-md-8">
+						<h3>Salon at Home</h3>
+						<p>Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied
+							we are bringing best of the salon services at your doorstep.</p>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	
-	
+			<div class="col-md-4 section-1-box wow fadeInDown">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="section-1-box-icon">
+						<i class="fas mt-4 fa-handshake"></i>
+					</div>
+				</div>
+				<div class="col-md-8">
+						<h3>No Trust Issues</h3>
+						<p>We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and
+							 familiar only with added training and expertise.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 section-1-box wow fadeInUp">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="section-1-box-icon">
+						<i class="fab mt-4 fa-telegram-plane"></i>
+					</div>
+				</div>
+				<div class="col-md-8">
+						<h3>Cheapest Prices</h3>
+						<p>Salozone’s prime motive is redefining beauty services in Patna with maximum customer returns and satisfaction which is why we
+							 promise all these facilities and benefits at the cheapest price so that you can avail all these services without second thoughts.</p>
+					</div>
+				</div>
+			</div>
+
 	<div id="fh5co-testimonial" class="fh5co-bg-section">
 		<div class="container">
 			<div class="row ">
@@ -438,5 +529,4 @@ text-align:center; }
 		</div>
 	</div>
 
-<?php include('footer.php'); ?>	
-	
+<?php include('footer.php'); ?>
