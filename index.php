@@ -8,6 +8,7 @@ if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
 
 //define ;
 ?>
+
 <link rel="stylesheet" href="jss/owl.carousel.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="jss/owl.theme.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="jss/style.css" type="text/css" media="all"/>
@@ -200,7 +201,7 @@ text-align:center; }
 		<div class="col section-1 section-description wow fadeIn">
 				<h1>Salozone Home Salon Services</h1>
 				<div class="divider-1 wow fadeInUp"><span></span>
-					<p>
+					<p style="text-align:center">
 						We are people from <strong>Salozone</strong> who are based in <strong>Patna,Bihar.</strong> we are here
 						to <strong>Redefine</strong> beauty services. At comfort of your home.
 					</p>
@@ -247,7 +248,7 @@ text-align:center; }
 			</div>
 
 
-			<div class="container mt-5">
+			<div class="container mt-5" id="maincards">
 				<div class="row">
 					<a href="dressup.php" class="text-decoration-none text-reset">
 					<div class="column">
@@ -255,7 +256,7 @@ text-align:center; }
 							<div class="zoom">
 									<img src="withouttext/makeup1.jpg" alt="Makeup">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Makeup</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -269,7 +270,7 @@ text-align:center; }
 							<div class="zoom">
 							<img src="withouttext/manicure1.jpg" alt="Manicure">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Manicure</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -283,7 +284,7 @@ text-align:center; }
 							<div class="zoom">
 							<img src="withouttext/Mehendi1.jpg" alt="Mehendi">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Mehendi</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -298,7 +299,7 @@ text-align:center; }
 							<div class="zoom">
 								<img src="withouttext/waxing1.jpg" alt="Waxing">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Waxing</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -312,7 +313,7 @@ text-align:center; }
 							<div class="zoom">
 								<img src="withouttext/threading1.jpg" alt="Threading">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Threading</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -326,7 +327,7 @@ text-align:center; }
 							<div class="zoom">
 								<img src="withouttext/cleanup1.jpg" alt="CleanUp">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Clean Up</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -341,7 +342,7 @@ text-align:center; }
 							<div class="zoom">
 								<img src="withouttext/facial1.jpg" alt="Facial">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Facial</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -353,9 +354,9 @@ text-align:center; }
 					<div class="column">
 						<div class="card">
 							<div class="zoom">
-								<img src="withouttext/bleach1.jpg" alt="Bleach" style="width:100%;min-height:200px">
+								<img src="withouttext/bleach1.jpg" alt="Bleach">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Bleach</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -367,9 +368,9 @@ text-align:center; }
 					<div class="column">
 						<div class="card">
 							<div class="zoom">
-								<img src="withouttext/haircut1.jpg" alt="Haircut" style="width:100%;min-height:200px">
+								<img src="withouttext/haircut1.jpg" alt="Haircut">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Haircut</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -381,9 +382,9 @@ text-align:center; }
 					<div class="column">
 						<div class="card">
 							<div class="zoom">
-								<img src="withouttext/hairstyle1.jpg" alt="Hair Care" style="width:100%;min-height:200px">
+								<img src="withouttext/hairstyle1.jpg" alt="Hair Care">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Hair Care</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -396,9 +397,9 @@ text-align:center; }
 					<div class="column">
 						<div class="card">
 							<div class="zoom">
-								<img src="withouttext/partyready1.jpg" alt="Party Ready" style="width:100%;min-height:200px">
+								<img src="withouttext/partyready1.jpg" alt="Party Ready">
 							</div>
-							<div class="container mt-3">
+							<div class="container">
 								<h2>Party Ready</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -410,9 +411,9 @@ text-align:center; }
 					<div class="column">
 						<div class="card">
 							<div class="zoom">
-								<img src="withouttext/bridal12.jpg" alt="Bridal" style="width:100%;min-height:200px">
+								<img src="withouttext/bridal12.jpg" alt="Bridal">
 							</div>
-							<div class="container mt-3">
+							<div class="container" id="cardheader">
 								<h2>Bridal</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
@@ -423,10 +424,7 @@ text-align:center; }
 			</div>
 
 
-
-
-	<div id="fh5co-services" class="fh5co-bg-section">
-
+	<div id="row fh5co-services" class="fh5co-bg-section">
 		<div class="col-md-4 section-1-box wow fadeInUp">
 			<div class="row">
 				<div class="col-md-4">
