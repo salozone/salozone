@@ -1,0 +1,4 @@
+[04-May-2019 23:54:28 Asia/Kolkata] PHP Notice:  Undefined index: cust_service in /home1/salozxmb/public_html/admin_site/php_get/get-customers-modal.php on line 12
+[04-May-2019 23:54:28 Asia/Kolkata] PHP Notice:  Undefined index: cust_price in /home1/salozxmb/public_html/admin_site/php_get/get-customers-modal.php on line 13
+[05-Jul-2019 13:34:58 Asia/Kolkata] PHP Notice:  Undefined index: cust_service in /home1/salozxmb/public_html/admin_site/php_get/get-customers-modal.php on line 12
+[05-Jul-2019 13:34:58 Asia/Kolkata] PHP Notice:  Undefined index: cust_price in /home1/salozxmb/public_html/admin_site/php_get/get-customers-modal.php on line 13
