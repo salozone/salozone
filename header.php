@@ -145,7 +145,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 			<div class="row">
 				<div class="col-md-3 col-xs-4">
 					<div id="fh5co-logo">
-                       <?php if($_SERVER['REQUEST_URI']=='/salozone/index.php') { ?>
+                       <?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:70%; height:auto" class="log" ></a> <?php }
 					 else {?>
 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:70%; height:auto" class="log" ></a>
