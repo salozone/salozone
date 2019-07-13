@@ -67,7 +67,50 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
 	<!-- Google Fonts ends here-->
+		<style type="text/css">
+			
+			
+			.background-wrap {
+				position: fixed;
+				z-index: -1000;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				top: 0;
+				left: 0;
+			}
+			
+			#video-bg-elem {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-height: 100%;
+				max-width:100%;
+				width: auto;
+				height: auto;
+			}
+			.content {
+				position: absolute;
+				width: 100%;
+				min-height: 100%;
+				z-index: 1000;
+				background-color: rgba(0,0,0,0.2);
+			}
+			.content h1 {
+				text-align: center;
+				font-size: 65px;
+				text-transform: uppercase;
+				font-weight: 300;
+				color: #fff;
+				padding-top: 15%;
+				margin-bottom: 10px;
+			}
+			
+			
+		</style>
 	</head>
 	<body>
 <style>
@@ -101,7 +144,13 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-3 col-xs-4">
-					<div id="fh5co-logo"><a href="index.php"><img src="withouttext/logobw2.png" style="max-width:70%; height:auto" class="log" ></a>
+					<div id="fh5co-logo">
+                       <?php if($_SERVER['REQUEST_URI']=='/salozone/index.php') { ?>
+						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:70%; height:auto" class="log" ></a> <?php }
+					 else {?>
+						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:70%; height:auto" class="log" ></a>
+					<?php } ?>
+
 					</div>
 				</div>
 
@@ -110,6 +159,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 				</div>
 				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
 					<ul>
+						<?php if($_SERVER['REQUEST_URI']=='/salozone/main.php') { ?>
 						<li class="has-dropdown">
 							<a>Services</a>
 							<ul class="dropdown">
@@ -126,7 +176,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 								<li><a href="dressup.php">Dress Up</a></li>
 								<li><a href="mehandi.php">Mehandi</a></li>
 							</ul>
-						</li>
+						</li> <?php } ?>
 						<li><a href="about.php">About Us</a></li>
 						<li><a href="contact.php">Contact Us</a></li>
 						<div class="whatsapp">
