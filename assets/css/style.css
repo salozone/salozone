@@ -13,43 +13,9 @@ img { max-width: 100%; }
 ::-moz-selection { background: #8542a0; color: #fff; text-shadow: none; }
 ::selection { background: #8542a0; color: #fff; text-shadow: none; }
 
-
-/***** General style, all sections *****/
-
-.section-container { margin: 0 auto; padding-bottom: 80px; }
-
-.section-container-gray-bg { background: #f8f8f8; }
-
-.section-container-image-bg,
-.section-container-image-bg h2,
-.section-container-image-bg h3 { color: #fff; }
-
-.section-container-image-bg .divider-1 span { border-color: #fff; }
-
-.section-description { margin-top: 60px; padding-bottom: 10px; }
-
-.section-description p { margin-top: 20px; padding: 0 120px; }
-.section-container-image-bg .section-description p { opacity: 0.8; }
-
-.section-bottom-button { padding-top: 60px; }
-
-
-/***** Divider *****/
-.divider-1{text-align: center;}
-.divider-1 span { display: inline-block; width: 200px; border-bottom: 1px dotted #aaa;}
-
-
-
-/***** Top content *****/
-
-.top-content { width: 100%; padding-top: 100px; }
-
-.carousel-control-next, .carousel-control-prev { border: 0; }
-
-
 /***** Section 1 *****/
 
-.section-1-box { padding-top: 30px; text-align: left; }
+.section-1-box {text-align: left; }
 
 .section-1-box .section-1-box-icon {
 	width: 80px; height: 80px; margin: 0 auto;
@@ -103,9 +69,7 @@ img { max-width: 100%; }
 	text-decoration: none;
 }
 
-.container {
-	padding: 0 16px;
-}
+
 
 .container::after, .row::after {
 	content: "";
@@ -156,4 +120,10 @@ img { max-width: 100%; }
 			min-width:140px;
 			min-height:30px;
 			font-size: 20px;
+}
+
+.abtsal{
+	-webkit-box-shadow: 0px 3px 10px 2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 10px 2px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 10px 2px rgba(0,0,0,0.75);
 }

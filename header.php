@@ -73,8 +73,8 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
 	<!-- Google Fonts ends here-->
 		<style type="text/css">
-			
-			
+
+
 			.background-wrap {
 				position: fixed;
 				z-index: -1000;
@@ -84,7 +84,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 				top: 0;
 				left: 0;
 			}
-			
+
 			#video-bg-elem {
 				position: absolute;
 				top: 0;
@@ -110,8 +110,8 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 				padding-top: 15%;
 				margin-bottom: 10px;
 			}
-			
-			
+
+
 		</style>
 	</head>
 
@@ -149,9 +149,9 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 				<div class="col-md-3 col-xs-4">
 					<div id="fh5co-logo">
                        <?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
-						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:70%; height:auto" class="log" ></a> <?php }
+						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:65%; height:auto" class="log" ></a> <?php }
 					 else {?>
-						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:70%; height:auto" class="log" ></a>
+						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:65%; height:auto" class="log" ></a>
 					<?php } ?>
 
 					</div>

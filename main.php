@@ -190,32 +190,26 @@ if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
 		</div>
     </div>
 <style>
-
 .center {
 text-align:center; }
 </style>
 
-
-<div class="row">
-		<div class="col section-1 section-description wow fadeIn">
-				<h1>Salozone Home Salon Services</h1>
-				<div class="divider-1 wow fadeInUp"><span></span>
-					<p>
+<center>
+				<h2>Salozone Home Salon Services</h2>
+				<hr width=200px>
+					<p style="text-align:center">
 						We are people from <strong>Salozone</strong> who are based in <strong>Patna,Bihar.</strong> we are here
 						to <strong>Redefine</strong> beauty services. At comfort of your home.
 					</p>
-				</div>
-
-		</div>
-</div>
+</center>
 
 			<div class="container combo">
-			<div class="row">
+			<div class="row mt-5">
 			  <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
 				<div class="card center" style="border-radius: 0px;">
 				  <div class="card-body">
 					<p class="card-text text-center" style="margin-top:15px;">OFFERS<br> (Promo)</p>
-					<a href="offers.php"><button type="button" class="btn btn-info">View</button></a>
+					<a href="offers.php"><button type="button" class="btn btn-success">View</button></a>
 				  </div>
 				</div>
 			  </div>
@@ -224,7 +218,7 @@ text-align:center; }
 				<div class="card center" style="border-radius: 0px;">
 				  <div class="card-body">
 					<p class="card-text text-center" style="margin-top:15px;">EXCLUSIVE<br> COMBOS<br></p>
-					<a href="combos.php"><button type="button" class="btn btn-info">View</button></a>
+					<a href="combos.php"><button type="button" class="btn btn-success">View</button></a>
 				  </div>
 				</div>
 			  </div>
@@ -233,7 +227,7 @@ text-align:center; }
 				<div class="card center" style="border-radius: 0px;">
 				  <div class="card-body">
 					<p class="card-text text-center" style="margin-top:15px;">SPECIAL<br> DEALS<br></p>
-					<a href="deals.php"><button type="button" class="btn btn-info">View</button></a>
+					<a href="deals.php"><button type="button" class="btn btn-success">View</button></a>
 				  </div>
 				</div>
 			  </div>
@@ -247,7 +241,7 @@ text-align:center; }
 			</div>
 
 
-			<div class="container mt-5">
+			<div class="container mb-5 wow fadeInUp" id="maincards">
 				<div class="row">
 					<a href="dressup.php" class="text-decoration-none text-reset">
 					<div class="column">
@@ -263,7 +257,36 @@ text-align:center; }
 					</a>
 					</div>
 
-				<a href="manicure.php" class="text-decoration-none text-reset">
+
+					<a href="haricut.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/haircut1.jpg" alt="Haircut" style="width:100%;min-height:200px">
+							</div>
+							<div class="container mt-3">
+								<h2>Haircut</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
+					</div>
+
+				<a href="hairstyling.php" class="text-decoration-none text-reset">
+					<div class="column">
+						<div class="card">
+							<div class="zoom">
+								<img src="withouttext/hairstyle1.jpg" alt="Hair Care" style="width:100%;min-height:200px">
+							</div>
+							<div class="container mt-3">
+								<h2>Hair Care</h2>
+								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+							</div>
+						</div>
+					</a>
+					</div>
+
+				<a href="pedicure.php" class="text-decoration-none text-reset">
 					<div class="column">
 						<div class="card">
 							<div class="zoom">
@@ -277,7 +300,7 @@ text-align:center; }
 					</a>
 					</div>
 
-					<a href="mehendi.php" class="text-decoration-none text-reset">
+					<a href="mehandi.php" class="text-decoration-none text-reset">
 					<div class="column">
 						<div class="card">
 							<div class="zoom">
@@ -349,7 +372,7 @@ text-align:center; }
 					</a>
 					</div>
 
-				<a href="bleach.php" class="text-decoration-none text-reset">
+				<a href="bleaching.php" class="text-decoration-none text-reset">
 					<div class="column">
 						<div class="card">
 							<div class="zoom">
@@ -357,34 +380,6 @@ text-align:center; }
 							</div>
 							<div class="container mt-3">
 								<h2>Bleach</h2>
-								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-							</div>
-						</div>
-					</a>
-					</div>
-
-					<a href="haricut.php" class="text-decoration-none text-reset">
-					<div class="column">
-						<div class="card">
-							<div class="zoom">
-								<img src="withouttext/haircut1.jpg" alt="Haircut" style="width:100%;min-height:200px">
-							</div>
-							<div class="container mt-3">
-								<h2>Haircut</h2>
-								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-							</div>
-						</div>
-					</a>
-					</div>
-
-				<a href="hairstyling.php" class="text-decoration-none text-reset">
-					<div class="column">
-						<div class="card">
-							<div class="zoom">
-								<img src="withouttext/hairstyle1.jpg" alt="Hair Care" style="width:100%;min-height:200px">
-							</div>
-							<div class="container mt-3">
-								<h2>Hair Care</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -406,7 +401,7 @@ text-align:center; }
 					</a>
 					</div>
 
-					<a href="bridal.php" class="text-decoration-none text-reset">
+					<a href="makeup.php" class="text-decoration-none text-reset">
 					<div class="column">
 						<div class="card">
 							<div class="zoom">
@@ -425,8 +420,8 @@ text-align:center; }
 
 
 
-	<div id="fh5co-services" class="fh5co-bg-section">
-
+	<div id="fh5co-services" class="abtsal mt-5 fh5co-bg-section">
+		<div class="container">
 		<div class="col-md-4 section-1-box wow fadeInUp">
 			<div class="row">
 				<div class="col-md-4">
@@ -464,11 +459,13 @@ text-align:center; }
 				</div>
 				<div class="col-md-8">
 						<h3>Cheapest Prices</h3>
-						<p>Salozone’s prime motive is redefining beauty services in Patna with maximum customer returns and satisfaction which is why we
-							 promise all these facilities and benefits at the cheapest price so that you can avail all these services without second thoughts.</p>
+						<p>Salozone’s prime motive is to redefine beauty services in Patna with maximum customer satisfaction which is why we
+							 promise all these facilities and benefits at the cheapest price .</p>
 					</div>
 				</div>
 			</div>
+		</div>
+		</div>
 
 	<div id="fh5co-testimonial" class="fh5co-bg-section">
 		<div class="container">
