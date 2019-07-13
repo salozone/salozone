@@ -1,6 +1,5 @@
 
-	
-	
+
 	<div id="fh5co-started">
 		<div class="container">
 			<div class="row animate-box">
@@ -85,8 +84,8 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p style = "color:black" class="text-center">
-						<small class="block">&copy; Salozone. All Rights Reserved.</small> 
-						<small class="block">Designed by: <u>AugWorld</u></a> 
+						<small class="block">&copy; Salozone. All Rights Reserved.</small>
+						<small class="block">Designed by: <u>AugWorld</u></a>
 					</p>
 					<p>
 						<ul class="fh5co-social-icons" id="lala" >
@@ -118,6 +117,7 @@
             });
 	}
 	</script>
+	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -137,5 +137,6 @@
 	<!--Slider Menu -->
 	<script type="text/javascript" src="jss/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="jss/script.js"></script>
+
 	</body>
 </html>
