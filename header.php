@@ -69,6 +69,8 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
 	<!-- Google Fonts ends here-->
 		<style type="text/css">
 			
@@ -99,9 +101,9 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 				z-index: 1000;
 				background-color: rgba(0,0,0,0.2);
 			}
-			.content h1 {
+			.content h5,h1 {
 				text-align: center;
-				font-size: 65px;
+				font-size: 35px;
 				text-transform: uppercase;
 				font-weight: 300;
 				color: #fff;
@@ -112,6 +114,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 			
 		</style>
 	</head>
+
 	<body>
 <style>
 	@media screen and (min-width: 768px) {
