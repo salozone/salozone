@@ -1,19 +1,19 @@
 (function (window, document, $) {
 	"use strict";
-	
+
 	$(window).on('load', function () {
 		$(".noo-spinner").remove();
 	});
-	
+
 	/* On resize */
 	$(window).on('resize', function () {
 		cartTopDistance();
 	});
-	
+
 	/* On scroll */
 	$(window).on('scroll', function () {
 		cartTopDistance();
-		
+
 		var isMobile = {
 			Android: function() {
 				return navigator.userAgent.match(/Android/i);
@@ -34,7 +34,7 @@
 				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 			}
 		};
-		
+
 		if( !isMobile.any() ) {
 			if ($(this).scrollTop() > 51) {
 				$('.header').addClass('scrolling-menu');
@@ -43,7 +43,7 @@
 			}
 		}
 	});
-	
+
 	$(document).ready(function($) {
 		/* Search */
 		var topSearch = $('.top-search');
@@ -65,7 +65,7 @@
 				}
 			}
 		});
-		
+
 		/* Mini cart */
 		cartTopDistance();
 		var miniCart = $('.mini-cart-wrap');
@@ -78,47 +78,47 @@
 				miniCart.removeClass('open');
 			}
 		});
-		
+
 		/* about background */
 		var organikAbout = $('.organik-about');
 		organikAbout.each(function() {
 			$(this).find('.image').css('background-color', $(this).find('.image').attr('data-bg-color'));
 		});
-		
+
 		/* featured products */
 		var featuredProducts = $('.organik-featured-product');
 		featuredProducts.each(function() {
 			if($(this).attr("data-bg-image")) $(this).css('background-image', 'url("' + $(this).attr("data-bg-image") + '")');
 			if($(this).attr("data-bg-color")) $(this).css('background-color', $(this).attr('data-bg-color'));
 		});
-		
+
 		/* product category */
 		var productCategory = $('.organik-featured-category');
 		productCategory.each(function() {
 			if($(this).find('.bg').attr("data-bg-color")) $(this).find('.bg').css('background-color', $(this).find('.bg').attr('data-bg-color'));
 		});
-		
+
 		var catItem = $('.cat-item');
 		catItem.each(function() {
 			if($(this).find('.cats-wrap').attr("data-bg-color")) $(this).find('.cats-wrap').css('background-color', $(this).find('.cats-wrap').attr('data-bg-color'));
 		});
-		
+
 		/* tooltip */
 		$('[data-toggle="tooltip"]').tooltip();
-		
+
 		/* accordion */
 		var accordionHeading = $('.accordion-heading');
 		accordionHeading.on('click', function() {
 			$(this).toggleClass("active");
 		});
-		
+
 		var accordionHeadingDefault = $('.accordion.icon-default .accordion-heading');
 		accordionHeadingDefault.on('click', function() {
 			var icon = $(this).find('i').attr("class");
 			if(icon === "ion-minus-circled") $(this).find('i').removeAttr("class").addClass("ion-plus-circled");
 			if(icon === "ion-plus-circled") $(this).find('i').removeAttr("class").addClass("ion-minus-circled");
 		});
-		
+
 		/* increase or decrease item */
 		var qtyPlus = $('.qty-plus');
 		var qtyMinus = $('.qty-minus');
@@ -131,21 +131,21 @@
 				$(this).siblings('.qty').val(parseInt($(this).siblings('.qty').val())-1);
 			}
         });
-		
+
 		/* product image slider */
 		if($('.image-gallery-inner').length > 0) {
 			slideSlick();
 		}
-		
+
 		/* countdown */
 		Countdown();
-		
+
 		/* carousel slider */
 		owlCarousel();
-		
+
 		/* google map */
 		googleMap();
-		
+
 		/* back to top */
 		$('#backtotop').on('click', function() {
 			$("html, body").animate({
@@ -153,7 +153,7 @@
 			}, 800);
 			return false;
 		});
-		
+
 		/* toggle mobile menu */
 		var openLeft = $('#open-left');
 		var site = $('.site');
@@ -171,13 +171,13 @@
 				slideoutMenu.removeClass('open');
 			}
         });
-		
+
 		var subMenuToggle = $('.sub-menu-toggle');
 		subMenuToggle.on('click',function(e){
             $(this).parent('li').toggleClass('expand');
 			$(this).siblings('.sub-menu').slideToggle();
         });
-		
+
 		/* init revolution slider */
 		if ($("#rev_slider").length > 0) {
 			RevolutionInit();
@@ -423,7 +423,7 @@ function slideSlick() {
 			}
 		]
 	});
-	
+
 	$('.image-gallery-nav').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -441,7 +441,7 @@ function slideSlick() {
 			},
 		]
 	});
-	
+
 	$('.slider-single').slick({
 		prevArrow: '<div class="slick-prev"><i class="fa fa-long-arrow-left"></i></div>',
 		nextArrow: '<div class="slick-next"><i class="fa fa-long-arrow-right"></i></div>',

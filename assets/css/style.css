@@ -45,6 +45,15 @@ img { max-width: 100%; }
 	border-radius: 5px;
 }
 
+
+#owl-demo .item{
+  margin: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+
 @media screen and (max-width: 900px) {
 	.column {
 		width: 33.3333%;
@@ -60,6 +69,14 @@ img { max-width: 100%; }
 	}
 	 #maincards h2 {font-size:22px;}
 	 #maincards p{display: none;}
+
+	 #owl-demo .item{
+	   margin: 0px;
+	   -webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	   border-radius: 3px;
+	   text-align: center;
+	 }
 }
 
 .card {
@@ -127,3 +144,14 @@ img { max-width: 100%; }
 	-moz-box-shadow: 0px 3px 10px 2px rgba(0,0,0,0.75);
 	box-shadow: 0px 3px 10px 2px rgba(0,0,0,0.75);
 }
+
+
+	#owl-demo h3{
+		margin-top: 10px;
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	#owl-demo img{
+		border-radius: 1%;
+	}
