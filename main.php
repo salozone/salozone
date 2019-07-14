@@ -20,181 +20,96 @@ if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
 <link rel="stylesheet" href="assets/css/media-queries.css">
 
 	<!-- SLIDESHOW. -->
-	<div>
-        <div class="section bg-light">
-			<div class="container">
-				<div class="product-carousel p-0" data-auto-play="true" data-desktop="3" data-laptop="2" data-tablet="2" data-mobile="1">
-				    <div class="product-item text-center">
-						<div class="">
-							<a href="makeup.php">
-								<img src="withouttext/bridaloffer1.jpg" alt="Salon At Home Bridal At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="makeup.php">
-								<h2 class="title">Bridal</h2>
-							</a>
-						</div>
-					</div>
-				    <div class="product-item text-center">
-						<div class="">
-							<a href="makeup.php">
-								<img src="withouttext/prebridal.jpeg" alt="Salon At Home Pre-Bridal Body Polishing At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="makeup.php">
-								<h2 class="title">Pre-Bridal</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="mehandi.php">
-								<img src="withouttext/mehndiOffer.jpeg" alt="Salon At Home Mehandi At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="mehandi.php">
-								<h2 class="title">Mehandi</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="single.php">
-								<img src="withouttext/threading1.jpg" alt="Salon At Home Threading At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="single.php">
-								<h2 class="title">Threading</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="waxing.php">
-								<img src="withouttext/waxing1.jpg" alt="Salon At Home Waxing At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="waxing.php">
-								<h2 class="title">Waxing</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="cleanup.php">
-								<img src="withouttext/cleanup1.jpg" alt="Salon At Home Cleanup At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="cleanup.php">
-								<h2 class="title">Cleanup</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="facial.php">
-								<div class="badges">
-								</div>
-								<img src="withouttext/facial1.jpg" alt="Salon At Home Facial At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="facial.php">
-								<h2 class="title">Facial</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="bleaching.php">
-								<img src="withouttext/bleach1.jpg" alt="Salon At Home Bleach At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="bleaching.php">
-								<h2 class="title">Bleach</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="pedicure.php">
-								<img src="withouttext/manicure1.jpg" alt="Salon At Home Pedicure/Manicure At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="pedicure.php">
-								<h2 class="title">Pedicure/Manicure</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="haricut.php">
-								<img src="withouttext/haircut1.jpg" alt="Salon At Home Haircut At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="haricut.php">
-								<h2 class="title">Haircut</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="hairstyling.php">
-								<img src="withouttext/hairstyle1.jpg" alt="Salon At Home Hairstyling At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="hairstyling.php">
-								<h2 class="title">Hair Care</h2>
-							</a>
-						</div>
-					</div>
-					<div class="product-item text-center">
-						<div class="">
-							<a href="partyready.php">
-								<div class="badges">
-								</div>
-								<img src="withouttext/partyready1.jpg" alt="Salon At Home Party Ready At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="partyready.php">
-								<h2 class="title">Party Ready</h2>
-							</a>
-						</div>
-					</div>
 
-					<div class="product-item text-center">
-						<div class="">
-							<a href="dressup.php">
-								<img src="withouttext/makeup1.jpg" alt="Salon At Home Dressup At Home" />
-							</a>
-						</div>
-						<div class="product-info">
-							<a href="dressup.php">
-								<h2 class="title">Make Up/Dress Up</h2>
-							</a>
-						</div>
-					</div>
+	<div class="container-fluid mt-5">
+		<div id="owl-demo" class="owl-carousel owl-theme owl-dots">
+			  <div class="item">
+					<a href="makeup.php">
+					<img src="withouttext/bridaloffer1.jpg" alt="Salon At Home Bridal At Home" /> 	</a>
+					<h3 class="title">Bridal</h3>
 				</div>
+
+
+			  <div class="item">
+					<a href="makeup.php">
+					<img src="withouttext/prebridal.jpeg" alt="Salon At Home Pre-Bridal Body Polishing At Home" /> </a>
+					<h3 class="title">Pre-Bridal</h3>
+				</a>
 			</div>
-		</div>
-    </div>
+
+			  <div class="item">
+					<a href="mehandi.php">
+					<img src="withouttext/mehndiOffer.jpeg" alt="Salon At Home Mehandi At Home" /> </a>
+						<h3 class="title">Mehandi</h3>
+				</div>
+
+
+			  <div class="item">
+					<a href="single.php">
+						<img src="withouttext/threading1.jpg" alt="Salon At Home Threading At Home" /> </a>
+							<h3 class="title">Threading</h3>
+				</div>
+
+		  	<div class="item">
+					<a href="waxing.php">
+							<img src="withouttext/waxing1.jpg" alt="Salon At Home Waxing At Home" /> </a>
+							<h3 class="title">Waxing</h3>
+				</div>
+
+		  	<div class="item">
+					<a href="cleanup.php">
+					<img src="withouttext/cleanup1.jpg" alt="Salon At Home Cleanup At Home" /> </a>
+					<h3 class="title">Cleanup</h3>
+				</div>
+
+		  	<div class="item">
+					<a href="facial.php">
+						<img src="withouttext/facial1.jpg" alt="Salon At Home Facial At Home" /> </a>
+						<h3 class="title">Facial</h3>
+				</div>
+
+
+		  	<div class="item">
+					<a href="bleaching.php">
+					<img src="withouttext/bleach1.jpg" alt="Salon At Home Bleach At Home" /> </a>
+					<h3 class="title">Bleach</h3>
+				</div>
+
+			  <div class="item">
+					<a href="pedicure.php">
+						<img src="withouttext/manicure1.jpg" alt="Salon At Home Pedicure/Manicure At Home" /> </a>
+						<h3 class="title">Pedicure/Manicure</h3>
+				</div>
+
+
+			  <div class="item">
+						<a href="hairstyling.php">
+					<img src="withouttext/hairstyle1.jpg" alt="Salon At Home Hairstyling At Home" /> </a>
+					<h3 class="title">Hair Care</h3>
+				</div>
+
+
+		  	<div class="item">
+					<a href="partyready.php">
+						<img src="withouttext/partyready1.jpg" alt="Salon At Home Party Ready At Home" /> </a>
+						<h3 class="title">Party Ready</h3>
+				</div>
+
+			  <div class="item">
+					<a href="dressup.php">
+						<img src="withouttext/makeup1.jpg" alt="Salon At Home Dressup At Home" /> </a>
+						<h3 class="title">Make Up/Dress Up</h3>
+				</div>
+
+	</div>
+	</div>
+
 <style>
 .center {
 text-align:center; }
 </style>
 
-<center>
+<center class="mt-5">
 				<h2>Salozone Home Salon Services</h2>
 				<hr width=200px>
 					<p style="text-align:center">
