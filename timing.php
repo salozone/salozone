@@ -163,12 +163,12 @@ $todayDate = date("d-m-Y");
 								</div>
 	
 							</div>
-							
+							<div class = "container">
 						</form>
 						<form action="verification.php" method="get">						
-<input type='text' id="datepicker" data-date-format="dd-mm-yyyy" name="date" placeholder="enter date manually" class='datepicker-here form-control' data-language='en'  />
-<input type="text" id="time" name="timing" placeholder="enter time manually" class="timepicker form-control"/>
-<input type="submit" class="form-control" value="submit"/>
+<input type='text' required id="datepicker" data-date-format="dd-mm-yyyy" name="date" placeholder="enter date manually" class='datepicker-here form-control' data-language='en' style="width:20rem" />
+<input type="text" required id="time" name="timing" placeholder="enter time manually" class="timepicker form-control" style="width:20rem"/>
+<input type="submit" class="form-control" value="submit" style="width:10rem"/>
 </form>
 
 
@@ -176,7 +176,13 @@ $todayDate = date("d-m-Y");
 (function($) {
     $(function() {
         $('.timepicker').timepicker({
-			timeFormat: 'h:mm p'
+			timeFormat: 'h:mm p',
+			minTime: '9:00am',
+    		maxTime: '8:00pm',
+    		startTime: '9:00',
+    		dynamic: true,
+    		dropdown: true,
+    		scrollbar: true
 		});
     });
 })(jQuery);
@@ -190,6 +196,7 @@ $('#datepicker').datepicker({
 	maxDate: date 
 })
 </script>
+</div>
 					</div>
 				</div>
 			</div>
@@ -198,9 +205,11 @@ $('#datepicker').datepicker({
 </div>	
 <?php $timezone = date_default_timezone_get();
 date_default_timezone_set($timezone);
-$date = date('d/m/Y h:i:s a', time());
-echo $date ."<br>";
-echo htmlentities($time);
+$test = date('d/m/Y h:i:s a', time());
+echo $test ."<br>";
+echo date('d/m/Y h:i:s a', $time_now) ."<br>";
+echo  date('d/m/Y h:i:s a', $nextAdd)."<br>";
+echo $prev
 ?>
 
 <?php include('footer.php'); ?>

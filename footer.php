@@ -116,7 +116,10 @@
                 window.location.reload();
                 }
             });
+
 	}
+	
+
 	</script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>

@@ -54,7 +54,10 @@ include("header.php");
 		}
 		$_SESSION["total"] = $total;
 		$_SESSION["noQty"] = $noQty;
+	
+		
    }
+
    
  }
 
