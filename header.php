@@ -164,7 +164,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 				</div>
 				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
 					<ul>
-						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php') { ?>
+						<?php if($_SERVER['REQUEST_URI']!=('/salozone/index.php'||'/salozone/')) { ?>
 						<li class="has-dropdown">
 							<a style="font-family:'Zilla Slab',serif; color:#C70039;">Services</a>
 							<ul class="dropdown">
