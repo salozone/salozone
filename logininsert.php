@@ -1,9 +1,13 @@
 <?php
 #logininsert.php
 session_start();
-#include("header.php");
+// include("header.php");
 include("admin_site/php_stuffs/connection.php");
 $dateTime = date('Y-m-d H:i:s');
+$products = array("Eyebrow", "Eyebrow + Forehead", "Upper Lip", "Full Face", "UnderArm-HoneyBee", "UnderArm-Chocolate", "FullHand-HoneyBee", "FullHand-Chocolate", "HalfLegs-HoneyBee", "HalfLegs-Chocolate", "FullLegs-HoneyBee", "FullLegs-Chocolate", "FullHands+FullLegs-Honeybee", "FullHands+FullLegs-Chocolate", "FullHands+FullLegs+Underarms-Honeybee", "FullHands+FullLegs+Underarms-Chocolate", "FullFace-Honeybee", "FullFace-Chocolate", "UpperLip-Honeybee", "UpperLip-Chocolate", "FullBody-Honeybee", "FullBody-Chocolate", "FullBack(upper)-Honeybee", "FullBack(upper)-Chocolate", "Stomach-Honeybee", "Stomach-Chocolate", "Forehead-Honeybee", "Forehead-Chocolate", "Fruit-Face", "Fruit-Hand", "Anti Tan-Face", "Anti Tan-Hand", "VLCC-Face", "VLCC-Hand", "Lotus-Face", "Lotus-Hand", "Shehnaz-Face", "Shehnaz-Hand", "Whitening-Face", "Whitening-Hand", "Charcoal-Face", "Charcoal-Hand", "Gold-Face", "Gold-Hand", "Diamond-Face", "Diamond-Hand", "Pearl-Face", "Pearl-Hand" , "Gold", "Diamond", "Pearl", "Charcoal", "Shehnaaz Gold", "Fruit", "Whitening", "Anti Tan","Lotus", "VLCC", "Aroma", "Oxy-Face","Oxy-Hand","Oxy-Face+Hand","Diamond-Face","Diamond-Hand","Diamond-Face+Hand","Gold-Face","Gold-Hand","Gold-Face+Hand","Fem-Face", "Fem-Hand", "Fem-Face+Hand","Pedicure","Manicure","Straight","U","V","Layer- 2 Step","Layer- 3 Step", "Laser", "Feather", "Chinese Cut", "Princess Cut", "Blunt Cut", "Boy Cut", "Sadhna Cut", "Half Hair Curls", "Full Hair Curls", "Hair Style Designer", "Waxing(full hand + full legs + underarms)+Clean Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling", "Waxing(full hand + full legs + underarms)+Clean Up+Make Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling +Make Up","Light","Bridal","Dress Up","Simple","Bridal","Threading + Full Hand Waxing + Clean Up(Fruit)","Facial(Gold) + Pedicure + Manicure","Facial(Gold) + Pedicure","Bleach(Oxy) + Hair Style Designer + Pedicure","Threading + Full Waxing(Hands+Legs+Under Arms) + Clean Up(Fruit)" ,"Air Brush","Body Polishing","Bridal Facial","Engagement","Reception","Pre-Bridal","Bridal HD", "Hair Spa-LOreal","Hair Spa-Body care","Hair Massage");
+$amounts = array("15","25", "10","80","30","50","119","199","119","149","199","249","299","449","329","499","99","119","20","25","599","799","149","175","149","175","30","45","99","180","199","299","149","249","249","349","449","599","199","299","449","599","199","299","299", "399", "199", "299","499","649","499","649","1499","199","299","299", "499", "299", "499","99","199","299","119","259","379","99","199","349","75","149","199","199","149","30","50","100","100","120","100","100","100","100","50","50","50","149","199","149","450","550","600","700","199","4999","200","149","4999","250","650","620","420","420","399","2999","799","1999","1999","3499","7999","549","449","249");
+
+
 //Register Form
 if(isset($_POST['do']) && $_POST['do'] == 'Register') {
 	$fname = $_POST['fname'];
@@ -46,7 +50,43 @@ if(isset($_POST['do']) && $_POST['do'] == 'sendOtp') {
 				unset($_SESSION['login_otp']);
 				setcookie("isLogin", 1, time()+60*60*24*100);
 				setcookie("username", $getRow['cust_id'], time()+60*60*24*100);
-				header("Location:index.php?success=Login");
+
+				$userid = $getRow['cust_id'];
+				$getList = mysqli_query($con, "SELECT * FROM `cart` WHERE `user_id` = '".$userid."'");
+				$getListNum = mysqli_num_rows($getList);
+				if($getListNum > 0){
+				for($i = 0 ; $i < $getListNum ; $i++) {
+				$cart_fetch = mysqli_fetch_array($getList);
+				$item  = $cart_fetch['item'];
+				$price = $cart_fetch['price'];
+				$qty   = $cart_fetch['qty'];
+				$_SESSION["cart"][$item] = $item ;
+				$_SESSION["amounts"][$item] = $price;
+				$_SESSION["qty"][$item] = $qty;
+				$_SESSION["price"][$item] = $amounts[$item];
+				
+				}
+				
+				$sql = "DELETE FROM cart WHERE user_id='".$getRow['cust_id']."'";
+				$con->query($sql);
+				
+				$numbers = "";
+				$total = 0;
+				$noQty = 0;
+				$n = 1;
+				foreach ( $_SESSION["cart"] as $i ) {
+					$numbers.=$i.",";
+					$cate = $products[$_SESSION["cart"][$i]];
+					$total = $total + $_SESSION["amounts"][$i];
+					$noQty += $_SESSION["qty"][$i];
+					$n++;
+				}
+				$_SESSION["total"] = $total;
+				$_SESSION["noQty"] = $noQty;
+
+				}
+
+			header("Location:index.php?success=Login");
 			} else {
 				header("Location:login.php?success=2");
 			}

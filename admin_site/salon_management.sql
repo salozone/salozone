@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 12, 2019 at 02:43 PM
+-- Generation Time: Jul 16, 2019 at 03:30 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -53,16 +53,9 @@ CREATE TABLE `cart` (
   `item` varchar(20) NOT NULL,
   `price` int(10) NOT NULL,
   `user_id` int(5) NOT NULL,
-  `cart_id` int(5) NOT NULL
+  `cart_id` int(5) NOT NULL,
+  `qty` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`item`, `price`, `user_id`, `cart_id`) VALUES
-('test', 100, 0, 1),
-('test2', 200, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -86,8 +79,6 @@ CREATE TABLE `customer` (
   `cust_added` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `customer`
 --
 
 -- --------------------------------------------------------
@@ -115,9 +106,6 @@ CREATE TABLE `order_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `order_items`
---
--- --------------------------------------------------------
 
 --
 -- Table structure for table `products`
@@ -190,7 +178,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `cart_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -202,7 +190,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `products`
