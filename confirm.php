@@ -247,8 +247,9 @@ EOF;
 		$payment_status = 1;
 	}
 		
-		$insert = mysqli_query($con, "INSERT INTO `order_items` SET `cname` = '".$fname."', `cemail` = '".$email."', `chouse` = '".$house_no."', `clocality` = '".$locality."', `clandmark` = '".$landmark."', `cmessage` = '".$message."', `user_id` = '".$userId."', `order_item` = '".$order_item."', `order_amt` = '".$order_amt."', `order_qty` = '".$order_qty."', `tot_qty` = '".$tot_qty."', `order_tot_amt` = '".$order_tot_amt."', `coupon_id` = '".$coupon_id."', `coupon_amt` = '".$coupon_amt."', `delivery_amt` = '".$delivery_amt."', `gross_amt` = '".$gross_amt."', `order_date` = '".date('Y-m-d', strtotime($date))."', `order_time` = '".$time."', `order_status` = '0', `payment_type` = '".$payment_type."', `payment_status` = '".$payment_status."', `datetime` = '".$dateTime."', `order_id` = '".$order_id."'");
-	
+	//	$insert = mysqli_query($con, "INSERT INTO `order_items` SET `cname` = '".$fname."', `cemail` = '".$email."', `chouse` = '".$house_no."', `clocality` = '".$locality."', `clandmark` = '".$landmark."', `cmessage` = '".$message."', `user_id` = '".$userId."', `order_item` = '".$order_item."', `order_amt` = '".$order_amt."', `order_qty` = '".$order_qty."', `tot_qty` = '".$tot_qty."', `order_tot_amt` = '".$order_tot_amt."', `coupon_id` = '".$coupon_id."', `coupon_amt` = '".$coupon_amt."', `delivery_amt` = '".$delivery_amt."', `gross_amt` = '".$gross_amt."', `order_date` = '".date('Y-m-d', strtotime($date))."', `order_time` = '".$time."', `order_status` = '0', `payment_type` = '".$payment_type."', `payment_status` = '".$payment_status."', `datetime` = '".$dateTime."', `order_id` = '".$order_id."'");
+	$insert = mysqli_query($con, "INSERT INTO `order_items` SET  `user_id` = '".$userId."', `order_item` = '".$order_item."', `order_amt` = '".$order_amt."', `order_qty` = '".$order_qty."', `tot_qty` = '".$tot_qty."', `order_tot_amt` = '".$order_tot_amt."', `delivery_amt` = '".$delivery_amt."', `gross_amt` = '".$gross_amt."', `order_date` = '".date('Y-m-d', strtotime($date))."', `order_time` = '".$time."', `order_status` = '0', `payment_type` = '".$payment_type."', `payment_status` = '".$payment_status."', `order_id` = '".$order_id."'");
+
 ?>
 
 <link rel="stylesheet" href="css/qaModalChunk-0c3d9f415163febe1e74.css">

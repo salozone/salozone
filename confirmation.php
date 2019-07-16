@@ -2,6 +2,7 @@
 //session_start();
 #confirmation.php
 include('header.php');
+$slider='';
 if(isset($_COOKIE['gTotal'])) {
 
 	unset($_SESSION["qty"]); //The quantity for each product

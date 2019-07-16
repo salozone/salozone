@@ -6,7 +6,8 @@ $msg = '';
 $status = '';
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
-	$salt				=   $postdata['salt'];
+	// $salt				=   $postdata['salt'];
+	$salt				=   "fuOTFzjTgU";
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
@@ -61,7 +62,8 @@ else exit(0);
 //Using setTimeout to execute a function after 5 seconds.
 setTimeout(function () {
    //Redirect with JavaScript
-   window.location.href= 'https://salozone.com/mybookings.php?success=Done';
+//    window.location.href= 'https://salozone.com/mybookings.php?success=Done';
+window.location.href= 'mybookings.php';
 }, 5000);
 </script>				
 			</div>

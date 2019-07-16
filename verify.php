@@ -8,16 +8,17 @@ if(isset($_POST['do']) && $_POST['do'] == "verifyOtp") {
 	if($ootp == $eotp) {
 	    //Set Session 
 		$contact_no = $_SESSION['contact_no'];
+		$fname = $_SESSION['fname'];
+		$email = $_SESSION['email'];
+		$house_no = $_SESSION['house_no'];
+		$locality = $_SESSION['locality'];
+		$landmark = $_SESSION['landmark'];
+		$message = $_SESSION['message'];
 		$getList = mysqli_query($con, "SELECT * FROM `customer` WHERE `cust_mobile` = '".$contact_no."'");
 		$getCount = mysqli_num_rows($getList);
 		if($getCount == 1) {
 			$getRow = mysqli_fetch_array($getList);
-			$fname = $_SESSION['fname'];
-			$email = $_SESSION['email'];
-			$house_no = $_SESSION['house_no'];
-			$locality = $_SESSION['locality'];
-			$landmark = $_SESSION['landmark'];
-			$message = $_SESSION['message'];
+			
 			$update = mysqli_query($con, "UPDATE `customer` SET `cust_houseno` = '".$house_no."', `cust_locality` = '".$locality."', `cust_landmark` = '".$landmark."', `cust_message` = '".$message."' WHERE `cust_id` = '".$getRow['cust_id']."'");
 			setcookie("isLogin", 1, time()+60*60*24*100);
             setcookie("username", $getRow['cust_id'], time()+60*60*24*100);

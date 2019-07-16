@@ -10,10 +10,10 @@ $amounts = array("15", "25", "10","80","30","50","150","250","120","150","240","
 if(isset($_GET['date'])) {
 	$dateValue = $_GET['date'];
 }else {
-	$dateValue = date("Y-m-d");
+	$dateValue = date("d-m-Y");
 }
-$todayDate = isset($dateValue) ? $dateValue : date("Y-m-d");
-#$todayDate = date("Y-m-d");
+#$todayDate = isset($dateValue) ? $dateValue : date("Y-m-d");
+$todayDate = date("d-m-Y");
 ?>
 
 <link rel="stylesheet" href="css/qaModalChunk-d5020c0ce4ff05d365f1.css">
@@ -41,39 +41,52 @@ $todayDate = isset($dateValue) ? $dateValue : date("Y-m-d");
 												// calculate timestamp for the Monday
 												//$ts = $ts - $offset*86400;
 												// loop from Monday till Sunday 
-												$ts2 = strtotime($dateValue);
-											?>
-											<?php  
-											for ($i = 0; $i < 3; $i++, $ts += 86400) {
-												$currentDate = explode('-', $todayDate);
-												$toDay = $currentDate[0];
+												//$ts2 = strtotime($dateValue);
+												$currentDate = explode('-', $dateValue);
+												echo $toDay = $currentDate[0];
+												/* Ist Day*/
 												$dNo = date("d", $ts);
 												$mNo = date("m", $ts);
 												$yNo = date("Y", $ts);
 												$dName = date("D", $ts);
 												$mName = date("M", $ts);
 												$yName = date("Y", $ts);
-												$dayss = date('D',strtotime(date($yNo.'-'.$mNo.'-'.$dNo)));
-												$gendate = strtotime(date($yNo.'-'.$mNo.'-'.$dNo));
-												$currentdate = date('M', strtotime(date($yNo.'-'.$mNo.'-'.$dNo)));
 												$passValue = ($dNo.'-'.$mNo.'-'.$yNo);
-												echo $toDay;
-												if($dNo == $toDay) {
+												/* 2nd Day */
+												$ts2 = $ts + 86400;
+												$dNo2 = date("d", $ts2);
+												$mNo2 = date("m", $ts2);
+												$yNo2 = date("Y", $ts2);
+												$dName2 = date("D", $ts2);
+												$mName2 = date("M", $ts2);
+												$yName2 = date("Y", $ts2);
+												$passValue2 = ($dNo2.'-'.$mNo2.'-'.$yNo2);
+												/*3 rd Day */
+												$ts3 = $ts2 + 86400;
+												$dNo3 = date("d", $ts3);
+												$mNo3 = date("m", $ts3);
+												$yNo3 = date("Y", $ts3);
+												$dName3 = date("D", $ts3);
+												$mName3 = date("M", $ts3);
+												$yName3 = date("Y", $ts3);
+												$passValue3 = ($dNo3.'-'.$mNo3.'-'.$yNo3);
 											?>
-												<a href="timing.php?date=<?php echo $passValue; ?>"><li class="_2FIjO3fCOdUytcu2BX_CFC _1BbcnE6pUhu97pQPRU9_Jn" data-index="<?php echo $i; ?>">
-													<p data-index="<?php echo $i; ?>" class="_3KZB12l8ThjRoHj4TkxCIs"><?php echo $dName; ?></p>
-													<p data-index="<?php echo $i; ?>" class="_2vhyzGbvqaFz6e2RatI3kO"><?php echo $dNo; ?></p>
-													<!--<p data-index="<?php echo $i; ?>" class="_3KZB12l8ThjRoHj4TkxCIs"><?php echo $mName; ?>&nbsp;<?php echo $yName; ?></p>-->
-												</li></a>
-											<?php } else { ?>
-												<a href="timing.php?date=<?php echo $passValue; ?>"><li class="_2FIjO3fCOdUytcu2BX_CFC " data-index="<?php echo $i; ?>">
-													<!--<span class="_3q7xIW259m_ndQkgVrNeef"><span data-icon="ą"></span></span>-->
-													<p data-index="<?php echo $i; ?>" class="_3KZB12l8ThjRoHj4TkxCIs"><?php echo $dName; ?></p>
-													<p data-index="<?php echo $i; ?>" class="_2vhyzGbvqaFz6e2RatI3kO"><?php echo $dNo; ?></p>
-													<!--<p data-index="<?php echo $i; ?>" class="_3KZB12l8ThjRoHj4TkxCIs"><?php echo $mName; ?>&nbsp;<?php echo $yName; ?></p>-->
-												</li></a>
-											<?php } ?>
-											<?php } ?>
+											<!-- Ist Day -->
+											<a href="timing.php?date=<?php echo $passValue; ?>"><li class="_2FIjO3fCOdUytcu2BX_CFC <?php if($dNo == $toDay) { echo "_1BbcnE6pUhu97pQPRU9_Jn"; } ?>" data-index="1">
+												<p data-index="1" class="_3KZB12l8ThjRoHj4TkxCIs"><?php echo $dName; ?></p>
+												<p data-index="1" class="_2vhyzGbvqaFz6e2RatI3kO"><?php echo $dNo; ?></p>
+											</li></a>
+											<!-- 2nd Day -->
+											<a href="timing.php?date=<?php echo $passValue2; ?>"><li class="_2FIjO3fCOdUytcu2BX_CFC <?php if($dNo2 == $toDay) { echo "_1BbcnE6pUhu97pQPRU9_Jn"; } ?>" data-index="2">
+													<p data-index="2" class="_3KZB12l8ThjRoHj4TkxCIs"><?php echo $dName2; ?></p>
+													<p data-index="2" class="_2vhyzGbvqaFz6e2RatI3kO"><?php echo $dNo2; ?></p>
+											</li></a>
+											<!-- 3rd Day -->
+											<a href="timing.php?date=<?php echo $passValue3; ?>"><li class="_2FIjO3fCOdUytcu2BX_CFC <?php if($dNo3 == $toDay) { echo "_1BbcnE6pUhu97pQPRU9_Jn"; } ?>" data-index="3">
+												<p data-index="3" class="_3KZB12l8ThjRoHj4TkxCIs"><?php echo $dName3; ?></p>
+												<p data-index="3" class="_2vhyzGbvqaFz6e2RatI3kO"><?php echo $dNo3; ?></p>
+											</li></a>
+											
 											</div>
 										</div>
 									</div>
@@ -81,11 +94,46 @@ $todayDate = isset($dateValue) ? $dateValue : date("Y-m-d");
 								<h3 class="_28gUKzEsw8N-nqfXEO8ClO">Select time</h3>
 									<ul id="schedulerTimeSlot" class="VRRoZR_W287QHk-Uo6A5i _2cwgaT4dHGJELUxF91Slht clearfix">
 									<?php
+									if($todayDate == $dateValue) {
 									 $time = '9:00'; // start
 									 for ($i = 0; $i <= 21; $i++)
 									 {
-										$time_now=mktime(date('h')+6,date('i')+30,date('s'));
-										$date = date('g:i a', $time_now);
+										$time_now = mktime(date('h')+4,date('i')+30,date('s'));
+										$date = date('g a', $time_now);
+										$dateAdd = strtotime('+30mins', strtotime($date));
+										$dateNow = date('g:i a', $dateAdd);
+										//echo "<span style='color:#000;'>".$date."</span>";
+										 #echo "<span style='color:#000;'>". date("h:i a")."</span>";
+										 $prev = date('g a', strtotime($time)); // format the start time
+										 $next = strtotime('+30mins', strtotime($time)); // add 30 mins
+										 
+										 $nextAdd = strtotime('+30mins', strtotime($prev)); // format the next time
+										 $time = date('g:i a', $next); // format the next time
+										 $time11 = date('g:i a', $next); // format the next time
+										 
+										 //echo "<span style='color:#000;'>$prev - $time</span>";
+										//if($prev <= $date && $time >= $date) { 
+										//echo "next".$nextAdd."<br>";
+										//echo "prev".$dateAdd."<br>";
+										if($nextAdd >= $dateAdd) {
+											
+										//echo "<span style='color:#000;'>".$time."-".$date."</span>";
+									?>
+										<a href="verification.php?timing=<?php echo htmlentities($time); ?>&date=<?php echo htmlentities($dateValue); ?>" ><li class="_1qddD8MXhhJEixhoKZQSgs" data-index="<?php echo $i; ?>">
+											<p data-index="<?php echo $i; ?>"><?php echo $time; ?></p>
+										</li></a>
+									<?php } else { ?>
+										<!--<a href="#" ><li class="_1qddD8MXhhJEixhoKZQSgs _20Zj8RByaXYN2wq7mBkjd8" data-index="<?php echo $i; ?>"><p data-index="<?php echo $i; ?>"><?php echo $time; ?></p></li></a>-->
+									<?php } ?>
+									<?php } ?>
+									<?php } else { 
+									 $time = '9:00'; // start
+									 for ($i = 0; $i <= 21; $i++)
+									 {
+										$time_now = mktime(date('h')+4,date('i')+30,date('s'));
+										$date = date('g a', $time_now);
+										$dateAdd = strtotime('+30mins', strtotime($date));
+										$dateNow = date('g:i a', $dateAdd);
 										//echo "<span style='color:#000;'>".$date."</span>";
 										 #echo "<span style='color:#000;'>". date("h:i a")."</span>";
 										 $prev = date('g:i a', strtotime($time)); // format the start time
@@ -93,20 +141,16 @@ $todayDate = isset($dateValue) ? $dateValue : date("Y-m-d");
 										 $time = date('g:i a', $next); // format the next time
 										 //echo "<span style='color:#000;'>$prev - $time</span>";
 										//if($prev <= $date && $time >= $date) { 
-										if($time == $date) { 
 										//echo "<span style='color:#000;'>".$time."-".$date."</span>";
 									?>
-										<a href="verification.php?timing=<?php echo htmlentities($time); ?>&date=<?php echo htmlentities($todayDate); ?>" ><li class="_1qddD8MXhhJEixhoKZQSgs" data-index="<?php echo $i; ?>">
-											<p data-index="<?php echo $i; ?>"><?php echo $time; ?><br><?php echo $date; ?></p>
+										<a href="verification.php?timing=<?php echo htmlentities($time); ?>&date=<?php echo htmlentities($dateValue); ?>" ><li class="_1qddD8MXhhJEixhoKZQSgs" data-index="<?php echo $i; ?>">
+											<p data-index="<?php echo $i; ?>"><?php echo $time; ?></p>
 										</li></a>
-									<?php } else { ?>
-										<a href="verification.php?timing=<?php echo htmlentities($time); ?>&date=<?php echo htmlentities($todayDate); ?>" ><li class="_1qddD8MXhhJEixhoKZQSgs _20Zj8RByaXYN2wq7mBkjd8" data-index="<?php echo $i; ?>"><p data-index="<?php echo $i; ?>"><?php echo $time; ?><br><?php echo $date; ?></p></li></a>
-									<?php } ?>
-									<?php } ?>
+									<?php } } ?>
 									</ul>
+									<div class="row">&nbsp;</div>
 								</div>
-								<div class="row">&nbsp;
-								</div>
+								
 							</div>
 							
 						</form>

@@ -55,7 +55,7 @@ include('header.php');
 											$ps = "Pending";
 											$psc = 'danger';
 											$psh = 'payment_later.php?id='.$order1['id'].'&order='.$order1['order_id'];
-										} elseif($order1['payment_type'] == 1) { 
+										} elseif($order1['payment_status'] == 1) { 
 											$ps = "paid";
 											$psc = "success";
 											$psh = '#';

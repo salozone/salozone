@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Kolkata');
-$con = mysqli_connect("localhost", "salozxmb_salozon", "c*,LOqH{#zI}", "salozxmb_salozone");
+$con = mysqli_connect("localhost", "root", "", "salon_management");
 
 $current_date = date("Y-m-d");
 $current_time = date("h:i:s");

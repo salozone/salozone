@@ -8,7 +8,7 @@ include('header.php');
 <div id="fh5co-product">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3 col-xs-12 animate-box">
+				<div class="col-md-6 col-xs-12 animate-box">
 					<center><h2>Login</h2></center>
 					<div class="col-md-12 animate-box">
 						<?php 
@@ -37,18 +37,21 @@ include('header.php');
 						</form>
 					</div>
 				</div>
-				<!--<div class="col-md-6 col-xs-12 animate-box">
+				<div class="col-md-6 col-xs-12 animate-box">
 					<h2>Register</h2>
 					<div class="col-md-12 animate-box">
-						<?php 
+					<?php 
 						if(isset($_GET['success']) && $_GET['success'] == 'Done') {
 							echo "<p class='text-success'>Registered Successfully...</p>";
 						}
 						if(isset($_GET['success']) && $_GET['success'] == 'Failed') {
 							echo "<p class='text-danger'>Please filled all the details...</p>";
 						}
-						if(isset($_GET['success']) && $_GET['success'] == 'Change') {
+						if(isset($_GET['success']) && $_GET['success'] == 'email') {
 							echo "<p class='text-danger'>Entered email address was already registered, please change the email address...";
+						}
+						if(isset($_GET['success']) && $_GET['success'] == 'phone') {
+							echo "<p class='text-danger'>Entered mobile number was already registered, please change the mobile number...";
 						}
 						?>
 						<form action="logininsert.php" id="register_form" name="register_form" method="POST">
@@ -81,7 +84,7 @@ include('header.php');
 							<input type="submit" name="register" value="Register" class="btn btn-primary btn-outline btn-lg" />
 						</form>
 					</div>
-				</div>-->
+				</div>
 			</div>
 		</div>
 	</div>

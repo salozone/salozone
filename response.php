@@ -6,7 +6,8 @@ $msg = '';
 $status = '';
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
-	$salt				=   $postdata['salt'];
+	// $salt				=   $postdata['salt'];
+	$salt				=   "fuOTFzjTgU";
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
@@ -52,7 +53,7 @@ else exit(0);
 						</div>
 						<div class="hPO8BoyBkYEU2ujeCWJgk _1ovga__v3v_0DJ3-9UggBS H1Lb6afUHKzH-OTelE23x" style="font-size: 14px;">
 							<div class="_1kb-XXNt4wePQ_svwAQnhG">Message:</div>
-							<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);"><?php if ($status == 'success'  && $resphash == $CalcHashString) { $msg = "Transaction Successful and Hash Verified..."; } else { $msg = "Payment failed for Hasn not verified..."; } ?></div>
+							<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);"><?php echo $msg ?></div>
 						</div>
 					</div>
 				</ul>
@@ -60,8 +61,9 @@ else exit(0);
 //Using setTimeout to execute a function after 5 seconds.
 setTimeout(function () {
    //Redirect with JavaScript
-   window.location.href= 'https://salozone.com/confirm.php';
-}, 1000);
+//    window.location.href= 'https://salozone.com/confirm.php';
+window.location.href= 'confirm.php';
+}, 5000);
 </script>
 			</div>
 		</div>
