@@ -6,6 +6,66 @@ $pageDesc = 'Dressup Service';
 $slider = 'dressup';
 include('header.php');
 ?>
+<!-- this script is used to increase or decrease values , it is the same script that is used in checkout.php where u can +/- cart item quantity -->
+<script>
+function increment_quantity(cart_id) {
+    var inputQuantityElement = document.getElementById("click").innerHTML ;
+    var newQuantity = parseInt(inputQuantityElement)+1;
+    //document.getElementById("input-quantity-"+cart_id).value = newQuantity;
+	save_to_db(cart_id, newQuantity);
+}
+
+function decrement_quantity(cart_id) {
+    var inputQuantityElement = document.getElementById("click").innerHTML ;
+    if(inputQuantityElement > 1) 
+    {
+    var newQuantity = parseInt(inputQuantityElement) - 1;
+		//document.getElementById("input-quantity-"+cart_id).value = newQuantity;
+		save_to_bd(cart_id, newQuantity);
+    }else {
+			//alert(new_quantity);
+			$.ajax({
+		url : "cart.php",
+		data : "delete="+cart_id,
+		type : 'Get',
+		success : function(response) {
+			location.reload();
+			//console.log(response);
+			//document.getElementById("input-quantity-"+cart_id).value = new_quantity;
+		}
+	});
+	}
+}
+
+function save_to_db(cart_id, new_quantity) {
+	//alert(new_quantity);
+    $.ajax({
+		url : "cart.php",
+		data : "cart_id="+cart_id+"&new_quantity="+new_quantity,
+		type : 'post',
+		success : function(response) {
+			location.reload();
+			//console.log(response);
+			//document.getElementById("input-quantity-"+cart_id).value = new_quantity;
+		}
+	});
+}
+
+function save_to_bd(cart_id, new_quantity) {
+	//alert(new_quantity);
+    $.ajax({
+		url : "cart.php",
+		data : "cart_id="+cart_id+"&minus_quantity="+new_quantity,
+		type : 'post',
+		success : function(response) {
+			location.reload();
+			//console.log(response);
+			//document.getElementById("input-quantity-"+cart_id).value = new_quantity;
+		}
+	});
+}
+</script>	
+
 
 		<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(withouttext/dressup1.jpg);">
 			<div class="overlay"></div>
@@ -14,7 +74,7 @@ include('header.php');
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
-								<h1 style="font-family: 'Cinzel', serif;text-shadow: 2px 2px #FF5733;color:#F4F0EC;">Dressup</h1>
+								<h1>Dressup</h1>
 							</div>
 						</div>
 					</div>
@@ -51,13 +111,27 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 200</div>
 													
 												</div>
-												<div>
+												<div><!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][94])){?>
 													<a href="#!" onclick="cart(94);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(94)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][94] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(94)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 											
