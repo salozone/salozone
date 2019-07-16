@@ -71,6 +71,8 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
 	<!-- Google Fonts ends here-->
 		<style type="text/css">
 
@@ -142,8 +144,8 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 
 	<!--<div class="fh5co-loader"></div>-->
 
-	<div id="page">
-	<nav class="fh5co-nav" role="navigation" style>
+	<div id="page" style="background-image: url(images/bac.jpg);">
+	<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471 ;">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-3 col-xs-4">
@@ -164,7 +166,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 					<ul>
 						<?php if($_SERVER['REQUEST_URI']=='/salozone/main.php') { ?>
 						<li class="has-dropdown">
-							<a>Services</a>
+							<a style="font-family:'Zilla Slab',serif; color:#C70039;">Services</a>
 							<ul class="dropdown">
 								<li><a href="single.php">Threading</a></li>
 								<li><a href="waxing.php">Waxing</a></li>
@@ -180,8 +182,8 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 								<li><a href="mehandi.php">Mehandi</a></li>
 							</ul>
 						</li> <?php } ?>
-						<li><a href="about.php">About Us</a></li>
-						<li><a href="contact.php">Contact Us</a></li>
+						<li><a href="about.php" style="font-family:'Zilla Slab',serif;color:#C70039;">About Us</a></li>
+						<li><a href="contact.php" style="font-family:'Zilla Slab',serif;color:#C70039;">Contact Us</a></li>
 						<div class="whatsapp">
 							<?php
 							if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) { ?>

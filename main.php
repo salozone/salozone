@@ -110,9 +110,9 @@ text-align:center; }
 </style>
 
 <center class="mt-5">
-				<h2>Salozone Home Salon Services</h2>
+				<h2 style="font-family: 'Kalam', cursive; color: #FFC300;"><u>Salozone Home Salon Services</u></h2>
 				<hr width=200px>
-					<p style="text-align:center">
+					<p style="text-align:center; color: #DAF7A6 ;">
 						We are people from <strong>Salozone</strong> who are based in <strong>Patna,Bihar.</strong> we are here
 						to <strong>Redefine</strong> beauty services. At comfort of your home.
 					</p>
@@ -123,7 +123,7 @@ text-align:center; }
 			  <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
 				<div class="card center" style="border-radius: 0px;">
 				  <div class="card-body">
-					<p class="card-text text-center" style="margin-top:15px;">OFFERS<br> (Promo)</p>
+					<p class="card-text text-center" style="margin-top:15px; color: #000000;text-decoration: underline;">OFFERS<br> (Promo)</p>
 					<a href="offers.php"><button type="button" class="btn btn-success">View</button></a>
 				  </div>
 				</div>
@@ -132,7 +132,7 @@ text-align:center; }
 			  <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
 				<div class="card center" style="border-radius: 0px;">
 				  <div class="card-body">
-					<p class="card-text text-center" style="margin-top:15px;">EXCLUSIVE<br> COMBOS<br></p>
+					<p class="card-text text-center" style="margin-top:15px;color: #000000;text-decoration: underline;">EXCLUSIVE<br> COMBOS<br></p>
 					<a href="combos.php"><button type="button" class="btn btn-success">View</button></a>
 				  </div>
 				</div>
@@ -141,7 +141,7 @@ text-align:center; }
 			  <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
 				<div class="card center" style="border-radius: 0px;">
 				  <div class="card-body">
-					<p class="card-text text-center" style="margin-top:15px;">SPECIAL<br> DEALS<br></p>
+					<p class="card-text text-center" style="margin-top:15px;color: #000000;text-decoration: underline;">SPECIAL<br> DEALS<br></p>
 					<a href="deals.php"><button type="button" class="btn btn-success">View</button></a>
 				  </div>
 				</div>
@@ -150,7 +150,7 @@ text-align:center; }
 		</div>
 			<div class="row mt-5">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h4 style="color:black">Please Choose your Service(s)..</h4>
+					<h4 style="color:#FF5733;font-size:20px;">Please Choose your Service(s)..</h4>
 					<!--<p class="text-center">Book expert services at salozone.com</p>-->
 				</div>
 			</div>
@@ -165,7 +165,7 @@ text-align:center; }
 									<img src="withouttext/makeup1.jpg" alt="Makeup">
 							</div>
 							<div class="container mt-3">
-								<h2>Makeup</h2>
+								<h2 style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Makeup</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -180,7 +180,7 @@ text-align:center; }
 								<img src="withouttext/haircut1.jpg" alt="Haircut" style="width:100%;min-height:200px">
 							</div>
 							<div class="container mt-3">
-								<h2>Haircut</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Haircut</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -194,7 +194,7 @@ text-align:center; }
 								<img src="withouttext/hairstyle1.jpg" alt="Hair Care" style="width:100%;min-height:200px">
 							</div>
 							<div class="container mt-3">
-								<h2>Hair Care</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Hair Care</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -208,7 +208,7 @@ text-align:center; }
 							<img src="withouttext/manicure1.jpg" alt="Manicure">
 							</div>
 							<div class="container mt-3">
-								<h2>Manicure</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Manicure</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -222,7 +222,7 @@ text-align:center; }
 							<img src="withouttext/Mehendi1.jpg" alt="Mehendi">
 							</div>
 							<div class="container mt-3">
-								<h2>Mehendi</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Mehendi</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -237,7 +237,7 @@ text-align:center; }
 								<img src="withouttext/waxing1.jpg" alt="Waxing">
 							</div>
 							<div class="container mt-3">
-								<h2>Waxing</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Waxing</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -251,7 +251,7 @@ text-align:center; }
 								<img src="withouttext/threading1.jpg" alt="Threading">
 							</div>
 							<div class="container mt-3">
-								<h2>Threading</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Threading</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -265,7 +265,7 @@ text-align:center; }
 								<img src="withouttext/cleanup1.jpg" alt="CleanUp">
 							</div>
 							<div class="container mt-3">
-								<h2>Clean Up</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Clean Up</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -280,7 +280,7 @@ text-align:center; }
 								<img src="withouttext/facial1.jpg" alt="Facial">
 							</div>
 							<div class="container mt-3">
-								<h2>Facial</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Facial</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -294,7 +294,7 @@ text-align:center; }
 								<img src="withouttext/bleach1.jpg" alt="Bleach" style="width:100%;min-height:200px">
 							</div>
 							<div class="container mt-3">
-								<h2>Bleach</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Bleach</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -309,7 +309,7 @@ text-align:center; }
 								<img src="withouttext/partyready1.jpg" alt="Party Ready" style="width:100%;min-height:200px">
 							</div>
 							<div class="container mt-3">
-								<h2>Party Ready</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Party Ready</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -323,7 +323,7 @@ text-align:center; }
 								<img src="withouttext/bridal12.jpg" alt="Bridal" style="width:100%;min-height:200px">
 							</div>
 							<div class="container mt-3">
-								<h2>Bridal</h2>
+								<h2  style="text-decoration: underline;font-family: 'Zilla Slab', serif;">Bridal</h2>
 								<p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
 							</div>
 						</div>
@@ -345,8 +345,8 @@ text-align:center; }
 					</div>
 				</div>
 				<div class="col-md-8">
-						<h3>Salon at Home</h3>
-						<p>Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied
+						<h3 style="color:#FFC300;text-decoration: underline;">Salon at Home</h3>
+						<p style="color:#DAF7A6;">Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied
 							we are bringing best of the salon services at your doorstep.</p>
 					</div>
 				</div>
@@ -359,8 +359,8 @@ text-align:center; }
 					</div>
 				</div>
 				<div class="col-md-8">
-						<h3>No Trust Issues</h3>
-						<p>We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and
+						<h3 style="color:#FFC300; text-decoration: underline;">No Trust Issues</h3>
+						<p style="color:#DAF7A6;">We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and
 							 familiar only with added training and expertise.</p>
 					</div>
 				</div>
@@ -373,8 +373,8 @@ text-align:center; }
 					</div>
 				</div>
 				<div class="col-md-8">
-						<h3>Cheapest Prices</h3>
-						<p>Salozone’s prime motive is to redefine beauty services in Patna with maximum customer satisfaction which is why we
+						<h3 style="color:#FFC300;text-decoration: underline;">Cheapest Prices</h3>
+						<p style="color:#DAF7A6;">Salozone’s prime motive is to redefine beauty services in Patna with maximum customer satisfaction which is why we
 							 promise all these facilities and benefits at the cheapest price .</p>
 					</div>
 				</div>
