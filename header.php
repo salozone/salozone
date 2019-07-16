@@ -54,7 +54,12 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	<![endif]-->\
+
+	
+	<!----adding the javascript for add button-->
+	<!---button.js--->
+	<script src="js/button.js"></script>
 	<!-- Font Awesome-->
 	<script src="https://kit.fontawesome.com/5878a489f6.js"></script>
 	<!-- Font Awesome ends here-->

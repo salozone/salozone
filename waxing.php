@@ -5,22 +5,80 @@ $pageTitle = 'Waxing Service';
 $pageDesc = 'Waxing Service';
 $slider = 'waxing';
 include('header.php');
-?>
- <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(withouttext/waxing1.jpg);">
+?><!-- this script is used to increase or decrease values , it is the same script that is used in checkout.php where u can +/- cart item quantity -->
+<script>
+function increment_quantity(cart_id) {
+    var inputQuantityElement = document.getElementById("click").innerHTML ;
+    var newQuantity = parseInt(inputQuantityElement)+1;
+    //document.getElementById("input-quantity-"+cart_id).value = newQuantity;
+	save_to_db(cart_id, newQuantity);
+}
+
+function decrement_quantity(cart_id) {
+    var inputQuantityElement = document.getElementById("click").innerHTML ;
+    if(inputQuantityElement > 1) 
+    {
+    var newQuantity = parseInt(inputQuantityElement) - 1;
+		//document.getElementById("input-quantity-"+cart_id).value = newQuantity;
+		save_to_bd(cart_id, newQuantity);
+    }else {
+			//alert(new_quantity);
+			$.ajax({
+		url : "cart.php",
+		data : "delete="+cart_id,
+		type : 'Get',
+		success : function(response) {
+			location.reload();
+			//console.log(response);
+			//document.getElementById("input-quantity-"+cart_id).value = new_quantity;
+		}
+	});
+	}
+}
+
+function save_to_db(cart_id, new_quantity) {
+	//alert(new_quantity);
+    $.ajax({
+		url : "cart.php",
+		data : "cart_id="+cart_id+"&new_quantity="+new_quantity,
+		type : 'post',
+		success : function(response) {
+			location.reload();
+			//console.log(response);
+			//document.getElementById("input-quantity-"+cart_id).value = new_quantity;
+		}
+	});
+}
+
+function save_to_bd(cart_id, new_quantity) {
+	//alert(new_quantity);
+    $.ajax({
+		url : "cart.php",
+		data : "cart_id="+cart_id+"&minus_quantity="+new_quantity,
+		type : 'post',
+		success : function(response) {
+			location.reload();
+			//console.log(response);
+			//document.getElementById("input-quantity-"+cart_id).value = new_quantity;
+		}
+	});
+}
+</script>
+	
+		<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(withouttext/waxing1.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
-								<h1 style="font-family: 'Cinzel', serif;text-shadow: 2px 2px #FF5733;color:#F4F0EC;">Waxing</h1>
+								<h1>Waxing</h1>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
-		
 
 <?php sliderMenu($slider); ?>
 	<div id="fh5co-product">
@@ -50,13 +108,28 @@ include('header.php');
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 30</div>
 												</div>
-												<div>
+												<div>													
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][4])){?>
 													<a href="#!" onclick="cart(4);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(4)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][4] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(4)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 											
@@ -80,12 +153,27 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 50</div>
 												</div>
 												<div>
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][5])){?>
 													<a href="#!" onclick="cart(5);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(5)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][5] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(5)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -108,12 +196,27 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 119</div>
 												</div>
 												<div>
-												<a href="#!" onclick="cart(6);">
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][6])){?>
+													<a href="#!" onclick="cart(6);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>
+													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(6)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][6] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(6)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -136,12 +239,27 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 199</div>
 												</div>
 												<div>
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][7])){?>
 													<a href="#!" onclick="cart(7);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>
+													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(7)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][7] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(7)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -164,12 +282,27 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 119</div>
 												</div>
 												<div>
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][8])){?>
 													<a href="#!" onclick="cart(8);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>
+													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(8)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][8] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(8)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -193,12 +326,27 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 149</div>
 												</div>
 												<div>
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][9])){?>
 													<a href="#!" onclick="cart(9);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>
+													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(9)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][9] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(9)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -219,13 +367,27 @@ include('header.php');
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 199</div>
 												</div>
-												<div>
+												<div>		<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][10])){?>
 													<a href="#!" onclick="cart(10);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>
+													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(10)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][10] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(10)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -246,13 +408,28 @@ include('header.php');
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 249</div>
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][11])){?>
 													<a href="#!" onclick="cart(11);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>
+													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(11)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][11] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(11)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -273,13 +450,28 @@ include('header.php');
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 299</div>
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][12])){?>
 													<a href="#!" onclick="cart(12);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>
+													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(12)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][12] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(12)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -300,13 +492,28 @@ include('header.php');
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 449</div>
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][13])){?>
 													<a href="#!" onclick="cart(13);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>
+													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(13)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][13] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(13)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -327,13 +534,28 @@ include('header.php');
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 329</div>
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][14])){?>
 													<a href="#!" onclick="cart(14);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>
+													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(14)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][14] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(14)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
@@ -355,16 +577,30 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 499</div>
 													
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][15])){?>
 													<a href="#!" onclick="cart(15);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(15)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][15] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(15)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -384,16 +620,30 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 99</div>
 													
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][16])){?>
 													<a href="#!" onclick="cart(16);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(16)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][16] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(16)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -413,16 +663,30 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 119</div>
 													
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][17])){?>
 													<a href="#!" onclick="cart(17);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(17)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][17] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(17)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -442,16 +706,30 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 20</div>
 													
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][18])){?>
 													<a href="#!" onclick="cart(18);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(18)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][18] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(18)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -471,16 +749,30 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 25</div>
 													
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][19])){?>
 													<a href="#!" onclick="cart(19);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(19)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][19] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(19)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -500,16 +792,30 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 599</div>
 													
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][20])){?>
 													<a href="#!" onclick="cart(20);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(20)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][20] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(20)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -529,16 +835,29 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 799</div>
 													
 												</div>
-												<div>
+												<div>		<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][21])){?>
 													<a href="#!" onclick="cart(21);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(21)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][21] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(21)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -558,16 +877,29 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 149</div>
 													
 												</div>
-												<div>
+												<div>		<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][22])){?>
 													<a href="#!" onclick="cart(22);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(22)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][22] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(22)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -588,15 +920,29 @@ include('header.php');
 													
 												</div>
 												<div>
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][23])){?>
 													<a href="#!" onclick="cart(23);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(23)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][23] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(23)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -616,16 +962,29 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 150</div>
 													
 												</div>
-												<div>
+												<div>		<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][24])){?>
 													<a href="#!" onclick="cart(24);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(24)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][24] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(24)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -645,16 +1004,29 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 175</div>
 													
 												</div>
-												<div>
+												<div>		<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][25])){?>
 													<a href="#!" onclick="cart(25);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(25)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][25] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(25)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -674,16 +1046,30 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹  30</div>
 													
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][26])){?>
 													<a href="#!" onclick="cart(26);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(26)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][26] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(26)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
@@ -703,16 +1089,30 @@ include('header.php');
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 45</div>
 													
 												</div>
-												<div>
+												<div>		
+												<!-- php is used to check the qty and display appropriate html -->
+												<?php if(!isset($_SESSION["qty"][27])){?>
 													<a href="#!" onclick="cart(27);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
 													</a>
+												<?php }else { ?>
+												
+													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
+														<div class="_7as_2mMKYqXZrgetll6K1">
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														decrement_quantity(27)" style="margin: 0px; cursor: pointer; ">-</span>
+														<span class="number" id="click" style="padding: 0 10px;
+														margin-bottom: 0px; font-size: 16px;"> <?php echo $_SESSION["qty"][27] ?> </span>
+														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
+														increment_quantity(27)" style="margin: 0px; cursor: pointer;">+</span>
+														</div>
+													</div>
+													<?php } ?>
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</li>
