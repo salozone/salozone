@@ -143,7 +143,6 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 	<!--<div class="fh5co-loader"></div>-->
-
 	<div id="page" style="background-image: url(images/bac.jpg);">
 	<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471 ;">
 		<div class="container-fluid">
@@ -164,7 +163,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 				</div>
 				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
 					<ul>
-						<?php if($_SERVER['REQUEST_URI']!=('/salozone/index.php'||'/salozone/')) { ?>
+						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&&$_SERVER['REQUEST_URI']!='/salozone/') { ?>
 						<li class="has-dropdown">
 							<a style="font-family:'Zilla Slab',serif; color:#C70039;">Services</a>
 							<ul class="dropdown">
