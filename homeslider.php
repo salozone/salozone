@@ -5,11 +5,23 @@
   <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
   <style type="text/css">
 
+    h3{
+      color: #bf9b30;
+    }
 
     .slider {
         width: 100%;
-        height: 370px;
+        height: 50%;
     }
+
+    .slick-dots li button:before {
+        color: red;
+      }
+
+      .slick-dots li button {
+        color: green;
+      }
+
 
     .slick-prev:before,
     .slick-next:before {
@@ -35,8 +47,45 @@
 
     .slick-current {
       opacity: 1;
-      transform: scale(1.15);
     }
+
+    .slick-current img{
+      opacity: 1;
+    }
+
+    .slick-current h3{
+      display: block;
+      position: relative;
+      margin: auto;
+    }
+
+    .regular{
+      position: relative;
+    }
+
+    @media screen and (max-width: 768px) {
+      .slick-active {
+        opacity: 1;
+      }
+      .slick-slide {
+        transition: all ease-in-out .3s;
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .slick-active {
+        opacity: 1;
+      }
+      .slick-slide {
+        transition: all ease-in-out .3s;
+        opacity: .2;
+      }
+      .slick-current {
+        opacity: 1;
+      }
+    }
+
   </style>
 
 
@@ -107,11 +156,10 @@
         breakpoint: 768,
         settings: {
           arrows: false,
-          centerMode: true,
+          centerMode: false,
           centerPadding: '40px',
-          slidesToShow: 1,
-            pauseOnHover:false,
-            dots:true
+          slidesToShow: 2,
+          pauseOnHover:false,
         }
       },
       {

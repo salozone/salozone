@@ -6,7 +6,7 @@ strong { font-weight: 600; }
 h1, h2 { margin-top: 10px; font-size: 30px; font-weight: 300; color: #555; line-height: 50px;}
 h3 { font-size: 22px; font-weight: 300; color: #555; line-height: 30px; font-style: italic; }
 
-img { max-width: 100%; }
+#maincards img { width: 100%; }
 
 .medium-paragraph { font-size: 17px; line-height: 32px; }
 
@@ -63,8 +63,8 @@ img { max-width: 100%; }
 	 #maincards p{display: none;}
 }
 
-.card {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+#maincards .card {
+	box-shadow: 0 4px 8px 0 #bf9b30;
 	border-radius: 0px 25px 25px 25px;
 	overflow: hidden;
 	text-decoration: none;
@@ -170,5 +170,3 @@ img { max-width: 100%; }
 	.slick-current {
 		opacity: 1;
 	}
-
-	
