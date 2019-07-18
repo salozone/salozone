@@ -55,11 +55,6 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
-	
-	<!----adding the javascript for add button-->
-	<!---button.js--->
-	<script src="js/button.js"></script>
 	<!-- Font Awesome-->
 	<script src="https://kit.fontawesome.com/5878a489f6.js"></script>
 	<!-- Font Awesome ends here-->
@@ -79,47 +74,72 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
 	<!-- Google Fonts ends here-->
-		<style type="text/css">
+	<style type="text/css">
 
 
-			.background-wrap {
-				position: fixed;
-				z-index: -1000;
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-				top: 0;
-				left: 0;
-			}
+		.background-wrap {
+			position: fixed;
+			z-index: -1000;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+		}
 
-			#video-bg-elem {
-				position: absolute;
-				top: 0;
-				left: 0;
-				min-height: 100%;
-				max-width:100%;
-				width: auto;
-				height: auto;
-			}
-			.content {
-				position: absolute;
-				width: 100%;
-				min-height: 100%;
-				z-index: 1000;
-				background-color: rgba(0,0,0,0.2);
-			}
-			.content h5,h1 {
-				text-align: center;
-				font-size: 35px;
-				text-transform: uppercase;
-				font-weight: 300;
-				color: #fff;
-				padding-top: 15%;
-				margin-bottom: 10px;
-			}
+		#video-bg-elem {
+			position: absolute;
+			top: 0;
+			left: 0;
+			min-height: 100%;
+			max-width:100%;
+			width: auto;
+			height: auto;
+		}
+		.content {
+			position: absolute;
+			width: 100%;
+			min-height: 100%;
+			z-index: 1000;
+			background-color: rgba(0,0,0,0.2);
+		}
+		.content h5,h1 {
+			text-align: center;
+			font-size: 35px;
+			text-transform: uppercase;
+			font-weight: 300;
+			color: #fff;
+			padding-top: 15%;
+			margin-bottom: 10px;
+		}
 
 
-		</style>
+	</style>
+</head>
+
+<body>
+<style>
+@media screen and (min-width: 768px) {
+	.whatsapp { display:none; }
+}
+@media screen and (max-width: 768px) {
+	.loginIcon { display:none !important; }
+}
+@media only screen and (max-width: 990px) and (min-width: 767px)  {
+	.menu-1 { width:63%;margin-top:10px !important; }
+	.navicon { margin-top:6px !important; }
+	.log { margin-top:5px; }
+}
+@media screen and (max-width: 400px) {
+	.navicon { margin-top:8px !important; padding: 0px !important; }
+	.fh5co-nav ul li a { padding: 0px !important; }
+	.fh5co-nav a { padding: 0px !important; }
+	.fh5co-nav-toggle { margin-top:20px !important; }
+	.product .product-grid { height: 150px !important; }
+}
+.navicon { margin-top: 20px; }
+.menu-1 { margin-top:30px; }
+</style>
 	</head>
 
 	<body>
@@ -147,29 +167,29 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!--<div class="fh5co-loader"></div>-->
-	<div id="page" style="background-image: url(images/bac.jpg);">
-	<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471 ;">
+	<div id="page" style="background-image: url(images/bac.jpg);background-size:100%">
+	<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-3 col-xs-4">
 					<div id="fh5co-logo">
-                       <?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
-						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:65%; height:auto" class="log" ></a> <?php }
-					 else {?>
-						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:65%; height:auto" class="log" ></a>
-					<?php } ?>
+						<?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
+ 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:55%; height:auto" class="log" ></a> <?php }
+ 					 else {?>
+ 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:55%; height:auto" class="log" ></a>
+ 					<?php } ?>
 
-					</div>
-				</div>
+ 					</div>
+ 				</div>
 
-				<div class="whatsapp col-xs-3" >
+ 				<div class="whatsapp col-xs-3" >
 
-				</div>
-				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
-					<ul>
-						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&&$_SERVER['REQUEST_URI']!='/salozone/') { ?>
-						<li class="has-dropdown">
-							<a style="font-family:'Zilla Slab',serif; color:#C70039;">Services</a>
+ 				</div>
+ 				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
+ 					<ul>
+ 						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&&$_SERVER['REQUEST_URI']!='/salozone/') { ?>
+ 						<li class="has-dropdown">
+							<a style="font-family: Open Sans, helvetica; color:#000000;">Services</a>
 							<ul class="dropdown">
 								<li><a href="single.php">Threading</a></li>
 								<li><a href="waxing.php">Waxing</a></li>
@@ -185,8 +205,8 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 								<li><a href="mehandi.php">Mehandi</a></li>
 							</ul>
 						</li> <?php } ?>
-						<li><a href="about.php" style="font-family:'Zilla Slab',serif;color:#C70039;">About Us</a></li>
-						<li><a href="contact.php" style="font-family:'Zilla Slab',serif;color:#C70039;">Contact Us</a></li>
+						<li><a href="about.php" style="font-family: helvetica, sans-serif; color:#000000;">About Us</a></li>
+						<li><a href="contact.php" style="font-family: helvetica, sans-serif; color:#000000;">Contact Us</a></li>
 						<div class="whatsapp">
 							<?php
 							if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) { ?>
