@@ -113,7 +113,7 @@ function save_to_bd(cart_id, new_quantity) {
 													
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][92])){?>
+												<?php if(!isset($_SESSION["qty"][92])  || $_SESSION["qty"][92] == 0){?>
 													<a href="#!" onclick="cart(92);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -157,7 +157,7 @@ function save_to_bd(cart_id, new_quantity) {
 													
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][102])){?>
+												<?php if(!isset($_SESSION["qty"][102])  || $_SESSION["qty"][102] == 0){?>
 													<a href="#!" onclick="cart(102);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -200,7 +200,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 4999</div>
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][93])){?>
+												<?php if(!isset($_SESSION["qty"][93])  || $_SESSION["qty"][93] == 0){?>
 													<a href="#!" onclick="cart(93);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -243,7 +243,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 7999</div>
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][108])){?>
+												<?php if(!isset($_SESSION["qty"][108])  || $_SESSION["qty"][108] == 0){?>
 													<a href="#!" onclick="cart(108);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -286,7 +286,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 3499</div>
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][107])){?>
+												<?php if(!isset($_SESSION["qty"][107])  || $_SESSION["qty"][107] == 0){?>
 													<a href="#!" onclick="cart(107);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -329,7 +329,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 2999</div>
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][103])){?>
+												<?php if(!isset($_SESSION["qty"][103])  || $_SESSION["qty"][103] == 0){?>
 													<a href="#!" onclick="cart(103);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -372,7 +372,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 799</div>
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][104])){?>
+												<?php if(!isset($_SESSION["qty"][104])  || $_SESSION["qty"][104] == 0){?>
 													<a href="#!" onclick="cart(104);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -415,7 +415,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 1999</div>
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][105])){?>
+												<?php if(!isset($_SESSION["qty"][105])  || $_SESSION["qty"][105] == 0){?>
 													<a href="#!" onclick="cart(105);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -458,7 +458,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 1999</div>
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][106])){?>
+												<?php if(!isset($_SESSION["qty"][106])  || $_SESSION["qty"][106] == 0){?>
 													<a href="#!" onclick="cart(106);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>

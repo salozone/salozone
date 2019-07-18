@@ -35,6 +35,65 @@ if(isset($_POST['do']) && $_POST['do'] == 'Register') {
 	}
 }
 
+if(isset($_POST['do']) && $_POST['do'] == 'Login') {
+	$uname = $_POST['uname'];
+	$pass= $_POST['pword'];
+	if(trim($uname) != '' &&  trim($pass) != ''){
+		$getList = mysqli_query($con, "SELECT * FROM `customer` WHERE `cust_email` = '".$uname."' and `cust_password` = '".$pass."'");
+		$getCount = mysqli_num_rows($getList);
+		if($getCount == 1 ) {
+				$getRow = mysqli_fetch_array($getList);
+				
+				$update = mysqli_query($con, "UPDATE `customer` SET `cust_logs` = '".$dateTime."' WHERE `cust_id` = '".$getRow['cust_id']."'");
+				setcookie("isLogin", 1, time()+60*60*24*100);
+				setcookie("username", $getRow['cust_id'], time()+60*60*24*100);
+
+
+				$userid = $getRow['cust_id'];
+				$getList = mysqli_query($con, "SELECT * FROM `cart` WHERE `user_id` = '".$userid."'");
+				$getListNum = mysqli_num_rows($getList);
+				if($getListNum > 0){
+				for($i = 0 ; $i < $getListNum ; $i++) {
+				$cart_fetch = mysqli_fetch_array($getList);
+				$item  = $cart_fetch['item'];
+				$price = $cart_fetch['price'];
+				$qty   = $cart_fetch['qty'];
+				$_SESSION["cart"][$item] = $item ;
+				$_SESSION["amounts"][$item] = $price;
+				$_SESSION["qty"][$item] = $qty;
+				$_SESSION["price"][$item] = $amounts[$item];
+				
+				}
+				
+				$sql = "DELETE FROM cart WHERE user_id='".$getRow['cust_id']."'";
+				$con->query($sql);
+				
+				$numbers = "";
+				$total = 0;
+				$noQty = 0;
+				$n = 1;
+				foreach ( $_SESSION["cart"] as $i ) {
+					$numbers.=$i.",";
+					$cate = $products[$_SESSION["cart"][$i]];
+					$total = $total + $_SESSION["amounts"][$i];
+					$noQty += $_SESSION["qty"][$i];
+					$n++;
+				}
+				$_SESSION["total"] = $total;
+				$_SESSION["noQty"] = $noQty;
+
+				}
+
+
+				header("Location:index.php?success=Login");
+		}else{
+			header("Location:login.php?success=2");
+		}
+	}else{
+		header("Location:login.php?success=1");
+	}
+}
+
 //Login Form
 if(isset($_POST['do']) && $_POST['do'] == 'sendOtp') {
 	$uname = $_SESSION['contact_no'];

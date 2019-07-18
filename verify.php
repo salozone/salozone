@@ -23,7 +23,7 @@ if(isset($_POST['do']) && $_POST['do'] == "verifyOtp") {
 			setcookie("isLogin", 1, time()+60*60*24*100);
             setcookie("username", $getRow['cust_id'], time()+60*60*24*100);
 		} else {
-			$insert = mysqli_query($con, "INSERT INTO `customer` SET `cust_name` = '".$fname."', `cust_email` = '".$email."', `cust_houseno` = '".$house_no."', `cust_locality` = '".$locality."', `cust_landmark` = '".$landmark."', `cust_message` = '".$message."', `cust_password` = '".$fname."', `cust_added` = '".date('Y-m-d H:i:s')."', `cust_mobile` = '".$contact_no."'");
+			$insert = mysqli_query($con, "INSERT INTO `customer` SET `cust_name` = '".$fname."', `cust_email` = '".$email."', `cust_houseno` = '".$house_no."', `cust_locality` = '".$locality."', `cust_landmark` = '".$landmark."', `cust_message` = '".$message."', `cust_added` = '".date('Y-m-d H:i:s')."', `cust_mobile` = '".$contact_no."'");
 			if($insert) {
 				$insertId = mysqli_insert_id();
 				$getList = mysqli_query($con, "SELECT * FROM `customer` WHERE `cust_mobile` = '".$contact_no."'");

@@ -112,7 +112,7 @@ function save_to_bd(cart_id, new_quantity) {
 													
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][94])){?>
+												<?php if(!isset($_SESSION["qty"][94])  || $_SESSION["qty"][94] == 0){?>
 													<a href="#!" onclick="cart(94);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>

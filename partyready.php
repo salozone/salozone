@@ -112,7 +112,7 @@ function save_to_bd(cart_id, new_quantity) {
 													
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][88])){?>
+												<?php if(!isset($_SESSION["qty"][88])  || $_SESSION["qty"][88] == 0){?>
 													<a href="#!" onclick="cart(88);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -154,7 +154,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 550</div>
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][89])){?>
+												<?php if(!isset($_SESSION["qty"][89])  || $_SESSION["qty"][89] == 0){?>
 													<a href="#!" onclick="cart(89);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -197,7 +197,7 @@ function save_to_bd(cart_id, new_quantity) {
 													
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][90])){?>
+												<?php if(!isset($_SESSION["qty"][90])  || $_SESSION["qty"][90] == 0){?>
 													<a href="#!" onclick="cart(90);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
@@ -239,7 +239,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 700</div>
 												</div>
 												<div><!-- php is used to check the qty and display appropriate html -->
-												<?php if(!isset($_SESSION["qty"][91])){?>
+												<?php if(!isset($_SESSION["qty"][91])  || $_SESSION["qty"][91] == 0){?>
 													<a href="#!" onclick="cart(91);">
 													<div class="_16cZZnX_tgIoQZPWgTijgv">
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>

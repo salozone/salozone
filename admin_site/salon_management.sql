@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 16, 2019 at 03:30 PM
+-- Generation Time: Jul 18, 2019 at 04:37 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -57,6 +57,7 @@ CREATE TABLE `cart` (
   `qty` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
 -- --------------------------------------------------------
 
 --
@@ -81,9 +82,6 @@ CREATE TABLE `customer` (
 
 --
 
--- --------------------------------------------------------
-
---
 -- Table structure for table `order_items`
 --
 
@@ -102,7 +100,10 @@ CREATE TABLE `order_items` (
   `order_qty` varchar(10) NOT NULL,
   `tot_qty` varchar(10) NOT NULL,
   `order_tot_amt` varchar(10) NOT NULL,
-  `delivery_amt` varchar(10) NOT NULL
+  `delivery_amt` varchar(10) NOT NULL,
+  `coupon_id` varchar(20) NOT NULL,
+  `coupon_amt` int(10) NOT NULL,
+  `datetime` datetime(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -178,19 +179,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `cart_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `products`

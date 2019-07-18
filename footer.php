@@ -14,7 +14,7 @@
 						<div class="col-md-6 col-sm-6">
 							<div class="form-group">
 								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
+								<input type="email" class="form-control"   placeholder="Email">
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-6">

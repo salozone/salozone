@@ -9,7 +9,7 @@ include("header.php");
  if ( !isset($_SESSION["total"]) ) {
    $_SESSION["total"] = 0;
    for ($i=0; $i< count($products); $i++) {
-    $_SESSION["qty"][$i] = 0;
+   $_SESSION["qty"][$i] = 0;
    $_SESSION["amounts"][$i] = 0;
    $_SESSION["price"][$i] = 0;
   }

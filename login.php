@@ -31,10 +31,33 @@ include('header.php');
 									</div>
 								</div>
 							</div>
-							<div align="center">
-							<input type="submit" name="login" value="Login" class="btn btn-primary btn-outline btn-lg " />
+							<div class ="text-center" >
+							<input type="submit" name="login" value="Send otp" class="btn btn-primary btn-outline btn-lg " />
 							</div>
 						</form>
+						<hr>
+						<h2 class="text-center">Or</h2>
+						<div class="col-md-12 animate-box">						
+						<form action="logininsert.php" method = "post" name="login_pass">
+						<input type="hidden" name="do" value="Login">
+							<div class="row form-group">
+								<div class="col-md-12">
+									<label for="message">Username:</label>
+									<input type="email" id="uname" name="uname" placeholder="Email Address" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="example@example.com" required="required" autocomplete="off" />
+									
+								</div>
+							</div>
+							<div class="row form-group">
+								<div class="col-md-12">
+									<label for="message">Password:</label>
+									<input type="password" id="pword" name="pword" placeholder="Password" class="form-control" pattern=".{6,}" maxlength="15" title="Input string should be either empty or between 6 - 15 characters" required="required"  />
+								</div>
+							</div>
+							<div class="text-center">
+							<input type="submit" name="login" value="Login" class="btn btn-primary btn-outline btn-lg" />
+							</div>						
+						</form>
+					</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-xs-12 animate-box">
