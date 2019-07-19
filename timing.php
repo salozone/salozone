@@ -98,7 +98,7 @@ $amounts = array("15", "25", "10","80","30","50","150","250","120","150","240","
 
 				$(function () {
 					$('#datetimepicker1').datetimepicker({
-	                viewMode: 'months',
+
 	                format: 'DD/MM/YYYY',
 
 	            });
@@ -107,9 +107,12 @@ $amounts = array("15", "25", "10","80","30","50","150","250","120","150","240","
 				$(function () {
 						$('#datetimepicker3').datetimepicker({
 								format: 'LT',
-								stepping : 30
+								stepping : 30,
+								disabledHours: [0, 1, 2, 3, 4, 5, 6, 7, 8, 21, 22, 23, 24],
+								enabledHours: [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
 						});
-				$('#datetimepicker3').data("DateTimePicker3").OPTION(stepping(20))
+
 				});
 		$(document).ready(function () {
 		    $("#dateValue").change(function () {
