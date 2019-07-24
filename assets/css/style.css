@@ -51,7 +51,7 @@ h3 { font-size: 22px; font-weight: 300; color: #555; line-height: 30px; font-sty
 		width: 33.3333%;
 		display: block;
 	}
-	 #maincards h2 {font-size:22px;}
+	 #maincards h2 {font-size:20px;}
 }
 
 @media screen and (max-width: 650px) {
@@ -59,7 +59,7 @@ h3 { font-size: 22px; font-weight: 300; color: #555; line-height: 30px; font-sty
 		width: 50%;
 		display: block;
 	}
-	 #maincards h2 {font-size:22px;}
+	 #maincards h2 {font-size:18px;}
 	 #maincards p{display: none;}
 }
 
@@ -68,6 +68,10 @@ h3 { font-size: 22px; font-weight: 300; color: #555; line-height: 30px; font-sty
 	border-radius: 0px 25px 25px 25px;
 	overflow: hidden;
 	text-decoration: none;
+}
+
+#maincards p{
+	display: none;
 }
 
 
@@ -112,9 +116,11 @@ h3 { font-size: 22px; font-weight: 300; color: #555; line-height: 30px; font-sty
 }
 
 .card h2{
+	margin-top: 0px;
+	font-size: 25px;
 	font-style: normal;
 	font-weight: bold;
-	text-align: left;
+	text-align: center;
 }
 
 .combo button{
