@@ -167,16 +167,16 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!--<div class="fh5co-loader"></div>-->
-	<div id="page" style="background:#100000">
+	
 	<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-3 col-xs-4">
 					<div id="fh5co-logo">
 						<?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
- 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:40%; height:auto" class="log" ></a> <?php }
+ 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:40%; height:auto;" class="log" ></a> <?php }
  					 else {?>
- 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:40%; height:auto" class="log" ></a>
+ 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:40%; height:auto;" class="log" ></a>
  					<?php } ?>
 
  					</div>
@@ -187,7 +187,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
  				</div>
  				<div class="col-md-5 col-xs-6 text-center menu-1 navicon mt-3">
  					<ul>
- 						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&&$_SERVER['REQUEST_URI']!='/salozone/') { ?>
+ 						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&& $_SERVER['REQUEST_URI']!='/salozone/') { ?>
  						<li class="has-dropdown">
 							<a style="font-family: Open Sans, helvetica; color:#000000;">Services</a>
 							<ul class="dropdown">
@@ -240,11 +240,13 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 			</div>
 		</div>
 	</nav>
+
 <?php
 //Define the products and cost
 $products = array("Eyebrow", "Eyebrow + Forehead", "Upper Lip", "Full Face", "UnderArm-HoneyBee", "UnderArm-Chocolate", "FullHand-HoneyBee", "FullHand-Chocolate", "HalfLegs-HoneyBee", "HalfLegs-Chocolate", "FullLegs-HoneyBee", "FullLegs-Chocolate", "FullHands+FullLegs-Honeybee", "FullHands+FullLegs-Chocolate", "FullHands+FullLegs+Underarms-Honeybee", "FullHands+FullLegs+Underarms-Chocolate", "FullFace-Honeybee", "FullFace-Chocolate", "UpperLip-Honeybee", "UpperLip-Chocolate", "FullBody-Honeybee", "FullBody-Chocolate", "FullBack(upper)-Honeybee", "FullBack(upper)-Chocolate", "Stomach-Honeybee", "Stomach-Chocolate", "Forehead-Honeybee", "Forehead-Chocolate", "Fruit-Face", "Fruit-Hand", "Anti Tan-Face", "Anti Tan-Hand", "VLCC-Face", "VLCC-Hand", "Lotus-Face", "Lotus-Hand", "Shehnaz-Face", "Shehnaz-Hand", "Whitening-Face", "Whitening-Hand", "Charcoal-Face", "Charcoal-Hand", "Gold-Face", "Gold-Hand", "Diamond-Face", "Diamond-Hand", "Pearl-Face", "Pearl-Hand" , "Gold", "Diamond", "Pearl", "Charcoal", "Shehnaaz Gold", "Fruit", "Whitening", "Anti Tan","Lotus", "VLCC", "Aroma", "Oxy-Face","Oxy-Hand","Oxy-Face+Hand","Diamond-Face","Diamond-Hand","Diamond-Face+Hand","Gold-Face","Gold-Hand","Gold-Face+Hand","Fem-Face", "Fem-Hand", "Fem-Face+Hand","Pedicure","Manicure","Straight","U","V","Layer- 2 Step","Layer- 3 Step", "Laser", "Feather", "Chinese Cut", "Princess Cut", "Blunt Cut", "Boy Cut", "Sadhna Cut", "Half Hair Curls", "Full Hair Curls", "Hair Style Designer", "Waxing(full hand + full legs + underarms)+Clean Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling", "Waxing(full hand + full legs + underarms)+Clean Up+Make Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling +Make Up","Light","Bridal","Dress Up","Simple","Bridal","Threading + Full Hand Waxing + Clean Up(Fruit)","Facial(Gold) + Pedicure + Manicure","Facial(Gold) + Pedicure","Bleach(Oxy) + Hair Style Designer + Pedicure","Threading + Full Waxing(Hands+Legs+Under Arms) + Clean Up(Fruit)" ,"Air Brush","Body Polishing","Bridal Facial","Engagement","Reception","Pre-Bridal","Bridal HD", "Hair Spa-LOreal","Hair Spa-Body care","Hair Massage");
 $amounts = array("15","25", "10","80","30","50","119","199","119","149","199","249","299","449","329","499","99","119","20","25","599","799","149","175","149","175","30","45","99","180","199","299","149","249","249","349","449","599","199","299","449","599","199","299","299", "399", "199", "299","499","649","499","649","1499","199","299","299", "499", "299", "499","99","199","299","119","259","379","99","199","349","75","149","199","199","149","30","50","100","100","120","100","100","100","100","50","50","50","149","199","149","450","550","600","700","199","4999","200","149","4999","250","650","620","420","420","399","2999","799","1999","1999","3499","7999","549","449","249");
 ?>
+	<div id="page" style="background:#100000;">
 <?php function footerCart() { ?>
 	<?php if ( isset($_SESSION["cart"]) ) { ?>
 		<div id="cartFooter" class="_1LETt-B9P8OaDZEUDWkA1R clearfix">
@@ -400,6 +402,7 @@ h3 {
 
 
 	<!-- Slider menu -->
+
 <div class="clearBoth">
 	<div class="container">
 		<div class="row">
@@ -556,6 +559,9 @@ h3 {
 		</div>
 	</div>
 </div>
+
+</div>
+
 	<!-- Slider menu -->
 <?php } ?>
 <!--Send Mail Function Start --->
