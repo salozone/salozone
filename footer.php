@@ -117,7 +117,11 @@
             });
 	}
 	</script>
-	
+
+	<script src="assets/js/wow.min.js"></script>
+	              <script>
+	              new WOW().init();
+	              </script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
