@@ -167,7 +167,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!--<div class="fh5co-loader"></div>-->
-	<div id="page" style="background-image: url(images/bac.jpg);background-size:100%">
+	<div id="page" style="background:#100000">
 	<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
 		<div class="container-fluid">
 			<div class="row">
