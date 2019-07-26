@@ -88,6 +88,7 @@ h3 { font-size: 22px; font-weight: 300; color: #555; line-height: 30px; font-sty
 .card p{
 	text-align: justify;
 	text-decoration: none;
+	font-size: 14px;
 }
 
 
@@ -101,8 +102,7 @@ h3 { font-size: 22px; font-weight: 300; color: #555; line-height: 30px; font-sty
 }
 
 .zoom img{
-	width: 100%;
-	min-height: 200px;
+	width: 200%;
 }
 
 .column:hover{
@@ -124,9 +124,8 @@ h3 { font-size: 22px; font-weight: 300; color: #555; line-height: 30px; font-sty
 }
 
 .combo button{
-			min-width:140px;
-			min-height:30px;
-			font-size: 20px;
+	font-size: 2vw;
+	width:45%;
 }
 
 .abtsal{
