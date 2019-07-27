@@ -361,7 +361,7 @@ function owlCarousel(){
 				items: $(this).attr("data-desktop"),
 				loop: true,
 				mouseDrag: true,
-				navigation: true,
+
 				dots: false,
 				pagination: false,
 				autoPlay: autoplay,
@@ -369,7 +369,7 @@ function owlCarousel(){
 				autoplayHoverPause: true,
 				smartSpeed: 1000,
 				autoplayHoverPause: true,
-				itemsDesktop: [1199, $(this).attr("data-desktop")],
+				itemsDesktop: [1199, $(this).attr("data-deskto")],
 				itemsDesktopSmall: [979, $(this).attr("data-laptop")],
 				itemsTablet: [768, $(this).attr("data-tablet")],
 				itemsMobile: [479, $(this).attr("data-mobile")]

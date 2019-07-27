@@ -17,7 +17,7 @@ function increment_quantity(cart_id) {
 
 function decrement_quantity(cart_id) {
     var inputQuantityElement = document.getElementById("click").innerHTML ;
-    if(inputQuantityElement > 1) 
+    if(inputQuantityElement > 1)
     {
     var newQuantity = parseInt(inputQuantityElement) - 1;
 		//document.getElementById("input-quantity-"+cart_id).value = newQuantity;
@@ -64,7 +64,7 @@ function save_to_bd(cart_id, new_quantity) {
 		}
 	});
 }
-</script>	
+</script>
 		<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(withouttext/threading1.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
@@ -73,7 +73,7 @@ function save_to_bd(cart_id, new_quantity) {
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
 								<h1>Threading</h1>
-								
+
 							</div>
 						</div>
 					</div>
@@ -86,7 +86,7 @@ function save_to_bd(cart_id, new_quantity) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 animate-box">
-					
+
 					<div class="row animate-box">
 						<div class="col-md-12 text-center fh5co-heading">
 							<h2>Services</h2>
@@ -107,7 +107,7 @@ function save_to_bd(cart_id, new_quantity) {
 											<div class="_1uGiX5DrQ7U17G8-N73t9E"><div class="_3SZyCgc61sD1kpi28Hif22 k6o2mAfYFzlWUusv_7kvE">₹ 20</div>
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
 													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 15</div>
-													
+
 												</div>
 												<div>
 												<!-- php is used to check the qty and display appropriate html -->
@@ -119,7 +119,7 @@ function save_to_bd(cart_id, new_quantity) {
 													</div>
 													</a>
 												<?php }else { ?>
-												
+
 													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
 														<div class="_7as_2mMKYqXZrgetll6K1">
 														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
@@ -133,7 +133,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<?php } ?>
 												</div>
 											</div>
-											
+
 										</div>
 									</div>
 								</li>
@@ -162,7 +162,7 @@ function save_to_bd(cart_id, new_quantity) {
 													</div>
 												</a>
 												<?php }else { ?>
-												
+
 													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
 														<div class="_7as_2mMKYqXZrgetll6K1">
 														<span class="_2JNlxwVH0JA0AJjntj75LL" onclick="
@@ -203,7 +203,7 @@ function save_to_bd(cart_id, new_quantity) {
 														<span class="_7as_2mMKYqXZrgetll6K1" style="margin-bottom:0px;">Add</span>
 														<span class="_2JNlxwVH0JA0AJjntj75LL" style="margin-bottom:0px;">+</span>
 													</div>
-												</a>												
+												</a>
 												<?php }else { ?>
 
 													<div class="_16cZZnX_tgIoQZPWgTijgv" id="show">
@@ -273,5 +273,5 @@ function save_to_bd(cart_id, new_quantity) {
 			</div>
 		</div>
 	</div>
-<?php footerCart(); ?>	
+<?php footerCart(); ?>
 <?php include('footer.php'); ?>

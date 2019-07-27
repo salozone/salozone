@@ -47,26 +47,26 @@
 
           <div class="container combo">
           <div class="row mt-5">
-            <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
-            <div class="card center" style="border-radius: 0px;">
+
+            <div class="card center" style="border-radius: 0px;width:30%;margin:1%;margin-left:3%;">
               <div class="card-body">
               <p class="card-text text-center" style="margin-top:15px; color: #000000;">OFFERS<br> (Promo)</p>
               <a href="offers.php"><button type="button" class="btn btn-success">View</button></a>
+
               </div>
             </div>
-            </div>
 
-            <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
-            <div class="card center" style="border-radius: 0px;">
+
+            <div class="card center" style="border-radius: 0px;width:30%;margin:1%">
               <div class="card-body">
               <p class="card-text text-center" style="margin-top:15px;color: #000000;">EXCLUSIVE<br> COMBOS<br></p>
               <a href="combos.php"><button type="button" class="btn btn-success">View</button></a>
               </div>
             </div>
-            </div>
 
-            <div class="col-xs-4 col-sm-4 mb-3 mb-md-0">
-            <div class="card center" style="border-radius: 0px;">
+
+
+            <div class="card center" style="border-radius: 0px;width:30%;margin:1%">
               <div class="card-body">
               <p class="card-text text-center" style="margin-top:15px;color: #000000;">SPECIAL<br> DEALS<br></p>
               <a href="deals.php"><button type="button" class="btn btn-success">View</button></a>
@@ -74,7 +74,7 @@
             </div>
             </div>
           </div>
-        </div>
+
           <div class="row mt-5">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
               <h4 style="font-size:20px;">Please Choose your Service(s)..</h4>
@@ -84,185 +84,194 @@
 
 
           <div class="container mb-5" id="maincards">
-            <div class="row">
-              <a href="dressup.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                      <img src="withouttext/makeup1.jpg" alt="Makeup">
+
+              <div class="row">
+
+                <a href="single.php" class="text-decoration-none text-reset">
+                <div class="column">
+                  <div class="card">
+                    <div class="zoom">
+                      <img src="withouttext/threading1.jpg" alt="Threading">
+                    </div>
+                    <div class="container mt-3">
+                      <h2>Threading</h2>
+                      <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                    </div>
                   </div>
-                  <div class="container mt-3">
-                    <h2>Makeup</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
+                </a>
                 </div>
-              </a>
+
+                <a href="waxing.php" class="text-decoration-none text-reset">
+                <div class="column">
+                  <div class="card">
+                    <div class="zoom">
+                      <img src="withouttext/waxing1.jpg" alt="Waxing">
+                    </div>
+                    <div class="container mt-3">
+                      <h2>Waxing</h2>
+                      <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
+
+               <a href="cleanup.php" class="text-decoration-none text-reset">
+                <div class="column">
+                  <div class="card">
+                    <div class="zoom">
+                      <img src="withouttext/cleanup1.jpg" alt="CleanUp">
+                    </div>
+                    <div class="container mt-3">
+                      <h2>Clean Up</h2>
+                      <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
+
+                <a href="facial.php" class="text-decoration-none text-reset">
+                <div class="column">
+                  <div class="card">
+                    <div class="zoom">
+                      <img src="withouttext/facial1.jpg" alt="Facial">
+                    </div>
+                    <div class="container mt-3">
+                      <h2>Facial</h2>
+                      <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
+              </div>
+
+              <div class="row">
+
+                <a href="bleaching.php" class="text-decoration-none text-reset">
+                  <div class="column">
+                    <div class="card">
+                      <div class="zoom">
+                        <img src="withouttext/bleach1.jpg" alt="Bleach">
+                      </div>
+                      <div class="container mt-3">
+                        <h2>Bleach</h2>
+                        <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                      </div>
+                    </div>
+                  </a>
+                  </div>
+
+                <a href="pedicure.php" class="text-decoration-none text-reset">
+                  <div class="column">
+                    <div class="card">
+                      <div class="zoom">
+                      <img src="withouttext/manicure1.jpg" alt="Manicure">
+                      </div>
+                      <div class="container mt-3">
+                        <h2>Manicure</h2>
+                        <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                      </div>
+                    </div>
+                  </a>
+                  </div>
+
+                <a href="haricut.php" class="text-decoration-none text-reset">
+                <div class="column">
+                  <div class="card">
+                    <div class="zoom">
+                      <img src="withouttext/haircut1.jpg" alt="Haircut">
+                    </div>
+                    <div class="container mt-3">
+                      <h2>Haircut</h2>
+                      <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
+
+              <a href="hairstyling.php" class="text-decoration-none text-reset">
+                <div class="column">
+                  <div class="card">
+                    <div class="zoom">
+                      <img src="withouttext/hairstyle1.jpg" alt="Hair Care">
+                    </div>
+                    <div class="container mt-3">
+                      <h2>Hair Care</h2>
+                      <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
               </div>
 
 
-              <a href="haricut.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                    <img src="withouttext/haircut1.jpg" alt="Haircut" style="width:100%;min-height:200px">
+              <div class="row">
+
+                <a href="partyready.php" class="text-decoration-none text-reset">
+                  <div class="column">
+                    <div class="card">
+                      <div class="zoom">
+                        <img src="withouttext/partyready1.jpg" alt="Party Ready">
+                      </div>
+                      <div class="container mt-3">
+                        <h2>Party Ready</h2>
+                        <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                      </div>
+                    </div>
+                  </a>
                   </div>
-                  <div class="container mt-3">
-                    <h2>Haircut</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+
+
+                <a href="makeup.php" class="text-decoration-none text-reset">
+                <div class="column">
+                  <div class="card">
+                    <div class="zoom">
+                      <img src="withouttext/bridal12.jpg" alt="Bridal">
+                    </div>
+                    <div class="container mt-3">
+                      <h2>Bridal</h2>
+                      <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                    </div>
                   </div>
+                </a>
                 </div>
-              </a>
+
+                <a href="dressup.php" class="text-decoration-none text-reset">
+                <div class="column">
+                  <div class="card">
+                    <div class="zoom">
+                        <img src="withouttext/makeup1.jpg" alt="Makeup">
+                    </div>
+                    <div class="container mt-3">
+                      <h2>Makeup</h2>
+                      <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
+
+
+                <a href="mehandi.php" class="text-decoration-none text-reset">
+                <div class="column">
+                  <div class="card">
+                    <div class="zoom">
+                    <img src="withouttext/Mehendi1.jpg" alt="Mehendi">
+                    </div>
+                    <div class="container mt-3">
+                      <h2>Mehendi</h2>
+                      <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
               </div>
 
-            <a href="hairstyling.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                    <img src="withouttext/hairstyle1.jpg" alt="Hair Care" style="width:100%;min-height:200px">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Hair Care</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-
-            <a href="pedicure.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                  <img src="withouttext/manicure1.jpg" alt="Manicure">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Manicure</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-
-              <a href="mehandi.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                  <img src="withouttext/Mehendi1.jpg" alt="Mehendi">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Mehendi</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-
-
-              <a href="waxing.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                    <img src="withouttext/waxing1.jpg" alt="Waxing">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Waxing</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-
-              <a href="single.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                    <img src="withouttext/threading1.jpg" alt="Threading">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Threading</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-
-             <a href="cleanup.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                    <img src="withouttext/cleanup1.jpg" alt="CleanUp">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Clean Up</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-
-
-              <a href="facial.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                    <img src="withouttext/facial1.jpg" alt="Facial">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Facial</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-
-            <a href="bleaching.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                    <img src="withouttext/bleach1.jpg" alt="Bleach" style="width:100%;min-height:200px">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Bleach</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-
-
-            <a href="partyready.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                    <img src="withouttext/partyready1.jpg" alt="Party Ready" style="width:100%;min-height:200px">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Party Ready</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-
-              <a href="makeup.php" class="text-decoration-none text-reset">
-              <div class="column">
-                <div class="card">
-                  <div class="zoom">
-                    <img src="withouttext/bridal12.jpg" alt="Bridal" style="width:100%;min-height:200px">
-                  </div>
-                  <div class="container mt-3">
-                    <h2>Bridal</h2>
-                    <p>Some interesting and attractive text describing the above service in a very attractive manner. We can also include price and more info about the service</p>
-                  </div>
-                </div>
-              </a>
-              </div>
-            </div>
           </div>
+        </div>
 
 
 
 
-      <div id="fh5co-services" class="abtsal mt-5 fh5co-bg-section">
+      <div id="fh5co-services" class="abtsal fh5co-bg-section">
         <div class="container">
         <div class="col-md-4 section-1-box wow fadeInUp">
           <div class="row">

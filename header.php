@@ -41,7 +41,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
 
-	<!-- Owl Carousel  -->
+	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
@@ -167,7 +167,9 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!--<div class="fh5co-loader"></div>-->
-	
+
+	<div id="page" style="background:#100000">
+
 	<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
 		<div class="container-fluid">
 			<div class="row">
@@ -560,7 +562,18 @@ h3 {
 	</div>
 </div>
 
-</div>
+
+<script>
+$(document).ready(function() {
+
+$(".product-carousel").owlCarousel({
+
+navigation : false,
+
+});
+
+});
+</script>
 
 	<!-- Slider menu -->
 <?php } ?>
