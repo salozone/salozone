@@ -146,7 +146,7 @@
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 3,
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     swipeToSlide: true,
     pauseOnHover:false,
     autoplay: true,
@@ -159,7 +159,7 @@
           arrows: false,
           centerMode: false,
           centerPadding: '40px',
-          slidesToShow: 2,
+          slidesToShow: 1,
           pauseOnHover:false,
             swipeToSlide: true,
         }
@@ -167,7 +167,7 @@
       {
         breakpoint: 480,
         settings: {
-          swipeToSlide: true,
+          swipeToSlide: false,
           arrows: false,
           centerMode: true,
           centerPadding: '40px',
