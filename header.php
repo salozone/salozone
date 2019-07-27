@@ -41,7 +41,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
 
-	<!-- Owl Carousel -->
+	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
@@ -76,6 +76,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<!-- Google Fonts ends here-->
 	<style type="text/css">
 
+		#page::-webkit-scrollbar { width: 0 !important }
 
 		.background-wrap {
 			position: fixed;
@@ -167,18 +168,16 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!--<div class="fh5co-loader"></div>-->
-
-	<div id="page" style="background:#100000">
-
+<div id="page">
 	<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-3 col-xs-4">
 					<div id="fh5co-logo">
 						<?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
- 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:40%; height:auto;" class="log" ></a> <?php }
+ 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a> <?php }
  					 else {?>
- 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:40%; height:auto;" class="log" ></a>
+ 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a>
  					<?php } ?>
 
  					</div>
@@ -187,7 +186,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
  				<div class="whatsapp col-xs-3" >
 
  				</div>
- 				<div class="col-md-5 col-xs-6 text-center menu-1 navicon mt-3">
+ 				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
  					<ul>
  						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&& $_SERVER['REQUEST_URI']!='/salozone/') { ?>
  						<li class="has-dropdown">
@@ -227,7 +226,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 						</div>
 					</ul>
 				</div>
-				<div class="col-md-4 col-xs-8 navicon mt-0">
+				<div class="col-md-4 col-xs-8 navicon">
 					<ul>
 						<li class="shopping-cart"><a href="tel:8925070790" title="Book Through" class="cart"><span><img src="images/call3.png" width="30" height="30"/></span></a></li>
 						<li class="shopping-cart"><a href="https://api.whatsapp.com/send?phone=918925070790" title="Whatsapp" class="cart"><span><img src="images/whatsapp.png" width="50" height="50"/></span></a></li>
@@ -562,18 +561,8 @@ h3 {
 	</div>
 </div>
 
-
-<script>
-$(document).ready(function() {
-
-$(".product-carousel").owlCarousel({
-
-navigation : false,
-
-});
-
-});
-</script>
+</div>
+</div>
 
 	<!-- Slider menu -->
 <?php } ?>

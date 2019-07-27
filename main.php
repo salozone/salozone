@@ -329,44 +329,44 @@
           <div class="row">
             <div class="col-md-12">
               <div class="col-md-12">
-                <div class="owl-carousel owl-carousel-fullwidth">
+                <div class="owl-carousel1">
                   <div class="item">
-                    <div class="testimony-slide active text-center">
+                    <div class=" active text-center">
                       <span style = "color:black" >Saumya, via <a href="#" class="twitter">Twitter</a></span>
                       <blockquote>
-                        <p style = "color:black" >&ldquo;Very pocket-friendly , now we don’t have to think several times before getting a proper professional make over.&rdquo;</p>
+                        <p style = "color:black;" class="text-center" >&ldquo;Very pocket-friendly , now we don’t have to think several times before getting a proper professional make over.&rdquo;</p>
                       </blockquote>
                     </div>
                   </div>
                   <div class="item">
-                    <div class="testimony-slide active text-center">
+                    <div class=" active text-center">
                       <span style = "color:black" >Shubhi, via <a href="#" class="twitter">Twitter</a></span>
                       <blockquote>
-                        <p style = "color:black" > &ldquo;Getting our local familiar salon service providers at our home serving us with added care and humbleness is great and very relieving.&rdquo;</p>
+                        <p style = "color:black" class="text-center" > &ldquo;Getting our local familiar salon service providers at our home serving us with added care and humbleness is great and very relieving.&rdquo;</p>
                       </blockquote>
                     </div>
                   </div>
                   <div class="item">
-                    <div class="testimony-slide active text-center">
+                    <div class=" active text-center">
                       <span style = "color:black" >Radhika, via <a href="#" class="twitter">Twitter</a></span>
                       <blockquote>
-                        <p style = "color:black" >&ldquo;Very useful for college students like us who don’t have time to visit salons and then wait in a long queue.&rdquo;</p>
+                        <p style = "color:black" class="text-center">&ldquo;Very useful for college students like us who don’t have time to visit salons and then wait in a long queue.&rdquo;</p>
                       </blockquote>
                     </div>
                   </div>
                   <div class="item">
-                    <div class="testimony-slide active text-center">
+                    <div class=" active text-center">
                       <span style = "color:black" >Smita, via <a href="#" class="twitter">WhatsApp</a></span>
                       <blockquote>
-                        <p style = "color:black" >&ldquo;Massage and Facial service at home was very relaxing and really cheap.&rdquo;</p>
+                        <p style = "color:black" class="text-center" >&ldquo;Massage and Facial service at home was very relaxing and really cheap.&rdquo;</p>
                       </blockquote>
                     </div>
                   </div>
                   <div class="item">
-                    <div class="testimony-slide active text-center">
+                    <div class=" active text-center">
                       <span style = "color:black" >Puja, via <a href="#" class="twitter">Instagram</a></span>
                       <blockquote>
-                        <p style = "color:black" >&ldquo;Salon service at home is a treat for Patna. Salon at home was really required in Patna&rdquo;</p>
+                        <p style = "color:black" class="text-center" >&ldquo;Salon service at home is a treat for Patna. Salon at home was really required in Patna&rdquo;</p>
                       </blockquote>
                     </div>
                   </div>
@@ -376,6 +376,18 @@
           </div>
         </div>
       </div>
+
+      <script>
+  $('.owl-carousel1').slick({
+    autoplay:true,
+    loop:true,
+    responsiveClass:true,
+    dots: true,
+    autoplaySpeed: 2000,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+})
+      </script>
 
     <?php include('footer.php'); ?>
   </body>
