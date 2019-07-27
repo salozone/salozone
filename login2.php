@@ -33,8 +33,13 @@ if(isset($_POST['do']) && $_POST['do'] == 'Login') {
 		
 		$_SESSION['login_otp'] = $otp;
 		$_SESSION['contact_no'] = $contact_no;
-	
-		header("Location:login_check.php");
+		
+		if(isset($_POST['member']) && $_POST['member'] == '1') { 
+			header("Location:login_check.php?member=1");
+			 }else{ 
+				header("Location:login_check.php");
+			 } 
+		
 	} else {
 		header("Location:login.php?success=2");
 	}

@@ -18,9 +18,7 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 function getCallbackUrl()
 {
 	$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-	#return $protocol . $_SERVER['HTTP_HOST'] ;
-	// return $protocol . $_SERVER['HTTP_HOST'] . '/'. 'response2.php';
-	return $protocol . 'localhost/salozone/response2.php';
+	return $protocol . $_SERVER['HTTP_HOST'] . '/salozone/response2.php';
 }
 
 ?>
