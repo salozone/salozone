@@ -30,7 +30,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<meta name="author" content="AugWorld" />
 	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
-	<link rel="icon" href="withouttext/logobw1.png">
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -116,35 +116,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 
 
 	</style>
-</head>
-
-<body>
-<style>
-@media screen and (min-width: 768px) {
-	.whatsapp { display:none; }
-}
-@media screen and (max-width: 768px) {
-	.loginIcon { display:none !important; }
-}
-@media only screen and (max-width: 990px) and (min-width: 767px)  {
-	.menu-1 { width:63%;margin-top:10px !important; }
-	.navicon { margin-top:6px !important; }
-	.log { margin-top:5px; }
-}
-@media screen and (max-width: 400px) {
-	.navicon { margin-top:8px !important; padding: 0px !important; }
-	.fh5co-nav ul li a { padding: 0px !important; }
-	.fh5co-nav a { padding: 0px !important; }
-	.fh5co-nav-toggle { margin-top:20px !important; }
-	.product .product-grid { height: 150px !important; }
-}
-.navicon { margin-top: 20px; }
-.menu-1 { margin-top:30px; }
-</style>
-	</head>
-
-	<body>
-<style>
+	<style>
 	@media screen and (min-width: 768px) {
 		.whatsapp { display:none; }
 	}
@@ -165,33 +137,74 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	}
 	.navicon { margin-top: 20px; }
 	.menu-1 { margin-top:30px; }
-</style>
+	</style>
+		</head>
+
+		<body>
+	<style>
+		@media screen and (min-width: 768px) {
+			.whatsapp { display:none; }
+		}
+		@media screen and (max-width: 768px) {
+			.loginIcon { display:none !important; }
+		}
+		@media only screen and (max-width: 990px) and (min-width: 767px)  {
+			.menu-1 { width:63%;margin-top:10px !important; }
+			.navicon { margin-top:6px !important; }
+			.log { margin-top:5px; }
+		}
+		@media screen and (max-width: 400px) {
+			.navicon { margin-top:8px !important; padding: 0px !important; }
+			.fh5co-nav ul li a { padding: 0px !important; }
+			.fh5co-nav a { padding: 0px !important; }
+			.fh5co-nav-toggle { margin-top:20px !important; }
+			.product .product-grid { height: 150px !important; }
+		}
+		.navicon { margin-top: 20px; }
+		.menu-1 { margin-top:30px; }
+	</style>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!--<div class="fh5co-loader"></div>-->
 <div id="page">
-	<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
+<style type="text/css">
+@media screen and (max-width: 650px) {
+		.fh5co-nav a{
+			font-size: 14px!important;
+		}
+		.log{
+			width:130px!important;
+			height:40px!important;
+		}
+		.remove{
+			display: none!important;
+		}
+		.cont{
+			display: none!important;
+		}
+		.fh5co-nav img{
+			max-width: 60%!important;
+			height: auto;
+		}
+}
+</style>
+
+
+<nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-3 col-xs-4">
-					<div id="fh5co-logo">
-						<?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
- 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a> <?php }
- 					 else {?>
- 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a>
- 					<?php } ?>
+					<ul class="mb-0">
+						<li class="float-left">
+								<?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
+		 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a> <?php }
+		 					 else {?>
+		 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a>
+		 					<?php } ?>
 
- 					</div>
- 				</div>
-
- 				<div class="whatsapp col-xs-3" >
-
- 				</div>
- 				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
- 					<ul>
- 						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&& $_SERVER['REQUEST_URI']!='/salozone/') { ?>
- 						<li class="has-dropdown">
+						</li>
+						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&& $_SERVER['REQUEST_URI']!='/salozone/') { ?>
+						<li class="has-dropdown remove">
 							<a style="font-family: Open Sans, helvetica; color:#000000;">Services</a>
-							<ul class="dropdown">
+							<ul class="dropdown" class="nav-link">
 								<li><a href="single.php">Threading</a></li>
 								<li><a href="waxing.php">Waxing</a></li>
 								<li><a href="cleanup.php">Cleanup</a></li>
@@ -206,41 +219,45 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 								<li><a href="mehandi.php">Mehandi</a></li>
 							</ul>
 						</li> <?php } ?>
-						<li><a href="about.php" style="font-family: helvetica, sans-serif; color:#000000;">About Us</a></li>
-						<li><a href="contact.php" style="font-family: helvetica, sans-serif; color:#000000;">Contact Us</a></li>
-						<div class="whatsapp">
-							<?php
-							if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) { ?>
-								<li><a href="#">Hello <?php echo $userName; ?></a></li>
-								<li><a href="mybookings.php">My Bookings</a></li>
-								<li><a href="logout.php" >Log Out</a></li>
-							<?php } else { ?>
-								<li><a href="login.php">Login/ Sign Up</a></li>
-							<?php } ?>
-							<li><a href="https://salozone.blogspot.com/" target="_blank">Blog</a></li>
-							<li><a href="feedback.php">Feedback</a></li>
-							<li><a href="complaints.php">Any complaints or Special Requests?</a></li>
-							<li><a href="terms.php">Terms of Use</a></li>
-							<li><a href="privacy.php">Privacy Policy</a></li>
-							<li><a href="join.php">Join as as professional</a></li>
-						</div>
-					</ul>
-				</div>
-				<div class="col-md-4 col-xs-8 navicon">
-					<ul>
-						<li class="shopping-cart"><a href="tel:8925070790" title="Book Through" class="cart"><span><img src="images/call3.png" width="30" height="30"/></span></a></li>
+						<li class="remove"><a href="about.php" style="font-family: helvetica, sans-serif; color:#000000;" >About Us</a></li>
+						<li class="remove"><a href="contact.php" style="font-family: helvetica, sans-serif; color:#000000;">Contact Us</a></li>
+						<li class="shopping-cart"><a href="tel:8925070790" title="Book Through"><span><img src="images/call3.png" width="30" height="30"/></span></a></li>
 						<li class="shopping-cart"><a href="https://api.whatsapp.com/send?phone=918925070790" title="Whatsapp" class="cart"><span><img src="images/whatsapp.png" width="50" height="50"/></span></a></li>
-						<li class="shopping-cart"><a href="checkout.php" title="Cart" class="cart"><span><img src="images/cart.png" width="50" height="45"/></span></a></li>
+						<li class="shopping-cart"><a href="checkout.php" title="Cart" ><span><img src="images/cart.png" width="50" height="45"/></span></a></li>
 						<?php if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) { ?>
-						<li class="shopping-cart loginIcon"><a href="logout.php" title="logout" class="cart"><span><img src="images/login1.png" width="40" height="40"/></span></a></li>
+						<li class="shopping-cart loginIcon"><a href="logout.php" title="logout" ><span><img src="images/login1.png" width="40" height="40"/></span></a></li>
 						<?php } else { ?>
 						<li class="shopping-cart loginIcon"><a href="login.php" title="Login" class="cart"><span><img src="images/login.png" width="30" height="30"/></span></a></li>
 						<?php } ?>
+						<li>
+											<span class="col-md-5 col-xs-6 text-center menu-1 navicon">
+							 					<ul>
+													<span class="whatsapp">
+														<?php
+														if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) { ?>
+															<li><a href="#">Hello <?php echo $userName; ?></a></li>
+															<li><a href="mybookings.php">My Bookings</a></li>
+															<li><a href="logout.php" >Log Out</a></li>
+														<?php } else { ?>
+															<li><a href="login.php">Login/ Sign Up</a></li>
+														<?php } ?>
+														<li><a href="https://salozone.blogspot.com/" target="_blank">Blog</a></li>
+														<li><a href="feedback.php">Feedback</a></li>
+														<li><a href="complaints.php">Any complaints or Special Requests?</a></li>
+														<li><a href="terms.php">Terms of Use</a></li>
+														<li><a href="privacy.php">Privacy Policy</a></li>
+														<li><a href="join.php">Join as as professional</a></li>
+													</span>
+												</ul>
+									</span>
+						</li>
 					</ul>
-				</div>
-			</div>
-		</div>
 	</nav>
+
+
+
+
+
 
 <?php
 //Define the products and cost
@@ -296,6 +313,7 @@ $amounts = array("15","25", "10","80","30","50","119","199","119","149","199","2
 					<span class="_3CdNMpKO9QvNBUY7iKuiu-"><span><i class="icon-long-arrow-right"></i></span></span></a>
 				</div>
 			</div>
+		</div>
 		</div>
 	<?php } ?>
 
@@ -562,7 +580,7 @@ h3 {
 </div>
 
 </div>
-</div>
+
 
 	<!-- Slider menu -->
 <?php } ?>

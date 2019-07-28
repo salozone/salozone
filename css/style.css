@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: white;
-  
+
   background: #100000;
 }
 
@@ -49,14 +49,14 @@ body {
 
 a {
   color: #d1c286;
-  
+
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
   color: #d1c286;
-  
+
   outline: none;
   text-decoration: none;
 }
@@ -68,7 +68,7 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: white;
-  
+
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
@@ -76,9 +76,9 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  
+
   background: #d1c286
-  
+
 }
 
 ::-moz-selection {
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .fh5co-nav #fh5co-logo {
-  font-size: 20px;
+  font-size: 0px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -207,9 +207,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-nav ul li a.cart {
   color: black;
 }
-.fh5co-nav ul li a.cart span {
-  position: relative;
-}
+
 .fh5co-nav ul li a.cart span small {
   position: absolute;
   top: -20px;
