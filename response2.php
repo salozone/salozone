@@ -1,13 +1,12 @@
 <?php
-#response.php
 include('header.php');
 $postdata = $_POST;
 $msg = '';
 $status = '';
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
-	// $salt				=   $postdata['salt'];
-	$salt				=   "fuOTFzjTgU";
+	$salt				=   $postdata['salt'];
+	// $salt				=   "fuOTFzjTgU";
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
@@ -39,7 +38,6 @@ if (isset($postdata ['key'])) {
 }
 else exit(0);
 ?>
-<?php  ?>
 <link rel="stylesheet" href="css/qaModalChunk-0c3d9f415163febe1e74.css">
 <div id="fh5co-contact">
 	<div class="container">

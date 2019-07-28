@@ -107,7 +107,7 @@ function save_to_bd(cart_id, new_quantity) {
 											</div>
 											<div class="_1uGiX5DrQ7U17G8-N73t9E"><div class="_3SZyCgc61sD1kpi28Hif22 k6o2mAfYFzlWUusv_7kvE">₹ 300</div>
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
-													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 199</div>
+													<div class="k6o2mAfYFzlWUusv_7kvE">₹ <?php echo $amounts[71] ?></div>
 													
 												</div>
 												<div>
@@ -150,7 +150,7 @@ function save_to_bd(cart_id, new_quantity) {
 											</div>
 											<div class="_1uGiX5DrQ7U17G8-N73t9E"><div class="_3SZyCgc61sD1kpi28Hif22 k6o2mAfYFzlWUusv_7kvE">₹ 299</div>
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
-													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 149</div>
+													<div class="k6o2mAfYFzlWUusv_7kvE">₹ <?php echo $amounts[72] ?></div>
 												</div>
 												<div>
 												<?php if(!isset($_SESSION["qty"][72])  || $_SESSION["qty"][72] == 0){?>

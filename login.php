@@ -16,12 +16,20 @@ include('header.php');
 							echo "<p class='text-danger'>Please filled all the details...</p>";
 						}
 						if(isset($_GET['success']) && $_GET['success'] == '2') {
-							echo "<p class='text-danger'>Invalid Login Data...";
+							echo "<p class='text-danger'>Invalid Login Data...</p>";
 						}
-						
+						if(isset($_GET['member']) && $_GET['member'] == '1') {
+							echo "<p class='text-danger'>Login or register to continue...</p>";
+						}
 						?>
 						<form action="login2.php" id="login_form" name="login_form" method="POST" >
 							<input type="hidden" name="do" value="Login">
+							<?php 
+						if(isset($_GET['member']) && $_GET['member'] == '1') { ?>
+							<input type="hidden" name="member" value="1">
+							<?php }else{ ?>
+							<input type="hidden" name="member" value="0">
+							<?php } ?>
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label for="message">Enter Your Mobile No:</label>
@@ -40,6 +48,12 @@ include('header.php');
 						<div class="col-md-12 animate-box">						
 						<form action="logininsert.php" method = "post" name="login_pass">
 						<input type="hidden" name="do" value="Login">
+						<?php 
+						if(isset($_GET['member']) && $_GET['member'] == '1') { ?>
+							<input type="hidden" name="member" value="1">
+							<?php }else{ ?>
+							<input type="hidden" name="member" value="0">
+							<?php } ?>
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label for="message">Username:</label>

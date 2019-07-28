@@ -35,6 +35,7 @@ if(isset($_POST['do']) && $_POST['do'] == 'Register') {
 	}
 }
 
+//login with uname and pass
 if(isset($_POST['do']) && $_POST['do'] == 'Login') {
 	$uname = $_POST['uname'];
 	$pass= $_POST['pword'];
@@ -47,7 +48,7 @@ if(isset($_POST['do']) && $_POST['do'] == 'Login') {
 				$update = mysqli_query($con, "UPDATE `customer` SET `cust_logs` = '".$dateTime."' WHERE `cust_id` = '".$getRow['cust_id']."'");
 				setcookie("isLogin", 1, time()+60*60*24*100);
 				setcookie("username", $getRow['cust_id'], time()+60*60*24*100);
-
+				setcookie("member", $getRow['member'], time()+60*60*24*100, '/');
 
 				$userid = $getRow['cust_id'];
 				$getList = mysqli_query($con, "SELECT * FROM `cart` WHERE `user_id` = '".$userid."'");
@@ -85,7 +86,11 @@ if(isset($_POST['do']) && $_POST['do'] == 'Login') {
 				}
 
 
-				header("Location:index.php?success=Login");
+				if((isset($_POST['member']) && $_POST['member'] == 0) || $getRow['member'] == 1) 	{
+					header("Location:index.php?success=Login");
+					}elseif($_POST['member'] == 1){
+						header("Location:member.php");
+					}
 		}else{
 			header("Location:login.php?success=2");
 		}
@@ -109,6 +114,7 @@ if(isset($_POST['do']) && $_POST['do'] == 'sendOtp') {
 				unset($_SESSION['login_otp']);
 				setcookie("isLogin", 1, time()+60*60*24*100);
 				setcookie("username", $getRow['cust_id'], time()+60*60*24*100);
+				setcookie("member", $getRow['member'], time()+60*60*24*100, '/');
 
 				$userid = $getRow['cust_id'];
 				$getList = mysqli_query($con, "SELECT * FROM `cart` WHERE `user_id` = '".$userid."'");
@@ -144,8 +150,12 @@ if(isset($_POST['do']) && $_POST['do'] == 'sendOtp') {
 				$_SESSION["noQty"] = $noQty;
 
 				}
-
+	
+			if((isset($_POST['member']) && $_POST['member'] == 0) || $getRow['member'] == 1) 	{
 			header("Location:index.php?success=Login");
+			}elseif($_POST['member'] == 1){
+				header("Location:member.php");
+			}
 			} else {
 				header("Location:login.php?success=2");
 			}

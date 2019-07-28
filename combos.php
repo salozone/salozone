@@ -67,7 +67,7 @@ include('header.php');
 											</div>
 											<div class="_1uGiX5DrQ7U17G8-N73t9E">
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
-													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 250</div>
+													<div class="k6o2mAfYFzlWUusv_7kvE">₹ <?php echo $amounts[97] ?></div>
 												</div>
 												<div>
 													<a href="#!" onclick="cart(97);">
@@ -94,7 +94,7 @@ include('header.php');
 											</div>
 											<div class="_1uGiX5DrQ7U17G8-N73t9E">
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
-													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 650</div>
+													<div class="k6o2mAfYFzlWUusv_7kvE">₹ <?php echo $amounts[98] ?></div>
 												</div>
 												<div>
 													<a href="#!" onclick="cart(98);">
@@ -121,7 +121,7 @@ include('header.php');
 											</div>
 											<div class="_1uGiX5DrQ7U17G8-N73t9E"><div class="_3SZyCgc61sD1kpi28Hif22 k6o2mAfYFzlWUusv_7kvE"></div>
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
-													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 620</div>
+													<div class="k6o2mAfYFzlWUusv_7kvE">₹ <?php echo $amounts[99] ?></div>
 												</div>
 												<div>
 													<a href="#!" onclick="cart(99);">
@@ -150,7 +150,7 @@ include('header.php');
 											</div>
 											<div class="_1uGiX5DrQ7U17G8-N73t9E"><div class="_3SZyCgc61sD1kpi28Hif22 k6o2mAfYFzlWUusv_7kvE"></div>
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
-													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 420</div>
+													<div class="k6o2mAfYFzlWUusv_7kvE">₹ <?php echo $amounts[100] ?></div>
 												</div>
 												<div>
 													<a href="#!" onclick="cart(100);">
@@ -177,7 +177,7 @@ include('header.php');
 											</div>
 											<div class="_1uGiX5DrQ7U17G8-N73t9E">
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
-													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 420</div>
+													<div class="k6o2mAfYFzlWUusv_7kvE">₹ <?php echo $amounts[101] ?></div>
 												</div>
 												<div>
 													<a href="#!" onclick="cart(101);">
