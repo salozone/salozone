@@ -176,12 +176,8 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 			<div class="row">
 				<div class="col-md-3 col-xs-4">
 					<div id="fh5co-logo">
-						<?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
- 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a> <?php }
- 					 else {?>
- 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a>
- 					<?php } ?>
-
+ 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a> 
+ 					
  					</div>
  				</div>
 
@@ -190,7 +186,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
  				</div>
  				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
  					<ul>
- 						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&& $_SERVER['REQUEST_URI']!='/salozone/') { ?>
+ 				
  						<li class="has-dropdown">
 							<a style="font-family: Open Sans, helvetica; color:#000000;">Services</a>
 							<ul class="dropdown">
@@ -207,7 +203,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 								<li><a href="dressup.php">Dress Up</a></li>
 								<li><a href="mehandi.php">Mehandi</a></li>
 							</ul>
-						</li> <?php } ?>
+						</li> 
 						<li><a href="about.php" style="font-family: helvetica, sans-serif; color:#000000;">About Us</a></li>
 						<li><a href="contact.php" style="font-family: helvetica, sans-serif; color:#000000;">Contact Us</a></li>
 						<?php
