@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 18, 2019 at 04:37 PM
+-- Generation Time: Jul 28, 2019 at 12:06 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -57,7 +57,6 @@ CREATE TABLE `cart` (
   `qty` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
 -- --------------------------------------------------------
 
 --
@@ -77,11 +76,21 @@ CREATE TABLE `customer` (
   `cust_landmark` varchar(50) NOT NULL,
   `cust_message` varchar(50) NOT NULL,
   `cust_password` varchar(20) NOT NULL,
-  `cust_added` date NOT NULL
+  `cust_added` date NOT NULL,
+  `member` int(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `customer`
+--
 
+INSERT INTO `customer` (`cust_id`, `cust_name`, `cust_service`, `cust_price`, `cust_logs`, `cust_mobile`, `cust_email`, `cust_houseno`, `cust_locality`, `cust_landmark`, `cust_message`, `cust_password`, `cust_added`, `member`) VALUES
+(17, 'test', NULL, NULL, '2019-07-27 21:58:17', '8369938940', 'xyz@gmail.com', '101', 'dummy', 'dummy', 'none', 'ash123', '2019-07-24', 1),
+(16, 'ashwin', NULL, NULL, '2019-07-27 21:50:25', '9167100401', 'test@gmail.com', '191', 'dummy', 'dummy', 'none', 'test123', '2019-07-24', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `order_items`
 --
 
@@ -107,6 +116,13 @@ CREATE TABLE `order_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `order_items`
+--
+
+INSERT INTO `order_items` (`id`, `user_id`, `order_id`, `order_date`, `order_time`, `gross_amt`, `order_status`, `payment_type`, `payment_status`, `order_item`, `order_amt`, `order_qty`, `tot_qty`, `order_tot_amt`, `delivery_amt`, `coupon_id`, `coupon_amt`, `datetime`) VALUES
+(1, 16, 1563971419, '2019-07-24', '11:00:00.000000', 200, 0, 3, 1, '[\"Dress Up\"]', '[\"200\"]', '[1]', '1', '200', '0', '-', 0, '2019-07-24 18:00:19.000000');
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `products`
@@ -144,7 +160,8 @@ ALTER TABLE `admin`
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`cart_id`);
+  ADD PRIMARY KEY (`cart_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `customer`
@@ -157,7 +174,8 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `order_items`
   ADD PRIMARY KEY (`order_id`),
-  ADD KEY `id` (`id`);
+  ADD KEY `id` (`id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `products`
@@ -179,19 +197,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `cart_id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `products`

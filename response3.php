@@ -3,8 +3,9 @@ include('header.php');
 $postdata = $_POST;
 $msg = '';
 if (isset($postdata ['key'])) {
-	$key				=   $postdata['key'];
-	$salt				=   "fuOTFzjTgU";
+    $key				=   $postdata['key'];
+    $salt				=   $postdata['salt'];
+	// $salt				=   "fuOTFzjTgU";
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
@@ -34,99 +35,33 @@ if (isset($postdata ['key'])) {
 }
 else exit(0);
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PayUmoney BOLT PHP7 Kit</title>
-</head>
-<style type="text/css">
-	.main {
-		margin-left:30px;
-		font-family:Verdana, Geneva, sans-serif, serif;
-	}
-	.text {
-		float:left;
-		width:180px;
-	}
-	.dv {
-		margin-bottom:5px;
-	}
-</style>
-<body>
-<div class="main">
-	<div>
-    	<img src="images/payumoney.png" />
-    </div>
-    <div>
-    	<h3>PHP7 BOLT Kit Response</h3>
-    </div>
-	
-    <div class="dv">
-    <span class="text"><label>Merchant Key:</label></span>
-    <span><?php echo $key; ?></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Merchant Salt:</label></span>
-    <span><?php echo $salt; ?></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Transaction/Order ID:</label></span>
-    <span><?php echo $txnid; ?></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Amount:</label></span>
-    <span><?php echo $amount; ?></span>    
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Product Info:</label></span>
-    <span><?php echo $productInfo; ?></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>First Name:</label></span>
-    <span><?php echo $firstname; ?></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Email ID:</label></span>
-    <span><?php echo $email; ?></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Mihpayid:</label></span>
-    <span><?php echo $mihpayid; ?></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Hash:</label></span>
-    <span><?php echo $resphash; ?></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Transaction Status:</label></span>
-    <span><?php echo $status; ?></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Message:</label></span>
-    <span><?php echo $msg; ?></span>
-    </div>
-</div>
-
+<link rel="stylesheet" href="css/qaModalChunk-0c3d9f415163febe1e74.css">
+<div id="fh5co-contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 animate-box">
+				<h3 class="text-center">Payment Status</h3>
+				<ul class="_2mioG8IfFu0HyLapNQp2db">
+					<div class="_3pUB-LDjlpx6e9ACL8E_1x _1ztQTskd2_GRzGb0OH6YwR" style="">
+						<div class="hPO8BoyBkYEU2ujeCWJgk H1Lb6afUHKzH-OTelE23x" style="font-size: 14px;">
+							<div class="_1kb-XXNt4wePQ_svwAQnhG">Transaction Status:</div>
+							<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);"><?php echo $status; ?></div>
+						</div>
+						<div class="hPO8BoyBkYEU2ujeCWJgk _1ovga__v3v_0DJ3-9UggBS H1Lb6afUHKzH-OTelE23x" style="font-size: 14px;">
+							<div class="_1kb-XXNt4wePQ_svwAQnhG">Message:</div>
+							<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);"><?php echo $msg; ?></div>
+						</div>
+					</div>
+				</ul>
 <script>
 //Using setTimeout to execute a function after 5 seconds.
 setTimeout(function () {
    //Redirect with JavaScript
-//    window.location.href= 'https://salozone.com/mybookings.php?success=Done';
-//window.location.href= 'index.php';
+window.location.href= 'main.php';
 }, 5000);
-</script>
-</body>
-</html>
-	
+</script>				
+			</div>
+		</div>
+	</div>
+</div>
+<?php include('footer.php'); ?>

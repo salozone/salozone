@@ -1,13 +1,12 @@
 <?php
-#response.php
 include('header.php');
 $postdata = $_POST;
 $msg = '';
 $status = '';
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
-	// $salt				=   $postdata['salt'];
-	$salt				=   "fuOTFzjTgU";
+    $salt				=   $postdata['salt'];
+//	$salt				=   "fuOTFzjTgU";
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];

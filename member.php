@@ -21,6 +21,7 @@ function getCallbackUrl()
 }
 
 include('header.php');
+$txn = "Txn" . rand(10000,99999999);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -34,11 +35,10 @@ include('header.php');
 <!-- this meta viewport is required for BOLT //-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
 <!-- BOLT Sandbox/test //-->
-<script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js" bolt-
-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
+<!-- <script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js" bolt-
+color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script> -->
 <!-- BOLT Production/Live //-->
-<!--// script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script //-->
-
+<script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
 </head>
 <style type="text/css">
 	.main {
@@ -65,50 +65,50 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
     <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_PHP7" />
     <input type="hidden" id="surl" name="surl" value="<?php echo getCallbackUrl(); ?>" />
     <div class="dv">
-    <span class="text"><label>Merchant Key:</label></span>
-    	<!-- <input type="hidden" id="key" name="key" placeholder="Merchant Key" class="form-control" value="zpcPF9e8" /> -->
-        <input type="text" id="key" name="key" class="form-control" placeholder="Merchant Key" value="E3IoU5Qj" />	
+    <!-- <span class="text"><label>Merchant Key:</label></span> -->
+    	<input type="hidden" id="key" name="key" placeholder="Merchant Key" class="form-control" value="zpcPF9e8" />
+        <!-- <input type="hidden" id="key" name="key" class="form-control" placeholder="Merchant Key" value="E3IoU5Qj" />	 -->
     </div>
     
     <div class="dv">
-    <span class="text"><label>Merchant Salt:</label></span>
-   	<!-- <span><input type="hidden" id="salt" name="salt" placeholder="Merchant Salt" value="yPny25lkcE" /></span> -->
-       <span><input type="text" id="salt" class="form-control" name="salt"  placeholder="Merchant Salt" value="fuOTFzjTgU" /></span>
+    <!-- <span class="text"><label>Merchant Salt:</label></span> -->
+   	<span><input type="hidden" id="salt" name="salt" placeholder="Merchant Salt" value="yPny25lkcE" /></span>
+       <!-- <span><input type="hidden" id="salt" class="form-control" name="salt"  placeholder="Merchant Salt" value="fuOTFzjTgU" /></span> -->
     </div>
     
     <div class="dv">
-    <span class="text"><label>Transaction/Order ID:</label></span>
-    <span><input type="text" id="txnid" class="form-control" name="txnid" placeholder="Transaction ID" value="<?php echo  "Txn" . rand(10000,99999999)?>" /></span>
+    <!-- <span class="text"><label>Transaction/Order ID:</label></span> -->
+    <span><input type="hidden" id="txnid" class="form-control" name="txnid" placeholder="Transaction ID" value="<?php echo  $txn ?>" /></span>
+	</div>
+	
+	<div class="dv">
+    <span class="text"><label>Product Info:</label></span>
+    <span><input type="text" id="pinfo" class="form-control" name="pinfo" placeholder="Product Info" value="Membership" /></span>
     </div>
-    
+        
     <div class="dv">
     <span class="text"><label>Amount:</label></span>
-    <span><input type="text" id="amount" class="form-control" name="amount" placeholder="Amount" value="6.00" /></span>    
+    <span><input type="text" id="amount" class="form-control" name="amount" placeholder="Amount" value="300.00" /></span>    
     </div>
     
     <div class="dv">
-    <span class="text"><label>Product Info:</label></span>
-    <span><input type="text" id="pinfo" class="form-control" name="pinfo" placeholder="Product Info" value="P01,P02" /></span>
+    <!-- <span class="text"><label>First Name:</label></span> -->
+    <span><input type="hidden" id="fname" class="form-control" name="fname" placeholder="First Name" value="<?php echo $userName; ?>" /></span>
     </div>
     
     <div class="dv">
-    <span class="text"><label>First Name:</label></span>
-    <span><input type="text" id="fname" class="form-control" name="fname" placeholder="First Name" value="<?php echo $userName; ?>" /></span>
+    <!-- <span class="text"><label>Email ID:</label></span> -->
+    <span><input type="hidden" id="email" class="form-control" name="email" placeholder="Email ID" value="<?php echo $userEmail; ?>" /></span>
     </div>
     
     <div class="dv">
-    <span class="text"><label>Email ID:</label></span>
-    <span><input type="text" id="email" class="form-control" name="email" placeholder="Email ID" value="<?php echo $userEmail; ?>" /></span>
+    <!-- <span class="text"><label>Mobile/Cell Number:</label></span> -->
+    <span><input type="hidden" id="mobile" class="form-control" name="mobile" placeholder="Mobile/Cell Number" value="<?php echo $userPhone; ?>" /></span>
     </div>
     
     <div class="dv">
-    <span class="text"><label>Mobile/Cell Number:</label></span>
-    <span><input type="text" id="mobile" class="form-control" name="mobile" placeholder="Mobile/Cell Number" value="<?php echo $userPhone; ?>" /></span>
-    </div>
-    
-    <div class="dv">
-    <span class="text"><label>Hash:</label></span>
-    <span><input type="text" id="hash" class="form-control" name="hash" placeholder="Hash" value="" /></span>
+    <!-- <span class="text"><label>Hash:</label></span> -->
+    <span><input type="hidden" id="hash" class="form-control" name="hash" placeholder="Hash" value="" /></span>
     </div>
     
     
