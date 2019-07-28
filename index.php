@@ -2,17 +2,11 @@
 <html lang="en" dir="ltr">
   <body>
 
-    <?php 
+    <?php
     #index.php
     $pageTitle = 'Index Page';
-
-
-			
-		
-
     if(isset($_POST['local']) && $_POST['local'] == 'login') { $_SESSION['login'] = 1; } else { $_SESSION['login'] = 0; }
     if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
-
     //define ;
     ?>
       <?php include('header.php'); ?>
@@ -26,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/media-queries.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+
 
       <!-- SLIDESHOW. -->
     <?php include('homeslider.php') ?>
@@ -284,7 +279,7 @@
               </div>
             </div>
             <div class="col-md-8 wow fadeInUp">
-                <h3 style="color:black;">Salon at Home</h3>
+                <h3 style="color:#f4cd2a;">Salon at Home</h3>
                 <p style="color:#bf9b30">Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied
                   we are bringing best of the salon services at your doorstep.</p>
               </div>
@@ -298,7 +293,7 @@
               </div>
             </div>
             <div class="col-md-8">
-                <h3 style="color:black;">No Trust Issues</h3>
+                <h3 style="color:#f4cd2a;">No Trust Issues</h3>
                 <p style="color:#bf9b30">We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and
                    familiar only with added training and expertise.</p>
               </div>
@@ -312,7 +307,7 @@
               </div>
             </div>
             <div class="col-md-8">
-                <h3 style="color:black">Cheapest Prices</h3>
+                <h3 style="color:#f4cd2a">Cheapest Prices</h3>
                 <p style="color:#bf9b30">Salozone’s prime motive is to redefine beauty services in Patna with maximum customer satisfaction which is why we
                    promise all these facilities and benefits at the cheapest price .</p>
               </div>
@@ -321,7 +316,7 @@
         </div>
         </div>
 
-       <div id="fh5co-testimonial" class="fh5co-bg-section">
+      <div id="fh5co-testimonial" class="fh5co-bg-section">
         <div class="container">
           <div class="row ">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -380,6 +375,8 @@
         </div>
       </div>
 
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+       <script src="./slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
       <script>
   $('.owl-carousel1').slick({
     autoplay:true,
