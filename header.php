@@ -13,8 +13,6 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	$getUser1 = mysqli_fetch_array($getUser);
 	$userName = $getUser1['cust_name'];
 	$userEmail = $getUser1['cust_email'];
-	$userPhone = $getUser1['cust_mobile'];
-	$member = $getUser1['member'];
 } else {
 	$userName = NULL;
 	$userEmail = NULL;
@@ -194,23 +192,17 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 
 <nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
 		<div class="container-fluid">
+					<ul class="mb-0">
+						<li class="float-left">
+								<?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
+		 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a> <?php }
+		 					 else {?>
+		 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a>
+		 					<?php } ?>
 
-			<div class="row">
-				<div class="col-md-3 col-xs-4">
-					<div id="fh5co-logo">
- 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a> 
- 					
- 					</div>
- 				</div>
-
- 				<div class="whatsapp col-xs-3" >
-
- 				</div>
- 				<div class="col-md-5 col-xs-6 text-center menu-1 navicon">
- 					<ul>
- 				
- 						<li class="has-dropdown">
-
+						</li>
+						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&& $_SERVER['REQUEST_URI']!='/salozone/') { ?>
+						<li class="has-dropdown remove">
 							<a style="font-family: Open Sans, helvetica; color:#000000;">Services</a>
 							<ul class="dropdown" class="nav-link">
 								<li><a href="single.php">Threading</a></li>
@@ -226,40 +218,10 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 								<li><a href="dressup.php">Dress Up</a></li>
 								<li><a href="mehandi.php">Mehandi</a></li>
 							</ul>
-						</li> 
+						</li> <?php } ?>
 						<li class="remove"><a href="about.php" style="font-family: helvetica, sans-serif; color:#000000;" >About Us</a></li>
 						<li class="remove"><a href="contact.php" style="font-family: helvetica, sans-serif; color:#000000;">Contact Us</a></li>
-						
-						<!--
-						<?php
-							if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1 && $member == 0) { ?>
-						<li><a href="member.php" style="font-family: helvetica, sans-serif; color:#000000;">Member</a></li>
-						<?php } elseif(!isset($_COOKIE['isLogin'])) { ?>
-							<li><a href="login.php?member=1" style="font-family: helvetica, sans-serif; color:#000000;">Member</a></li>
-						<?php } ?>   -->
-
-						<div class="whatsapp">
-							<?php
-							if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) { ?>
-								<li><a href="#">Hello <?php echo $userName; ?></a></li>
-								<li><a href="mybookings.php">My Bookings</a></li>
-								<li><a href="logout.php" >Log Out</a></li>
-							<?php } else { ?>
-								<li><a href="login.php">Login/ Sign Up</a></li>
-							<?php } ?>
-							<li><a href="https://salozone.blogspot.com/" target="_blank">Blog</a></li>
-							<li><a href="feedback.php">Feedback</a></li>
-							<li><a href="complaints.php">Any complaints or Special Requests?</a></li>
-							<li><a href="terms.php">Terms of Use</a></li>
-							<li><a href="privacy.php">Privacy Policy</a></li>
-							<li><a href="join.php">Join as as professional</a></li>
-						</div>
-					</ul>
-				</div>
-				<div class="col-md-4 col-xs-8 navicon">
-					<ul>
-						<li class="shopping-cart"><a href="tel:8925070790" title="Book Through" class="cart"><span><img src="images/call3.png" width="30" height="30"/></span></a></li>
-
+						<li class="shopping-cart"><a href="tel:8925070790" title="Book Through"><span><img src="images/call3.png" width="30" height="30"/></span></a></li>
 						<li class="shopping-cart"><a href="https://api.whatsapp.com/send?phone=918925070790" title="Whatsapp" class="cart"><span><img src="images/whatsapp.png" width="50" height="50"/></span></a></li>
 						<li class="shopping-cart"><a href="checkout.php" title="Cart" ><span><img src="images/cart.png" width="50" height="45"/></span></a></li>
 						<?php if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) { ?>
@@ -298,16 +260,9 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 
 
 <?php
-//Define the products and costmember
+//Define the products and cost
 $products = array("Eyebrow", "Eyebrow + Forehead", "Upper Lip", "Full Face", "UnderArm-HoneyBee", "UnderArm-Chocolate", "FullHand-HoneyBee", "FullHand-Chocolate", "HalfLegs-HoneyBee", "HalfLegs-Chocolate", "FullLegs-HoneyBee", "FullLegs-Chocolate", "FullHands+FullLegs-Honeybee", "FullHands+FullLegs-Chocolate", "FullHands+FullLegs+Underarms-Honeybee", "FullHands+FullLegs+Underarms-Chocolate", "FullFace-Honeybee", "FullFace-Chocolate", "UpperLip-Honeybee", "UpperLip-Chocolate", "FullBody-Honeybee", "FullBody-Chocolate", "FullBack(upper)-Honeybee", "FullBack(upper)-Chocolate", "Stomach-Honeybee", "Stomach-Chocolate", "Forehead-Honeybee", "Forehead-Chocolate", "Fruit-Face", "Fruit-Hand", "Anti Tan-Face", "Anti Tan-Hand", "VLCC-Face", "VLCC-Hand", "Lotus-Face", "Lotus-Hand", "Shehnaz-Face", "Shehnaz-Hand", "Whitening-Face", "Whitening-Hand", "Charcoal-Face", "Charcoal-Hand", "Gold-Face", "Gold-Hand", "Diamond-Face", "Diamond-Hand", "Pearl-Face", "Pearl-Hand" , "Gold", "Diamond", "Pearl", "Charcoal", "Shehnaaz Gold", "Fruit", "Whitening", "Anti Tan","Lotus", "VLCC", "Aroma", "Oxy-Face","Oxy-Hand","Oxy-Face+Hand","Diamond-Face","Diamond-Hand","Diamond-Face+Hand","Gold-Face","Gold-Hand","Gold-Face+Hand","Fem-Face", "Fem-Hand", "Fem-Face+Hand","Pedicure","Manicure","Straight","U","V","Layer- 2 Step","Layer- 3 Step", "Laser", "Feather", "Chinese Cut", "Princess Cut", "Blunt Cut", "Boy Cut", "Sadhna Cut", "Half Hair Curls", "Full Hair Curls", "Hair Style Designer", "Waxing(full hand + full legs + underarms)+Clean Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling", "Waxing(full hand + full legs + underarms)+Clean Up+Make Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling +Make Up","Light","Bridal","Dress Up","Simple","Bridal","Threading + Full Hand Waxing + Clean Up(Fruit)","Facial(Gold) + Pedicure + Manicure","Facial(Gold) + Pedicure","Bleach(Oxy) + Hair Style Designer + Pedicure","Threading + Full Waxing(Hands+Legs+Under Arms) + Clean Up(Fruit)" ,"Air Brush","Body Polishing","Bridal Facial","Engagement","Reception","Pre-Bridal","Bridal HD", "Hair Spa-LOreal","Hair Spa-Body care","Hair Massage");
 $amounts = array("15","25", "10","80","30","50","119","199","119","149","199","249","299","449","329","499","99","119","20","25","599","799","149","175","149","175","30","45","99","180","199","299","149","249","249","349","449","599","199","299","449","599","199","299","299", "399", "199", "299","499","649","499","649","1499","199","299","299", "499", "299", "499","99","199","299","119","259","379","99","199","349","75","149","199","199","149","30","50","100","100","120","100","100","100","100","50","50","50","149","199","149","450","550","600","700","199","4999","200","149","4999","250","650","620","420","420","399","2999","799","1999","1999","3499","7999","549","449","249");
-if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1 && $member == 1) {
-$discount = 15;
-$discount = $discount/100;
-for ($x=0;$x < sizeof($amounts);$x++){
-	$amounts[$x] = $amounts[$x]*(1-$discount);
-}
-}
 ?>
 	<div id="page" style="background:#100000;">
 <?php function footerCart() { ?>
