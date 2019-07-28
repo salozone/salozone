@@ -42,7 +42,7 @@ $todayDate = date("d-m-Y");
 							<div class="_2ALjwXt8Brx2UBQJ1a6UDu _3TjTyyRTZ846xSE30xLszh _2-bFRYxiqevuTNSsQzbSOG"><div class="_32y59UEDbJyVoQag7s2FyN">
 								<h2 class="_28gUKzEsw8N-nqfXEO8ClO">Select date of service</h2>
 
-								<div class='input-group date' id='datetimepicker1' data-date-start-date="26/07/2019">
+								<div class='input-group date' id='datetimepicker1'>
 									<input type='text' class="form-control" />
 										<span class="input-group-addon">
 											<span class="glyphicon glyphicon-calendar"></span>
