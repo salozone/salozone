@@ -226,16 +226,18 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 								<li><a href="dressup.php">Dress Up</a></li>
 								<li><a href="mehandi.php">Mehandi</a></li>
 							</ul>
-						</li> <?php } ?>
+						</li> 
 						<li class="remove"><a href="about.php" style="font-family: helvetica, sans-serif; color:#000000;" >About Us</a></li>
 						<li class="remove"><a href="contact.php" style="font-family: helvetica, sans-serif; color:#000000;">Contact Us</a></li>
-						<li class="shopping-cart"><a href="tel:8925070790" title="Book Through"><span><img src="images/call3.png" width="30" height="30"/></span></a></li>
+						
+						<!--
 						<?php
 							if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1 && $member == 0) { ?>
 						<li><a href="member.php" style="font-family: helvetica, sans-serif; color:#000000;">Member</a></li>
 						<?php } elseif(!isset($_COOKIE['isLogin'])) { ?>
 							<li><a href="login.php?member=1" style="font-family: helvetica, sans-serif; color:#000000;">Member</a></li>
-						<?php } ?>
+						<?php } ?>   -->
+
 						<div class="whatsapp">
 							<?php
 							if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) { ?>
