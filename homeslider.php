@@ -89,10 +89,12 @@
   <!-- Initialize Swiper -->
   <script>
   var swiper = new Swiper('.swiper-container', {
+
    slidesPerView: 4,
    spaceBetween: 50,
    autoplay: true,
    loop: true,
+   autoplaySpeed:1000,
    pagination: {
      el: '.swiper-pagination',
      clickable: true,
@@ -101,18 +103,24 @@
      1024: {
        slidesPerView: 4,
        spaceBetween: 40,
+        loop: true,
      },
      768: {
+         loop: true,
        slidesPerView: 3,
        spaceBetween: 30,
+
      },
      640: {
-       slidesPerView: 2,
+       loop: true,
+       slidesPerView: 1.6,
        spaceBetween: 20,
+
      },
      320: {
        slidesPerView: 1,
        spaceBetween: 10,
+        loop: true,
      }
    }
  });
