@@ -25,6 +25,11 @@ if(isset($_SESSION['contact_no']) && isset($_SESSION['login_otp'])) {
 						?>
 						<form action="logininsert.php" id="login_form" name="login_form" method="POST" >
 							<input type="hidden" name="do" value="sendOtp">
+							<?php if(isset($_GET['member']) && $_GET['member'] == '1') { ?>
+							<input type="hidden" name="member" value="1">
+							<?php }else{ ?>
+							<input type="hidden" name="member" value="0">
+							<?php } ?>
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label for="message">Enter Your OTP No:</label>

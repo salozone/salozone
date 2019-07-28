@@ -50,10 +50,14 @@ $todayDate = date("d-m-Y");
 								</div>
 
 											<script>
+											var date = new Date();
+											var daysToAdd = 30;
+											date.setDate(date.getDate() + daysToAdd); 
 											$(function () {
 												$('#datetimepicker1').datetimepicker({
-
 																format: 'DD/MM/YYYY',
+																minDate: new Date(),
+																maxDate: date
 														});
 											});
 											</script>

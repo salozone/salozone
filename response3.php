@@ -2,11 +2,10 @@
 include('header.php');
 $postdata = $_POST;
 $msg = '';
-$status = '';
 if (isset($postdata ['key'])) {
-	$key				=   $postdata['key'];
+    $key				=   $postdata['key'];
     $salt				=   $postdata['salt'];
-//	$salt				=   "fuOTFzjTgU";
+	// $salt				=   "fuOTFzjTgU";
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
@@ -22,13 +21,12 @@ if (isset($postdata ['key'])) {
 	$reverseKeyArray 	= 	array_reverse($keyArray);
 	$reverseKeyString	=	implode("|",$reverseKeyArray);
 	$CalcHashString 	= 	strtolower(hash('sha512', $salt.'|'.$status.'|'.$reverseKeyString));
-	$dateTime = date('Y-m-d H:i:s');
-	$orderId = strtotime(date('Y-m-d H:i:s'));
+	
 	
 	if ($status == 'success'  && $resphash == $CalcHashString) {
 		$msg = "Transaction Successful and Hash Verified...";
-		//Do success order processing here...
-		#$payInsert = mysqli_query($con, "INSERT INTO `tbl_payment` SET `customer_id` = '".$_COOKIE['username']."', `customer_email` = '".$email."', `payment_date` = '".$dateTime."', `txnid` = '".$txnid."', `paid_amount` = '".$amount."', `payment_status` = '".$status."', `payment_id` = '".$orderId."'"); 
+        $update = mysqli_query($con, "UPDATE `customer` SET `member` = '1' WHERE `cust_id` = '".$_COOKIE['username']."' AND `member` = '0'");
+        setcookie("member", 1, time()+60*60*24*100, '/');
 	}
 	else {
 		//tampered or failed
@@ -37,7 +35,6 @@ if (isset($postdata ['key'])) {
 }
 else exit(0);
 ?>
-<?php  ?>
 <link rel="stylesheet" href="css/qaModalChunk-0c3d9f415163febe1e74.css">
 <div id="fh5co-contact">
 	<div class="container">
@@ -52,7 +49,7 @@ else exit(0);
 						</div>
 						<div class="hPO8BoyBkYEU2ujeCWJgk _1ovga__v3v_0DJ3-9UggBS H1Lb6afUHKzH-OTelE23x" style="font-size: 14px;">
 							<div class="_1kb-XXNt4wePQ_svwAQnhG">Message:</div>
-							<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);"><?php echo $msg ?></div>
+							<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);"><?php echo $msg; ?></div>
 						</div>
 					</div>
 				</ul>
@@ -60,10 +57,9 @@ else exit(0);
 //Using setTimeout to execute a function after 5 seconds.
 setTimeout(function () {
    //Redirect with JavaScript
-//    window.location.href= 'https://salozone.com/confirm.php';
-window.location.href= 'confirm.php';
+window.location.href= 'main.php';
 }, 5000);
-</script>
+</script>				
 			</div>
 		</div>
 	</div>

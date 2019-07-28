@@ -108,9 +108,9 @@ function save_to_bd(cart_id, new_quantity) {
 											</div>
 											<div class="_1uGiX5DrQ7U17G8-N73t9E"><div class="_3SZyCgc61sD1kpi28Hif22 k6o2mAfYFzlWUusv_7kvE">₹ 100</div>
 												<div class="_3WEEdfo6HvqjUVVkX8c5Tt XcqLOYdtiv_3WgzzX_6P_">
-													<div class="k6o2mAfYFzlWUusv_7kvE">₹ 200</div>
+													<div class="k6o2mAfYFzlWUusv_7kvE">₹ <?php echo $amounts[94] ?></div>
 													
-												</div>
+												</div> 
 												<div><!-- php is used to check the qty and display appropriate html -->
 												<?php if(!isset($_SESSION["qty"][94])  || $_SESSION["qty"][94] == 0){?>
 													<a href="#!" onclick="cart(94);">

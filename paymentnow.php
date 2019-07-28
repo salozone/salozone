@@ -18,9 +18,7 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 function getCallbackUrl()
 {
 	$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-	#return $protocol . $_SERVER['HTTP_HOST'] ;
-	// return $protocol . $_SERVER['HTTP_HOST'] . '/'. 'response.php';
-	return $protocol . 'localhost/salozone/response.php';
+	return $protocol . $_SERVER['HTTP_HOST'] . '/salozone/response.php';
 }
 
 ?>
@@ -37,10 +35,10 @@ $txn = "Txn" . rand(10000,99999999);
 <!-- this meta viewport is required for BOLT //-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
 <!-- BOLT Sandbox/test // -->
-<script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js " bolt-
-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
+<!-- <script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js " bolt-
+color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script> -->
 <!-- BOLT Production/Live // -->
-<!-- <script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script> -->
+<script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
 <link rel="stylesheet" href="css/qaModalChunk-0c3d9f415163febe1e74.css">
 
 	<div id="fh5co-contact">
@@ -54,13 +52,15 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 							<input type="hidden" id="surl" name="surl" value="<?php echo getCallbackUrl(); ?>" />
 							<div class="row form-group">
 								<div class="col-md-6">
-									<!-- <input type="hidden" id="key" name="key" placeholder="Merchant Key" class="form-control" value="zpcPF9e8" /> -->
-									<input type="hidden" id="key" name="key" placeholder="Merchant Key" class="form-control" value="E3IoU5Qj" />								</div>
+									<input type="hidden" id="key" name="key" placeholder="Merchant Key" class="form-control" value="zpcPF9e8" />
+									<!-- testing key -->
+									<!-- <input type="hidden" id="key" name="key" placeholder="Merchant Key" class="form-control" value="E3IoU5Qj" />								</div> -->
 							</div>
 							
 							<div class="dv">
-							<!-- <span><input type="hidden" id="salt" name="salt" placeholder="Merchant Salt" value="yPny25lkcE" /></span> -->
-							<span><input type="hidden" id="salt" name="salt"  placeholder="Merchant Salt" value="fuOTFzjTgU" /></span>
+							<span><input type="hidden" id="salt" name="salt" placeholder="Merchant Salt" value="yPny25lkcE" /></span>
+							<!-- testing salt -->
+							<!-- <span><input type="hidden" id="salt" name="salt"  placeholder="Merchant Salt" value="fuOTFzjTgU" /></span> -->
 							</div>
 							
 							<div class="dv">
