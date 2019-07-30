@@ -1,5 +1,8 @@
-<?php
+﻿<?php
 #header.php
+
+error_reporting(0);
+@ini_set('display_errors', 0);
 session_start();
 ob_start();
 ini_set('output_buffering', 'On');
@@ -116,28 +119,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 
 
 	</style>
-	<style>
-	@media screen and (min-width: 768px) {
-		.whatsapp { display:none; }
-	}
-	@media screen and (max-width: 768px) {
-		.loginIcon { display:none !important; }
-	}
-	@media only screen and (max-width: 990px) and (min-width: 767px)  {
-		.menu-1 { width:63%;margin-top:10px !important; }
-		.navicon { margin-top:6px !important; }
-		.log { margin-top:5px; }
-	}
-	@media screen and (max-width: 400px) {
-		.navicon { margin-top:8px !important; padding: 0px !important; }
-		.fh5co-nav ul li a { padding: 0px !important; }
-		.fh5co-nav a { padding: 0px !important; }
-		.fh5co-nav-toggle { margin-top:20px !important; }
-		.product .product-grid { height: 150px !important; }
-	}
-	.navicon { margin-top: 20px; }
-	.menu-1 { margin-top:30px; }
-	</style>
+
 		</head>
 
 		<body>
@@ -154,13 +136,13 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 			.log { margin-top:5px; }
 		}
 		@media screen and (max-width: 400px) {
-			.navicon { margin-top:8px !important; padding: 0px !important; }
+			.navicon { margin-top:0px !important; padding: 0px !important; }
 			.fh5co-nav ul li a { padding: 0px !important; }
 			.fh5co-nav a { padding: 0px !important; }
-			.fh5co-nav-toggle { margin-top:20px !important; }
+			.fh5co-nav-toggle { margin-top:8px !important; }
 			.product .product-grid { height: 150px !important; }
 		}
-		.navicon { margin-top: 20px; }
+		.navicon { margin-top: 10px; }
 		.menu-1 { margin-top:30px; }
 	</style>
 
