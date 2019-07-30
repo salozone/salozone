@@ -1,8 +1,6 @@
 ﻿<?php
 #header.php
 
-error_reporting(0);
-@ini_set('display_errors', 0);
 session_start();
 ob_start();
 ini_set('output_buffering', 'On');
@@ -135,7 +133,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 			.navicon { margin-top:6px !important; }
 			.log { margin-top:5px; }
 		}
-		@media screen and (max-width: 400px) {
+		@media screen and (max-width: 600px) {
 			.navicon { margin-top:0px !important; padding: 0px !important; }
 			.fh5co-nav ul li a { padding: 0px !important; }
 			.fh5co-nav a { padding: 0px !important; }
