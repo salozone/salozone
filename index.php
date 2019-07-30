@@ -269,52 +269,42 @@
 
 
 
-      <div id="fh5co-services" class="abtsal fh5co-bg-section">
-        <div class="container">
-        <div class="col-md-4 section-1-box wow fadeInUp">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="section-1-box-icon">
-                <i class="fas mt-4 fa-home"></i>
-              </div>
-            </div>
-            <div class="col-md-8 wow fadeInUp">
-                <h3 style="color:#f4cd2a;">Salon at Home</h3>
-                <p style="color:#bf9b30">Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied
-                  we are bringing best of the salon services at your doorstep.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 section-1-box wow fadeInDown">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="section-1-box-icon">
-                <i class="fas mt-4 fa-handshake"></i>
-              </div>
-            </div>
-            <div class="col-md-8">
-                <h3 style="color:#f4cd2a;">No Trust Issues</h3>
-                <p style="color:#bf9b30">We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and
-                   familiar only with added training and expertise.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 section-1-box wow fadeInUp">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="section-1-box-icon">
-                <i class="fab mt-4 fa-telegram-plane"></i>
-              </div>
-            </div>
-            <div class="col-md-8">
-                <h3 style="color:#f4cd2a">Cheapest Prices</h3>
-                <p style="color:#bf9b30">Salozone’s prime motive is to redefine beauty services in Patna with maximum customer satisfaction which is why we
-                   promise all these facilities and benefits at the cheapest price .</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
+        <div id="fh5co-services" class="fh5co-bg-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 text-center">
+					<div class="feature-center " data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-credit-card"></i>
+						</span>
+						<h3 style="color:#f4cd2a;">SALON AT HOME</h3>
+						<p style="color:#bf9b30">Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied we are bringing best of the salon services at your doorstep.</p>
+
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 text-center">
+					<div class="feature-center " data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-wallet"></i>
+						</span>
+						<h3 style="color:#f4cd2a;">NO TRUST ISSUES</h3>
+						<p style="color:#bf9b30">We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and familiar only with added training and expertise.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 text-center">
+					<div class="feature-center " data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-paper-plane"></i>
+						</span>
+						<h3 style="color:#f4cd2a;">CHEAPEST PRICE GUARANTEED</h3>
+						<p style="color:#bf9b30">Salozone’s prime motive is to redefine beauty services in Patna with maximum customer satisfaction which is why we
+               promise all these facilities and benefits at the cheapest price .</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
       <div id="fh5co-testimonial" class="fh5co-bg-section">
         <div class="container">

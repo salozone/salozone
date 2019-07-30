@@ -181,6 +181,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 		 					<?php } ?>
 
 						</li>
+
 						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&& $_SERVER['REQUEST_URI']!='/salozone/') { ?>
 						<li class="has-dropdown remove">
 							<a style="font-family: Open Sans, helvetica; color:#000000;">Services</a>
@@ -213,6 +214,25 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 											<span class="col-md-5 col-xs-6 text-center menu-1 navicon">
 							 					<ul>
 													<span class="whatsapp">
+														<li class="has-dropdown">
+															<a>Services</a>
+															<ul class="dropdown">
+																<li><a href="single.php">Threading</a></li>
+																<li><a href="waxing.php">Waxing</a></li>
+																<li><a href="cleanup.php">Cleanup</a></li>
+																<li><a href="facial.php">Facial</a></li>
+																<li><a href="bleaching.php">Bleach</a></li>
+																<li><a href="pedicure.php">Pedicure/Manicure</a></li>
+																<li><a href="haricut.php">Haircut</a></li>
+																<li><a href="hairstyling.php">Hair Care</a></li>
+																<li><a href="partyready.php">Party Ready</a></li>
+																<li><a href="makeup.php">Bridal</a></li>
+																<li><a href="dressup.php">Dress Up</a></li>
+																<li><a href="mehandi.php">Mehandi</a></li>
+															</ul>
+														</li>
+														<li><a href="about.php">About Us</a></li>
+														<li><a href="contact.php">Contact Us</a></li>
 														<?php
 														if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) { ?>
 															<li><a href="#">Hello <?php echo $userName; ?></a></li>
@@ -233,8 +253,6 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 						</li>
 					</ul>
 	</nav>
-
-
 
 
 
