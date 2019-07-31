@@ -171,7 +171,6 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 </style>
 
 <div id="page">
-
 <nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
 		<div class="container-fluid">
 					<ul class="mb-0">
@@ -580,6 +579,7 @@ h3 {
 	</div>
 </div>
 
+</div>
 </div>
 
 

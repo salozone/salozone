@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <body>
+<?php
+error_reporting(0);
+include('header.php'); ?>
 
+<html>
+  <body>
     <?php
+
     #index.php
     $pageTitle = 'Index Page';
     if(isset($_POST['local']) && $_POST['local'] == 'login') { $_SESSION['login'] = 1; } else { $_SESSION['login'] = 0; }
     if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
     //define ;
     ?>
-    <?php include('header.php'); ?>
+
     <link rel="stylesheet" href="jss/style.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="jss/custom.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
@@ -23,7 +26,7 @@
 
 
       <!-- SLIDESHOW. -->
-    <?php include('homeslider.php') ?>
+
     <style>
     .center {
     text-align:center; }
@@ -33,6 +36,8 @@
         margin: 1em 0; padding: 0;
     }
     </style>
+
+    <?php include('homeslider.php') ?>
 
     <center class="mt-5">
             <h2 class="mt-5" style="color:#ffcf40">Salozone Home Salon Services</h2>
@@ -378,7 +383,6 @@
     swipeToSlide: true,
 })
       </script>
-
+    </body>
+    </html>
     <?php include('footer.php'); ?>
-  </body>
-</html>
