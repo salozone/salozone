@@ -579,8 +579,8 @@ h3 {
 	</div>
 </div>
 
-
-
+</div>
+</div>
 
 
 	<!-- Slider menu -->
