@@ -9,10 +9,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Demo styles -->
   <style>
-  .smobile-wrap::-webkit-scrollbar { width: 0 !important }
+
   .mobile-container {
    width: 97%;
    padding-top: 50px;
+   overflow: hidden;
   }
   .mobile-slide {
    background-position: center;
@@ -35,6 +36,7 @@
    overflow-y: hidden;
    vertical-align:middle;
    display: block;
+    overflow: hidden;
   }
   .mobile-slide {
    display: inline-block;
@@ -191,7 +193,7 @@
           <img src="withouttext/makeup1.jpg" alt="Salon At Home Dressup At Home" /> </a>
           <h3>Dressup<h3>
       </div>
-  
+
     </div>
     <!-- Add Pagination -->
 
