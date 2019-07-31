@@ -1,6 +1,5 @@
-﻿<?php
+<?php
 #header.php
-
 session_start();
 ob_start();
 ini_set('output_buffering', 'On');
@@ -76,9 +75,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
 	<!-- Google Fonts ends here-->
 	<style type="text/css">
-
 		#page::-webkit-scrollbar { width: 0 !important }
-
 		.background-wrap {
 			position: fixed;
 			z-index: -1000;
@@ -88,7 +85,6 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 			top: 0;
 			left: 0;
 		}
-
 		#video-bg-elem {
 			position: absolute;
 			top: 0;
@@ -114,8 +110,6 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 			padding-top: 15%;
 			margin-bottom: 10px;
 		}
-
-
 	</style>
 
 		</head>
@@ -142,7 +136,6 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 		}
 		.navicon { margin-top: 10px; }
 		.menu-1 { margin-top:30px; }
-
 	</style>
 
 
@@ -337,34 +330,26 @@ $amounts = array("15","25", "10","80","30","50","119","199","119","149","199","2
 ul {
     list-style-type: none;
 }
-
 ._1DHBhD10Ng1cgRavn1k2gO {
     margin: 0;
     padding: 0;
 }
-
 ._3eR0Ps0OiYMoBRFr33yxgu {
     display: flex;
     background-color: #fff;
     align-items: stretch;
 }
-
 *, :after, :before {
     box-sizing: border-box;
 }
-
 ._20fQsT4R-EBnAmG2j8hXHy {
     width: 100%;
 }
-
-
 ._20fQsT4R-EBnAmG2j8hXHy .bV9pH8LGyb_s16WgD4UkH {
     padding: 16px;
     flex: 1;
 }
-
 ._16cZZnX_tgIoQZPWgTijgv { height: 100%; }
-
 .k6o2mAfYFzlWUusv_7kvE {
     display: block;
     font-size: 1.57em;
@@ -378,7 +363,6 @@ ul {
 	padding:2px;
 	font-family: Axiforma-Regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
-
 h3 {
     display: block;
     font-size: 1.57em;
@@ -392,7 +376,6 @@ h3 {
 	padding:2px;
 	font-family: Axiforma-Regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
-
 ._20fQsT4R-EBnAmG2j8hXHy .vjh4-SZW6em1Ffdp2AMqH {
     width: 20px;
     height: 20px;
@@ -404,7 +387,6 @@ h3 {
     margin-top: 18px;
     margin-right: 12px;
 }
-
 ._20fQsT4R-EBnAmG2j8hXHy ._1uGiX5DrQ7U17G8-N73t9E {
     display: flex;
     height: 62px;
@@ -412,7 +394,6 @@ h3 {
     padding: 0 16px;
     align-items: center;
 }
-
 .OyiF3KnmNwSIRGjG-ndyQ {
     max-height: 575px;
     font-family: Axiforma-Regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
@@ -587,14 +568,11 @@ h3 {
 <?php } ?>
 <!--Send Mail Function Start --->
 <?php
-
 	function sendEmail($from, $fromName, $to, $toName, $subject, $body, $signature){
-
 		$companyWeb = 'https://salozone.com';
 		$companyName = 'SALOZONE';
 		$companyEmail = 'contact@salozone.com';
 		$companyMobile = '+91 89250 70790';
-
 		$emailMessageStart=<<<EOD
 			<html xmlns="http://www.w3.org/1999/xhtml">
 				<head>
@@ -603,23 +581,19 @@ h3 {
 					<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 				</head>
 				<body topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" marginwidth="0" marginheight="0" width="100%" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%; height: 100%; -webkit-font-smoothing: antialiased; text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; line-height: 100%;background-color: #F0F0F0;color: #000000;" bgcolor="#F0F0F0"text="#000000">
-
 					<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%;" class="background"><tr><td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;"
 						bgcolor="#F0F0F0">
 					<table border="0" cellpadding="0" cellspacing="0" align="center"
 						width="560" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: inherit;
 						max-width: 560px;" class="wrapper">
-
 						<tr>
 							<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%;
 								padding-top: 20px;
 								padding-bottom: 20px;">
-
 								<a target="_blank" style="text-decoration: none;"
 									href="$companyWeb"><img border="0" vspace="0" hspace="0"
 									src="$companyWeb/images/logo.jpg" alt="$companyName" width="100" height="75"
 									title="$companyName" style="color: #000000;font-size: 10px; margin: 0; padding: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;" /></a>
-
 							</td>
 						</tr>
 					</table>
@@ -665,10 +639,8 @@ h3 {
 								padding-top: 25px;
 								color: #000000;
 								font-family: sans-serif;" class="paragraph">
-
 EOD;
 		$emailMessageEnd='
-
 							</td>
 						</tr>
 						<tr>
@@ -680,14 +652,11 @@ EOD;
 									$signature.'
 							</td>
 						</tr>
-
 					</table>
 					</td></tr></table>
 				</body>
 			</html>';
-
 		$body1 = $emailMessageStart . $body . $emailMessageEnd;
-
 		$headers = "MIME-Version: 1.0\r\n";
 		$headers .= "Content-type: text/html\r\n";
 		$headers .= 'From: '.strip_tags($companyEmail). "\r\n" .
@@ -701,6 +670,5 @@ EOD;
 			return false;
 		}
 	}
-
 ?>
 <!-- Send Mail Function End --->

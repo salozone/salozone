@@ -1,7 +1,7 @@
-<?php 
+<?php
 //session_start();
 #mybookings.php
-include('header.php');	
+include('header.php');
 ?>
 <style>
 .rowcenter {
@@ -50,16 +50,16 @@ include('header.php');
 									<td class="rowcenter"><?php if($order1['order_status'] == 1) { echo "Done"; } elseif($order1['order_status'] == 2) { echo "Canceled"; } else { echo "Pending"; } ?></td>
 									<td class="rowcenter"><?php if($order1['payment_type'] == 1) { echo "Pay Online After Service"; } elseif($order1['payment_type'] == 2) { echo "Pay Cash"; } elseif($order1['payment_type'] == 3) { echo "Pay Online"; } ?></td>
 									<td class="rowcenter">
-										<?php 
-										if($order1['payment_status'] == 0) { 
+										<?php
+										if($order1['payment_status'] == 0) {
 											$ps = "Pending";
 											$psc = 'danger';
 											$psh = 'payment_later.php?id='.$order1['id'].'&order='.$order1['order_id'];
-										} elseif($order1['payment_status'] == 1) { 
-											$ps = "paid";
+										} elseif($order1['payment_status'] == 1) {
+											$ps = "Paid";
 											$psc = "success";
 											$psh = '#';
-										} 
+										}
 										?>
 										<a href="<?php echo $psh; ?>" title="<?php echo $ps; ?>" class="btn btn-<?php echo $psc; ?> btn-sm"><?php echo $ps; ?></a>
 									</td>
@@ -71,8 +71,8 @@ include('header.php');
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
-	</div>	
-<?php 
+	</div>
+<?php
 include('footer.php'); ?>

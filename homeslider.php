@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Demo styles -->
   <style>
-
+  .smobile-wrap::-webkit-scrollbar { width: 0 !important }
+  .smobile-wrap { overflow: -moz-scrollbars-none; }
+  .smobile-wrap { -ms-overflow-style: none; }
   .mobile-container {
    width: 97%;
    padding-top: 50px;
-   overflow: hidden;
   }
   .mobile-slide {
    background-position: center;
@@ -36,7 +37,6 @@
    overflow-y: hidden;
    vertical-align:middle;
    display: block;
-    overflow: hidden;
   }
   .mobile-slide {
    display: inline-block;
