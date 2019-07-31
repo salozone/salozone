@@ -269,7 +269,7 @@
 
 
 
-        <div id="fh5co-services" class="fh5co-bg-section">
+  <div id="fh5co-services" class="fh5co-bg-section" style="background-color: #100000;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 text-center">
@@ -277,7 +277,7 @@
 						<span class="icon">
 							<i class="icon-credit-card"></i>
 						</span>
-						<h3 style="color:#f4cd2a;">SALON AT HOME</h3>
+						<h3 style="color:#D1C384;">SALON AT HOME</h3>
 						<p style="color:#bf9b30">Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied we are bringing best of the salon services at your doorstep.</p>
 
 					</div>
@@ -287,7 +287,7 @@
 						<span class="icon">
 							<i class="icon-wallet"></i>
 						</span>
-						<h3 style="color:#f4cd2a;">NO TRUST ISSUES</h3>
+						<h3 style="color:#D1C384;">NO TRUST ISSUES</h3>
 						<p style="color:#bf9b30">We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and familiar only with added training and expertise.</p>
 					</div>
 				</div>
@@ -296,7 +296,7 @@
 						<span class="icon">
 							<i class="icon-paper-plane"></i>
 						</span>
-						<h3 style="color:#f4cd2a;">CHEAPEST PRICE GUARANTEED</h3>
+						<h3 style="color:#D1C384;">CHEAPEST PRICE GUARANTEED</h3>
 						<p style="color:#bf9b30">Salozone’s prime motive is to redefine beauty services in Patna with maximum customer satisfaction which is why we
                promise all these facilities and benefits at the cheapest price .</p>
 					</div>

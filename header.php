@@ -135,13 +135,14 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 		}
 		@media screen and (max-width: 600px) {
 			.navicon { margin-top:0px !important; padding: 0px !important; }
-			.fh5co-nav ul li a { padding: 0px !important; }
+			.fh5co-nav ul li a { padding: 0px !important}
 			.fh5co-nav a { padding: 0px !important; }
 			.fh5co-nav-toggle { margin-top:8px !important; }
 			.product .product-grid { height: 150px !important; }
 		}
 		.navicon { margin-top: 10px; }
 		.menu-1 { margin-top:30px; }
+
 	</style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -211,9 +212,9 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 						<li class="shopping-cart loginIcon"><a href="login.php" title="Login" class="cart"><span><img src="images/login.png" width="30" height="30"/></span></a></li>
 						<?php } ?>
 						<li>
-											<span class="col-md-5 col-xs-6 text-center menu-1 navicon">
+											<span class="col-md-5 col-xs-6 menu-1 navicon" >
 							 					<ul>
-													<span class="whatsapp">
+													<span class="whatsapp" style="text-align:left">
 														<li class="has-dropdown">
 															<a>Services</a>
 															<ul class="dropdown">
