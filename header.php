@@ -130,14 +130,14 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 		}
 		@media only screen and (max-width: 990px) and (min-width: 767px)  {
 			.menu-1 { width:63%;margin-top:10px !important; }
-			.navicon { margin-top:6px !important; }
+			.navicon { margin-top:8px !important; }
 			.log { margin-top:5px; }
 		}
 		@media screen and (max-width: 600px) {
-			.navicon { margin-top:0px !important; padding: 0px !important; }
+			.navicon { margin-top:8px !important; padding: 0px !important; }
 			.fh5co-nav ul li a { padding: 0px !important}
 			.fh5co-nav a { padding: 0px !important; }
-			.fh5co-nav-toggle { margin-top:8px !important; }
+			.fh5co-nav-toggle { margin-top:6px !important; }
 			.product .product-grid { height: 150px !important; }
 		}
 		.navicon { margin-top: 10px; }
@@ -145,9 +145,9 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 
 	</style>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!--<div class="fh5co-loader"></div>-->
-<div id="page">
 <style type="text/css">
 @media screen and (max-width: 650px) {
 		.fh5co-nav a{
@@ -170,6 +170,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 }
 </style>
 
+<div id="page">
 
 <nav class="fh5co-nav" role="navigation" style="background-color: #F8C471;">
 		<div class="container-fluid">
@@ -212,7 +213,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 						<li class="shopping-cart loginIcon"><a href="login.php" title="Login" class="cart"><span><img src="images/login.png" width="30" height="30"/></span></a></li>
 						<?php } ?>
 						<li>
-											<span class="col-md-5 col-xs-6 menu-1 navicon" >
+											<span class="col-md-5 col-xs-6 text-center menu-1 navicon" >
 							 					<ul>
 													<span class="whatsapp" style="text-align:left">
 														<li class="has-dropdown">
@@ -253,6 +254,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 									</span>
 						</li>
 					</ul>
+					</div>
 	</nav>
 
 

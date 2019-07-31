@@ -9,7 +9,7 @@
     if(isset($_POST['local2'])) { $_SESSION['login'] = 0; }
     //define ;
     ?>
-      <?php include('header.php'); ?>
+    <?php include('header.php'); ?>
     <link rel="stylesheet" href="jss/style.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="jss/custom.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
@@ -273,31 +273,31 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 text-center">
-					<div class="feature-center " data-animate-effect="fadeIn">
+					<div class="feature-center wow fadeInUp">
 						<span class="icon">
 							<i class="icon-credit-card"></i>
 						</span>
-						<h3 style="color:#D1C384;">SALON AT HOME</h3>
-						<p style="color:#bf9b30">Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied we are bringing best of the salon services at your doorstep.</p>
+						<h3 style="color:white;font-style:normal">SALON AT HOME</h3>
+						<p>Understanding the need of quality Salon services and frustration of visiting different salons and then returning unsatisfied we are bringing best of the salon services at your doorstep.</p>
 
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 text-center">
-					<div class="feature-center " data-animate-effect="fadeIn">
+					<div class="feature-center wow fadeInDown">
 						<span class="icon">
 							<i class="icon-wallet"></i>
 						</span>
-						<h3 style="color:#D1C384;">NO TRUST ISSUES</h3>
-						<p style="color:#bf9b30">We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and familiar only with added training and expertise.</p>
+						<h3 style="color:white;font-style:normal">NO TRUST ISSUES</h3>
+						<p>We have collaborated with your local salon service providers who are trusted and tested by you. Everything will be the same and familiar only with added training and expertise.</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 text-center">
-					<div class="feature-center " data-animate-effect="fadeIn">
+					<div class="feature-center wow fadeInUp" >
 						<span class="icon">
 							<i class="icon-paper-plane"></i>
 						</span>
-						<h3 style="color:#D1C384;">CHEAPEST PRICE GUARANTEED</h3>
-						<p style="color:#bf9b30">Salozone’s prime motive is to redefine beauty services in Patna with maximum customer satisfaction which is why we
+						<h3 style="color:white;font-style:normal">CHEAPEST PRICE GUARANTEED</h3>
+						<p>Salozone’s prime motive is to redefine beauty services in Patna with maximum customer satisfaction which is why we
                promise all these facilities and benefits at the cheapest price .</p>
 					</div>
 				</div>
