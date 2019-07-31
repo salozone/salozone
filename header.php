@@ -168,15 +168,12 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 		<div class="container-fluid">
 					<ul class="mb-0">
 						<li class="float-left">
-								<?php if($_SERVER['REQUEST_URI']=='/salozone/index.php'||$_SERVER['REQUEST_URI']=='/salozone/') { ?>
-		 						<a href="main.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a> <?php }
-		 					 else {?>
+							
 		 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a>
-		 					<?php } ?>
-
+		 					
 						</li>
 
-						<?php if($_SERVER['REQUEST_URI']!='/salozone/index.php'&& $_SERVER['REQUEST_URI']!='/salozone/') { ?>
+						
 						<li class="has-dropdown remove">
 							<a style="font-family: Open Sans, helvetica; color:#000000;">Services</a>
 							<ul class="dropdown" class="nav-link">
@@ -193,7 +190,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 								<li><a href="dressup.php">Dress Up</a></li>
 								<li><a href="mehandi.php">Mehandi</a></li>
 							</ul>
-						</li> <?php } ?>
+						</li>
 						<li class="remove"><a href="about.php" style="font-family: helvetica, sans-serif; color:#000000;" >About Us</a></li>
 						<li class="remove"><a href="contact.php" style="font-family: helvetica, sans-serif; color:#000000;">Contact Us</a></li>
 						<li class="shopping-cart"><a href="tel:8925070790" title="Book Through"><span><img src="images/call3.png" width="30" height="30"/></span></a></li>
