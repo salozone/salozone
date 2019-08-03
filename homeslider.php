@@ -9,9 +9,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Demo styles -->
   <style>
+
   .smobile-wrap::-webkit-scrollbar { width: 0 !important }
   .smobile-wrap { overflow: -moz-scrollbars-none; }
   .smobile-wrap { -ms-overflow-style: none; }
+
   .mobile-container {
    width: 97%;
    padding-top: 50px;
@@ -50,6 +52,9 @@
    .mobile-container{
      display:none;
    }
+   h3{
+     text-align: center;
+   }
   }
 
   @media screen and (max-width: 600px) {
@@ -85,7 +90,10 @@
    background-color: white;
    border-radius: 50%;
   }
-
+  i{
+    margin-left: 35%;
+    margin-top: 30%;
+  }
   </style>
   </head>
   <body>
@@ -139,8 +147,8 @@
           <h3>Dressup<h3>
       </div>
     </div>
-    <div class="swiper-button-next"><i class="fas fa-arrow-right mt-3"></i></div>
-   <div class="swiper-button-prev"><i class="fas fa-arrow-left mt-3"></i></div>
+    <div class="swiper-button-next"><i class="fas fa-arrow-right "></i></div>
+   <div class="swiper-button-prev"><i class="fas fa-arrow-left "></i></div>
     <!-- Add Pagination -->
   </div>
 
@@ -237,5 +245,6 @@
  });
 
   </script>
+
 </body>
 </html>
