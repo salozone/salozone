@@ -41,10 +41,6 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
 
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
@@ -168,12 +164,12 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 		<div class="container-fluid">
 					<ul class="mb-0">
 						<li class="float-left">
-							
+
 		 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a>
-		 					
+
 						</li>
 
-						
+
 						<li class="has-dropdown remove">
 							<a style="font-family: Open Sans, helvetica; color:#000000;">Services</a>
 							<ul class="dropdown" class="nav-link">
@@ -308,18 +304,20 @@ $amounts = array("15","25", "10","80","30","50","119","199","119","149","199","2
 	<?php } ?>
 
 <?php } ?>
+
+<!-- START OF PRODUCT SLIDER-->
+
 <?php function sliderMenu($slider = ''){ ?>
-<link rel="stylesheet" href="jss/owl.carousel.css" type="text/css" media="all"/>
-<link rel="stylesheet" href="jss/owl.theme.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="jss/style.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="jss/custom.css" type="text/css" media="all"/>
 	<link rel="stylesheet" href="css/qaModalChunk-0c3d9f415163febe1e74.css">
+	<link rel="stylesheet" href="assets/css/swiper.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 	@media screen and (max-width: 768px) {
 		.gototop { position:unset; }
 	}
-	</style>
-<style>
+
 .clearBoth {
 	padding: 2em;
 	clear: both;
@@ -395,167 +393,255 @@ h3 {
     max-height: 575px;
     font-family: Axiforma-Regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
-</style>
+
+	.smobile-wrap::-webkit-scrollbar { width: 0 !important }
+	.smobile-wrap { overflow: -moz-scrollbars-none; }
+	.smobile-wrap { -ms-overflow-style: none; }
+	.mobile-container {
+	 width: 97%;
+	}
+	.mobile-slide {
+	 background-position: center;
+	 background-size: cover;
+	 width: 300px;
+	 height: 300px;
+	}
+	.mobile-slide img{
+	 width:100%;
+	 border-radius: 1%;
+	}
+
+	.smobile-wrap {
+	 position: relative;
+	 width: 100%;
+	 margin: 2px auto;
+	 text-align: left;
+	 white-space: nowrap;
+	 overflow-x: auto;
+	 overflow-y: hidden;
+	 vertical-align:middle;
+	 display: block;
+	}
+	.mobile-slide {
+	 display: inline-block;
+	 margin: 0.3em;
+	 padding: 3px;
+	 white-space: normal;
+	 text-align: center;
+	 padding-top: 15%;
+	}
+
+/* WHEN ON PC VIEW */
+	@media screen and (min-width: 600px) {
+	 .mobile-container{
+		 display:none;
+	 }
+	 .swiper-slide h3{
+		 font-size: 16px!important;
+		 color:#7C7784;
+		 text-align: center;
+	 }
+	}
+
+/* WHEN ON MOBILE VIEW */
+	@media screen and (max-width: 600px) {
+	 .mobile-slide{
+		 width: 30%;
+		 height: 150px;
+
+	 }
+	 .mobile-slide h3{
+		 font-size: 14px!important;
+		 color:#7C7784;
+		 text-align: center;
+	 }
+	 .swiper-container{
+		 display:none;
+	 }
+	}
 
 
-	<!-- Slider menu -->
-
-<div class="clearBoth">
-	<div class="container">
-		<div class="row">
-			<div class="product-carousel p-0" data-auto-play="true" data-desktop="6" data-laptop="4" data-tablet="3" data-mobile="3">
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="single.php">
-							<img src="withouttext/threading1.jpg" alt="Threading" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="single.php">
-							<h2 class="title">Threading</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="waxing.php">
-							<img src="withouttext/waxing1.jpg" alt="Waxing" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="waxing.php">
-							<h2 class="title">Waxing</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="cleanup.php">
-							<img src="withouttext/cleanup1.jpg" alt="Cleanup" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="cleanup.php">
-							<h2 class="title">Cleanup</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="facial.php">
-							<div class="badges">
-							</div>
-							<img src="withouttext/facial1.jpg" alt="Facial" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="facial.php">
-							<h2 class="title">Facial</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="bleaching.php">
-							<img src="withouttext/bleach1.jpg" alt="Bleach" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="bleaching.php">
-							<h2 class="title">Bleach</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="pedicure.php">
-							<img src="withouttext/manicure1.jpg" alt="Pedicure/Manicure" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="pedicure.php">
-							<h2 class="title">Pedi/Mani</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="haricut.php">
-							<img src="withouttext/haircut1.jpg" alt="Haircut" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="haricut.php">
-							<h2 class="title">Haircut</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="hairstyling.php">
-							<img src="withouttext/hairstyle1.jpg" alt="Hairstyling" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="hairstyling.php">
-							<h2 class="title">Hairstyling</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="partyready.php">
-							<div class="badges">
-							</div>
-							<img src="withouttext/partyready1.jpg" alt="Party Ready" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="partyready.php">
-							<h2 class="title">Party Ready</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="makeup.php">
-							<img src="withouttext/bridal12.jpg" alt="Bridal" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="makeup.php">
-							<h2 class="title">Bridal</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="dressup.php">
-							<img src="withouttext/dressup1.jpg" alt="Dressup" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="dressup.php">
-							<h2 class="title">Dressup</h2>
-						</a>
-					</div>
-				</div>
-				<div class="product-item text-center">
-					<div class="product-thumb">
-						<a href="mehandi.php">
-							<img src="withouttext/Mehendi1.jpg" alt="Mehandi" />
-						</a>
-					</div>
-					<div class="product-info">
-						<a href="mehandi.php">
-							<h2 class="title">Mehandi</h2>
-						</a>
-					</div>
-				</div>
+	.swiper-container {
+	 width: 97%;
+	 padding-top: 6%;
+	}
+	.swiper-slide {
+	 background-position: center;
+	 background-size: cover;
+	 width: 40%;
+	 height: 40%;
+	}
+	.swiper-slide img{
+	 width:100%;
+	 border-radius: 1%;
+	}
+	.swiper-button-next, .swiper-button-prev{
+	 background-image: none !important;
+	 height:30px;
+	 width:30px;
+	 background-color: white;
+	 border-radius: 50%;
+	}
+	i{
+		margin-left: 30%;
+		margin-top: 25%;
+	}
+	.slide img{
+		border:3px solid white;
+	}
+	.slide img:hover{
+		border:3px solid #3DB17D;
+	}
+	</style>
+	</head>
+	<body>
+	<!-- Swiper -->
+<div class="container slide">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="single.php">
+					<img src="withouttext/threading1.jpg" alt="Salon At Home Threading At Home" /> </a>
+					<h3>Threading<h3>
+			</div>
+			<div  class="swiper-slide">
+				<a href="waxing.php">
+						<img src="withouttext/waxing1.jpg" alt="Salon At Home Waxing At Home" /> </a>
+						<h3>Waxing<h3>
+			</div>
+			<div  class="swiper-slide">
+				<a href="cleanup.php">
+				<img src="withouttext/cleanup1.jpg" alt="Salon At Home Cleanup At Home" /> </a>
+				<h3>Cleanup<h3>
+			</div>
+			<div  class="swiper-slide">
+				<a href="facial.php">
+					<img src="withouttext/facial1.jpg" alt="Salon At Home Facial At Home" /> </a>
+					<h3>Facial<h3>
+			</div>
+			<div  class="swiper-slide">
+				<a href="bleaching.php">
+				<img src="withouttext/bleach1.jpg" alt="Salon At Home Bleach At Home" /> </a>
+				<h3>Bleaching<h3>
+			</div>
+			<div  class="swiper-slide">
+				<a href="pedicure.php">
+					<img src="withouttext/manicure1.jpg" alt="Salon At Home Pedicure/Manicure At Home" /> </a>
+					<h3>Manicure/Pedicure<h3>
+			</div>
+			<div  class="swiper-slide">
+					<a href="hairstyling.php">
+				<img src="withouttext/hairstyle1.jpg" alt="Salon At Home Hairstyling At Home" /> </a>
+				<h3>Haistyling<h3>
+			</div>
+			<div  class="swiper-slide">
+				<a href="partyready.php">
+					<img src="withouttext/partyready1.jpg" alt="Salon At Home Party Ready At Home" /> </a>
+					<h3>Party Ready<h3>
+			</div>
+			<div class="swiper-slide">
+				<a href="dressup.php">
+					<img src="withouttext/makeup1.jpg" alt="Salon At Home Dressup At Home" /> </a>
+					<h3>Dressup<h3>
 			</div>
 		</div>
+		<!-- Add Pagination -->
+	</div>
+
+
+	<div class="mobile-container">
+		<div class="smobile-wrap">
+			<div class="mobile-slide">
+				<a href="single.php">
+					<img src="withouttext/threading1.jpg" alt="Salon At Home Threading At Home" /> </a>
+					<h3>Threading<h3>
+			</div>
+			<div  class="mobile-slide">
+				<a href="waxing.php">
+						<img src="withouttext/waxing1.jpg" alt="Salon At Home Waxing At Home" /> </a>
+						<h3>Waxing<h3>
+			</div>
+			<div  class="mobile-slide">
+				<a href="cleanup.php">
+				<img src="withouttext/cleanup1.jpg" alt="Salon At Home Cleanup At Home" /> </a>
+				<h3>Cleanup<h3>
+			</div>
+			<div  class="mobile-slide">
+				<a href="facial.php">
+					<img src="withouttext/facial1.jpg" alt="Salon At Home Facial At Home" /> </a>
+					<h3>Facial<h3>
+			</div>
+			<div  class="mobile-slide">
+				<a href="bleaching.php">
+				<img src="withouttext/bleach1.jpg" alt="Salon At Home Bleach At Home" /> </a>
+				<h3>Bleaching<h3>
+			</div>
+			<div  class="mobile-slide">
+				<a href="pedicure.php">
+					<img src="withouttext/manicure1.jpg" alt="Salon At Home Pedicure/Manicure At Home" /> </a>
+					<h3>Mani/Pedi<h3>
+			</div>
+			<div  class="mobile-slide">
+					<a href="hairstyling.php">
+				<img src="withouttext/hairstyle1.jpg" alt="Salon At Home Hairstyling At Home" /> </a>
+				<h3>Haistyling<h3>
+			</div>
+			<div  class="mobile-slide">
+				<a href="partyready.php">
+					<img src="withouttext/partyready1.jpg" alt="Salon At Home Party Ready At Home" /> </a>
+					<h3>Party Ready<h3>
+			</div>
+			<div class="mobile-slide">
+				<a href="dressup.php">
+					<img src="withouttext/makeup1.jpg" alt="Salon At Home Dressup At Home" /> </a>
+					<h3>Dressup<h3>
+			</div>
+
+		</div>
+		<!-- Add Pagination -->
+
 	</div>
 </div>
+
+	<!-- Swiper JS -->
+	<script src="assets/js/swiper.min.js"></script>
+	<!-- Initialize Swiper -->
+	<script>
+	var swiper = new Swiper('.swiper-container', {
+	 slidesPerView: 6,
+	 spaceBetween: 25,
+	 autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+	 loop:true,
+
+	 breakpoints: {
+		 1024: {
+			 slidesPerView: 4,
+			 spaceBetween: 40,
+
+		 },
+		 768: {
+
+			 slidesPerView: 3,
+			 spaceBetween: 30,
+		 },
+		 640: {
+
+			 slidesPerView: 3,
+			 spaceBetween: 20,
+		 },
+		 320: {
+			 slidesPerView: 3,
+			 spaceBetween: 10,
+
+		 }
+	 }
+	});
+
+	</script>
+
 
 </div>
 </div>
@@ -563,6 +649,7 @@ h3 {
 
 	<!-- Slider menu -->
 <?php } ?>
+<!-- END OF PRODUCT SLIDER-->
 <!--Send Mail Function Start --->
 <?php
 	function sendEmail($from, $fromName, $to, $toName, $subject, $body, $signature){
