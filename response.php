@@ -1,12 +1,12 @@
 <?php
+#response.php
 include('header.php');
 $postdata = $_POST;
 $msg = '';
 $status = '';
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
-    $salt				=   $postdata['salt'];
-//	$salt				=   "fuOTFzjTgU";
+	$salt				=   "yPny25lkcE";
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
@@ -60,9 +60,8 @@ else exit(0);
 //Using setTimeout to execute a function after 5 seconds.
 setTimeout(function () {
    //Redirect with JavaScript
-//    window.location.href= 'https://salozone.com/confirm.php';
-window.location.href= 'confirm.php';
-}, 5000);
+   window.location.href= 'https://salozone.com/confirm.php';
+}, 1000);
 </script>
 			</div>
 		</div>

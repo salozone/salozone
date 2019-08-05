@@ -243,7 +243,7 @@ function save_to_bd(cart_id, new_quantity) {
 								<span>Your Cart is Empty...</span>
 							
 							<?php } ?>
-							<a class="btn btn-primary btn-outline btn-lg" href="main.php">Continue Shopping</a>
+							<a class="btn btn-primary btn-outline btn-lg" href="index.php">Continue Shopping</a>
 							<?php if(isset($total) && $total != '') {
 						     ?>
 									<a class="btn btn-primary btn-outline btn-lg" href="added.php">Continue Checkout</a>

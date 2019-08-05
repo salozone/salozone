@@ -3,9 +3,9 @@
 include('header.php');
 // Unset all of the session variables.
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname="salon_management";
+$username = "salozxmb_salozon";
+$password = "c*,LOqH{#zI}";
+$dbname="salozxmb_salozone";
 
 // Create connection
 $conn = mysqli_connect($servername, $username,$password,$dbname);

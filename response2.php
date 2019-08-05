@@ -1,12 +1,12 @@
 <?php
+#response.php
 include('header.php');
 $postdata = $_POST;
 $msg = '';
 $status = '';
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
-	$salt				=   $postdata['salt'];
-	// $salt				=   "fuOTFzjTgU";
+	$salt				=   "yPny25lkcE";
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
@@ -38,6 +38,7 @@ if (isset($postdata ['key'])) {
 }
 else exit(0);
 ?>
+<?php  ?>
 <link rel="stylesheet" href="css/qaModalChunk-0c3d9f415163febe1e74.css">
 <div id="fh5co-contact">
 	<div class="container">
@@ -60,8 +61,7 @@ else exit(0);
 //Using setTimeout to execute a function after 5 seconds.
 setTimeout(function () {
    //Redirect with JavaScript
-//    window.location.href= 'https://salozone.com/mybookings.php?success=Done';
-window.location.href= 'mybookings.php';
+   window.location.href= 'https://salozone.com/mybookings.php?success=Done';
 }, 5000);
 </script>				
 			</div>
