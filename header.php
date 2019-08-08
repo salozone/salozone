@@ -1,5 +1,6 @@
 <?php
 #header.php
+
 session_start();
 ob_start();
 ini_set('output_buffering', 'On');
@@ -13,9 +14,44 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	$getUser1 = mysqli_fetch_array($getUser);
 	$userName = $getUser1['cust_name'];
 	$userEmail = $getUser1['cust_email'];
+	$userPhone = $getUser1['cust_mobile'];
+	$member = $getUser1['member'];
+	date_default_timezone_set('Asia/Kolkata');
+	$date1 = $getUser1['member_added'];
+	$date2 = date('Y-m-d'); //today's date
+
+
+	$diff = abs(strtotime($date2) - strtotime($date1));
+	$years = floor($diff / (365*60*60*24));
+	$months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+	$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+
+	//If user is a tier 1 member
+	if($member == 1)
+	{
+	if($months>=1)
+	{
+		$member = 0;
+		$reset = "0000-00-00";
+		$update = mysqli_query($con, "UPDATE `customer` SET `member` = '".$member."' , `member_added` = '".$reset."'");
+		
+
+	}
+	}
+	//If user is a tier 2 member
+	if($member == 2)
+	{
+	if($months>=6)
+	{
+		$member = 0;
+		$reset = "0000-00-00";
+		$update = mysqli_query($con, "UPDATE `customer` SET `member` = '".$member."' , `member_added` = '".$reset."'");
+	}
+	}
 } else {
 	$userName = NULL;
 	$userEmail = NULL;
+	$userPhone = NULL;
 }
 ?>
 <!DOCTYPE HTML>
@@ -189,6 +225,12 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 						</li>
 						<li class="remove"><a href="about.php" style="font-family: helvetica, sans-serif; color:#000000;" >About Us</a></li>
 						<li class="remove"><a href="contact.php" style="font-family: helvetica, sans-serif; color:#000000;">Contact Us</a></li>
+						<?php
+														if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1 && $member == 0) { ?>
+														<li><a href="member.php" style="font-family: helvetica, sans-serif; color:#000000;">Member</a></li>
+														<?php } elseif(!isset($_COOKIE['isLogin'])) { ?>
+															<li><a href="login.php?member=1" style="font-family: helvetica, sans-serif; color:#000000;">Member</a></li>
+														<?php } ?>
 						<li class="shopping-cart"><a href="tel:8925070790" title="Book Through"><span><img src="images/call3.png" width="30" height="30"/></span></a></li>
 						<li class="shopping-cart"><a href="https://api.whatsapp.com/send?phone=918925070790" title="Whatsapp" class="cart"><span><img src="images/whatsapp.png" width="50" height="50"/></span></a></li>
 						<li class="shopping-cart"><a href="checkout.php" title="Cart" ><span><img src="images/cart.png" width="50" height="45"/></span></a></li>
@@ -249,7 +291,17 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 //Define the products and cost
 $products = array("Eyebrow", "Eyebrow + Forehead", "Upper Lip", "Full Face", "UnderArm-HoneyBee", "UnderArm-Chocolate", "FullHand-HoneyBee", "FullHand-Chocolate", "HalfLegs-HoneyBee", "HalfLegs-Chocolate", "FullLegs-HoneyBee", "FullLegs-Chocolate", "FullHands+FullLegs-Honeybee", "FullHands+FullLegs-Chocolate", "FullHands+FullLegs+Underarms-Honeybee", "FullHands+FullLegs+Underarms-Chocolate", "FullFace-Honeybee", "FullFace-Chocolate", "UpperLip-Honeybee", "UpperLip-Chocolate", "FullBody-Honeybee", "FullBody-Chocolate", "FullBack(upper)-Honeybee", "FullBack(upper)-Chocolate", "Stomach-Honeybee", "Stomach-Chocolate", "Forehead-Honeybee", "Forehead-Chocolate", "Fruit-Face", "Fruit-Hand", "Anti Tan-Face", "Anti Tan-Hand", "VLCC-Face", "VLCC-Hand", "Lotus-Face", "Lotus-Hand", "Shehnaz-Face", "Shehnaz-Hand", "Whitening-Face", "Whitening-Hand", "Charcoal-Face", "Charcoal-Hand", "Gold-Face", "Gold-Hand", "Diamond-Face", "Diamond-Hand", "Pearl-Face", "Pearl-Hand" , "Gold", "Diamond", "Pearl", "Charcoal", "Shehnaaz Gold", "Fruit", "Whitening", "Anti Tan","Lotus", "VLCC", "Aroma", "Oxy-Face","Oxy-Hand","Oxy-Face+Hand","Diamond-Face","Diamond-Hand","Diamond-Face+Hand","Gold-Face","Gold-Hand","Gold-Face+Hand","Fem-Face", "Fem-Hand", "Fem-Face+Hand","Pedicure","Manicure","Straight","U","V","Layer- 2 Step","Layer- 3 Step", "Laser", "Feather", "Chinese Cut", "Princess Cut", "Blunt Cut", "Boy Cut", "Sadhna Cut", "Half Hair Curls", "Full Hair Curls", "Hair Style Designer", "Waxing(full hand + full legs + underarms)+Clean Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling", "Waxing(full hand + full legs + underarms)+Clean Up+Make Up", "Waxing(full hand + full legs + underarms)+Clean Up+ Hair Styling +Make Up","Light","Bridal","Dress Up","Simple","Bridal","Threading + Full Hand Waxing + Clean Up(Fruit)","Facial(Gold) + Pedicure + Manicure","Facial(Gold) + Pedicure","Bleach(Oxy) + Hair Style Designer + Pedicure","Threading + Full Waxing(Hands+Legs+Under Arms) + Clean Up(Fruit)" ,"Air Brush","Body Polishing","Bridal Facial","Engagement","Reception","Pre-Bridal","Bridal HD", "Hair Spa-LOreal","Hair Spa-Body care","Hair Massage");
 $amounts = array("15","25", "10","80","30","50","119","199","119","149","199","249","299","449","329","499","99","119","20","25","599","799","149","175","149","175","30","45","99","180","199","299","149","249","249","349","449","599","199","299","449","599","199","299","299", "399", "199", "299","499","649","499","649","1499","199","299","299", "499", "299", "499","99","199","299","119","259","379","99","199","349","75","149","199","199","149","30","50","100","100","120","100","100","100","100","50","50","50","149","199","149","450","550","600","700","199","4999","200","149","4999","250","650","620","420","420","399","2999","799","1999","1999","3499","7999","549","449","249");
+
+if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1 && $member == 1) {
+$discount = 15;
+$discount = $discount/100;
+for ($x=0;$x < sizeof($amounts);$x++){
+	$amounts[$x] = $amounts[$x]*(1-$discount);
+}
+}
 ?>
+
+
 	<div id="page" style="background:#100000;">
 <?php function footerCart() { ?>
 	<?php if ( isset($_SESSION["cart"]) ) { ?>
