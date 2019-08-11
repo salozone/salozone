@@ -1,0 +1,34 @@
+.popup{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hide{
+	display: none;
+}
+
+.model-content{
+	width: 500px;
+	height: 300px;
+	border-radius: 4px;
+	position: relative;
+	text-align: center;
+	padding: 20px;
+	z-index: 1;
+}
+
+.close{
+	position: absolute;
+	top: 15;
+	left: 615px;
+	font-size: 42px;
+	transform: rotate(45deg);
+	cursor: pointer;
+	color: #DAA520;
+}

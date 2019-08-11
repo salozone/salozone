@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/media-queries.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css" media="all">
 
 
       <!-- SLIDESHOW. -->
@@ -33,6 +34,8 @@
         margin: 1em 0; padding: 0;
     }
     </style>
+
+
 
     <center class="mt-5">
             <h2 class="mt-5" style="color:#ffcf40">Salozone Home Salon Services</h2>
@@ -266,6 +269,26 @@
           </div>
         </div>
 
+
+      <!---pop up screen for premium --->
+      <div class="popup hide" id="footerpop">
+        <div class="model-content">
+          <div class="close">+</div>
+          <img src="images/popup.jpg" alt="" >
+        </div>
+      </div>
+      <!--------------------------------->
+      <!---Script for js----------------->
+      <script>
+        setTimeout(function(){
+        document.getElementById('footerpop').classList.remove('hide');
+        }, 10000);
+        document.querySelector('.close').addEventListener('click',
+          function(){
+        document.getElementById('footerpop').classList.add('hide');
+          });
+      </script>
+      <!-------------------------------------->
 
 
 
