@@ -270,8 +270,8 @@
         </div>
 
 
-      <!---pop up screen for premium --->
-      <div class="popup hide" id="footerpop">
+      <!--pop up screen for premium --->
+      <div class="popup1 hide" id="footerpop">
         <div class="model-content">
           <div class="close">+</div>
           <img src="images/popup.jpg" alt="" >
