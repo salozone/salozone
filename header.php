@@ -33,7 +33,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	{
 		$member = 0;
 		$reset = "0000-00-00";
-		$update = mysqli_query($con, "UPDATE `customer` SET `member` = '".$member."' , `member_added` = '".$reset."'");
+		$update = mysqli_query($con, "UPDATE `customer` SET `member` = '".$member."' , `member_added` = '".$reset."' WHERE `cust_name` = '".$userName."'");
 		
 
 	}
@@ -204,8 +204,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 		 						<a href="index.php"><img src="withouttext/logobw2.png" style="max-width:45%; height:auto;" class="log" ></a>
 
 						</li>
-
-
+						
 						<li class="has-dropdown remove">
 							<a style="font-family: Open Sans, helvetica; color:#000000;">Services</a>
 							<ul class="dropdown" class="nav-link">
@@ -296,7 +295,11 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1 && $member == 1) {
 $discount = 15;
 $discount = $discount/100;
 for ($x=0;$x < sizeof($amounts);$x++){
-	$amounts[$x] = $amounts[$x]*(1-$discount);
+	if($x == 92 || $x == 93 || ($x >= 102 && $x <=108)){
+		continue;
+	}else{
+		$amounts[$x] = $amounts[$x]*(1-$discount);
+	}
 }
 }
 ?>

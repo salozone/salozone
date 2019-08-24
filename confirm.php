@@ -112,9 +112,9 @@ if(isset($_POST['pas']) && $_POST['pas'] != "") {
 		$totalQty = $noQty;
 		$delivery = $_SESSION['delivery'];
 		if(isset($_SESSION['newtotal']) && $_SESSION['newtotal'] != '') {
-			$gTotal = ($totalAmt + $delivery) - 0;//change done here to remove promo code
+			$gTotal = ($_SESSION['gtotal']) - 0;//change done here to remove promo code
 		} else {
-			$gTotal = ($totalAmt + $delivery);
+			$gTotal = ($_SESSION['gtotal']);
 		}
 		$mailText .="
 			<tr>

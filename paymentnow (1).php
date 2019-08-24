@@ -1,16 +1,16 @@
-<?php 
+<?php
 //session_start();
 #payment.php
 if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 	//Request hash
-	$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';	
+	$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 	if(strcasecmp($contentType, 'application/json') == 0){
 		$data = json_decode(file_get_contents('php://input'));
 		$hash=hash('sha512', $data->key.'|'.$data->txnid.'|'.$data->amount.'|'.$data->pinfo.'|'.$data->fname.'|'.$data->email.'|||||'.$data->udf5.'||||||'.$data->salt);
 		$json=array();
 		$json['success'] = $hash;
     	echo json_encode($json);
-	
+
 	}
 	exit(0);
 }
@@ -19,27 +19,28 @@ function getCallbackUrl()
 {
 	$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 	#return $protocol . $_SERVER['HTTP_HOST'] ;
-	return $protocol . $_SERVER['HTTP_HOST'] . '/'. 'response.php';
+	// return $protocol . $_SERVER['HTTP_HOST'] . '/'. 'response.php';
+	return $protocol . 'localhost/salozone/response.php';
 }
 
 ?>
-<?php 
+<?php
 include('header.php');
 if(isset($_SESSION["total"])) {
 $total = isset($_SESSION["total"]) ? $_SESSION["total"] : 0;
 $delivery = $_SESSION['delivery'];
-$amount = isset($_SESSION['newtotal']) ? (($total +$delivery) - 0) : ($total + $delivery);
+$amount = isset($_SESSION['newtotal']) ? ($_SESSION["gtotal"] - 0) : ($_SESSION["gtotal"]);
 $txn = "Txn" . rand(10000,99999999);
 ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- this meta viewport is required for BOLT //-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
-<!-- BOLT Sandbox/test //
+<!-- BOLT Sandbox/test // -->
 <script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js " bolt-
-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>-->
+color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
 <!-- BOLT Production/Live // -->
-<script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
+<!-- <script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script> -->
 <link rel="stylesheet" href="css/qaModalChunk-0c3d9f415163febe1e74.css">
 
 	<div id="fh5co-contact">
@@ -53,20 +54,21 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 							<input type="hidden" id="surl" name="surl" value="<?php echo getCallbackUrl(); ?>" />
 							<div class="row form-group">
 								<div class="col-md-6">
-									<input type="hidden" id="key" name="key" placeholder="Merchant Key" class="form-control" value="zpcPF9e8" />
-								</div>
+									<!-- <input type="hidden" id="key" name="key" placeholder="Merchant Key" class="form-control" value="zpcPF9e8" /> -->
+									<input type="hidden" id="key" name="key" placeholder="Merchant Key" class="form-control" value="E3IoU5Qj" />								</div>
 							</div>
-							
+
 							<div class="dv">
-							<span><input type="hidden" id="salt" name="salt" placeholder="Merchant Salt" value="yPny25lkcE" /></span>
+							<!-- <span><input type="hidden" id="salt" name="salt" placeholder="Merchant Salt" value="yPny25lkcE" /></span> -->
+							<span><input type="hidden" id="salt" name="salt"  placeholder="Merchant Salt" value="fuOTFzjTgU" /></span>
 							</div>
-							
+
 							<div class="dv">
 							<span><input type="hidden" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  $txn; ?>" /></span>
 							</div>
 							<div class="row form-group">
 								<div class="col-md-6">
-									<input type="hidden" id="amount" name="amount" placeholder="Amount" class="form-control" value="<?php echo $amount; ?>" /></span>    
+									<input type="hidden" id="amount" name="amount" placeholder="Amount" class="form-control" value="<?php echo $amount; ?>" /></span>
 								</div>
 								<div class="col-md-6">
 									<input type="hidden" id="pinfo" name="pinfo" placeholder="Product Info" class="form-control" value="P01,P02" />
@@ -80,14 +82,14 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 									<input type="hidden" id="email" name="email" placeholder="Email ID" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="example@example.com" required="required" autocomplete="off" value="<?php echo $_SESSION['email']; ?>" />
 								</div>
 							</div>
-							
+
 							<div class="row form-group">
 								<div class="col-md-12">
 									<input type="hidden" id="mobile" name="mobile" placeholder="Mobile/Cell Number" class="form-control" required="required" pattern="^[6789]\d{9}$" title="Enter 10 digit valid mobile number" maxlength="10" autocomplete="off" value="<?php echo $_SESSION['contact_no']; ?>" />
 								</div>
 									<input type="hidden" id="hash" name="hash" placeholder="Hash" class="form-control" value="" /></span>
 							</div>
-							
+
 							<ul class="_2mioG8IfFu0HyLapNQp2db">
 								<div class="_3pUB-LDjlpx6e9ACL8E_1x _1ztQTskd2_GRzGb0OH6YwR" style="">
 									<div class="hPO8BoyBkYEU2ujeCWJgk H1Lb6afUHKzH-OTelE23x" style="font-size: 14px;">
@@ -117,7 +119,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 									</div>
 								</div>
 							</ul>
-							
+
 							<div class="form-group text-center">
 								<input type="submit" value="Pay" class="btn btn-primary btn-outline btn-lg" onclick="launchBOLT(); return false;" />
 							</div>
@@ -125,16 +127,16 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 <script type="text/javascript"><!--
 //$('#payment_form').bind('keyup blur', function(){
-$( document ).ready(function() {	
+$( document ).ready(function() {
 	$.ajax({
           url: 'paymentnow.php',
           type: 'post',
-          data: JSON.stringify({ 
+          data: JSON.stringify({
             key: $('#key').val(),
 			salt: $('#salt').val(),
 			txnid: $('#txnid').val(),
@@ -151,21 +153,21 @@ $( document ).ready(function() {
             if (json['error']) {
 			 $('#alertinfo').html('<i class="fa fa-info-circle"></i>'+json['error']);
             }
-			else if (json['success']) {	
+			else if (json['success']) {
 				$('#hash').val(json['success']);
             }
           }
-        }); 
+        });
 });
 //-->
 </script>
 <script type="text/javascript"><!--
 function launchBOLT()
 {
-	
+
 	bolt.launch({
 	key: $('#key').val(),
-	txnid: $('#txnid').val(), 
+	txnid: $('#txnid').val(),
 	hash: $('#hash').val(),
 	amount: $('#amount').val(),
 	firstname: $('#fname').val(),
@@ -175,9 +177,9 @@ function launchBOLT()
 	udf5: $('#udf5').val(),
 	surl : $('#surl').val(),
 	furl: $('#surl').val(),
-	mode: 'dropout'	
+	mode: 'dropout'
 },{ responseHandler: function(BOLT){
-	console.log( BOLT.response.txnStatus );		
+	console.log( BOLT.response.txnStatus );
 	if(BOLT.response.txnStatus != 'CANCEL')
 	{
 		//Salt is passd here for demo purpose only. For practical use keep salt at server side only.
@@ -195,7 +197,7 @@ function launchBOLT()
 		'<input type=\"hidden\" name=\"hash\" value=\"'+BOLT.response.hash+'\" />' +
 		'</form>';
 		var form = jQuery(fr);
-		jQuery('body').append(form);								
+		jQuery('body').append(form);
 		form.submit();
 	}
 },
@@ -205,8 +207,8 @@ function launchBOLT()
 });
 }
 //--
-</script>	
-<?php 
+</script>
+<?php
 	} else {
 		header("Location:checkout.php");
 	}
