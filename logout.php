@@ -3,9 +3,9 @@
 include('header.php');
 // Unset all of the session variables.
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname="salon_management";
+$username = "salozxmb_salozon";
+$password = "c*,LOqH{#zI}";
+$dbname="salozxmb_salozone";
 
 // Create connection
 $conn = mysqli_connect($servername, $username,$password,$dbname);
@@ -33,8 +33,7 @@ if(isset($_SESSION["total"])){
 
 unset($_COOKIE['isLogin']);
 unset($_COOKIE['username']);
-unset($_COOKIE['member']);
-unset($_COOKIE['wallet_pts']);
+
 // Finally, destroy the session. 
 setcookie("isLogin", '', time()-3600);
 setcookie("username", '', time()-3600); 

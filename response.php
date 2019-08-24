@@ -26,17 +26,7 @@ if (isset($postdata ['key'])) {
 	$orderId = strtotime(date('Y-m-d H:i:s'));
 	
 	if ($status == 'success'  && $resphash == $CalcHashString) {
-		/* Wallet update */
-		$userid = $_COOKIE[$userid];
-		$msg = "Transaction Successful and Hash Verified...";
-		$wallet_pts = floor($amount*10/100);
-		$sql = "INSERT INTO customer(wallet_pts) values ($wallet_pts) where user_id = $userid";
-    $query = mysqli_query($con, $sql);
-		if(isset($_SESSION['walletPointsUsed']) && $_SESSION['walletPointsUsed'] == true)
-		{
-			$sql2 = "UPDATE customer SET wallet_pts = 0 WHERE user_id = $userid";
-	    $query2 = mysqli_query($con, $sql2);
-		}
+		
 		$msg = "Transaction Successful and Hash Verified...";
 		//Do success order processing here...
 		#$payInsert = mysqli_query($con, "INSERT INTO `tbl_payment` SET `customer_id` = '".$_COOKIE['username']."', `customer_email` = '".$email."', `payment_date` = '".$dateTime."', `txnid` = '".$txnid."', `paid_amount` = '".$amount."', `payment_status` = '".$status."', `payment_id` = '".$orderId."'"); 

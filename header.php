@@ -19,7 +19,7 @@ if(isset($_COOKIE['isLogin']) && $_COOKIE['isLogin'] == 1) {
 	date_default_timezone_set('Asia/Kolkata');
 	$date1 = $getUser1['member_added'];
 	$date2 = date('Y-m-d'); //today's date
-
+	$_SESSION["wallet_pts"] =$getUser1['wallet_pts'];
 
 	$diff = abs(strtotime($date2) - strtotime($date1));
 	$years = floor($diff / (365*60*60*24));

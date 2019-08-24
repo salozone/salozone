@@ -49,7 +49,6 @@ if(isset($_POST['do']) && $_POST['do'] == 'Login') {
 				setcookie("isLogin", 1, time()+60*60*24*100);
 				setcookie("username", $getRow['cust_id'], time()+60*60*24*100);
 				setcookie("member", $getRow['member'], time()+60*60*24*100, '/');
-				setcookie("wallet_pts", $getRow['wallet_pts'], time()+60*60*24*100, '/');
 				$userid = $getRow['cust_id'];
 				$getList = mysqli_query($con, "SELECT * FROM `cart` WHERE `user_id` = '".$userid."'");
 				$getListNum = mysqli_num_rows($getList);
@@ -114,9 +113,7 @@ if(isset($_POST['do']) && $_POST['do'] == 'sendOtp') {
 				unset($_SESSION['login_otp']);
 				setcookie("isLogin", 1, time()+60*60*24*100);
 				setcookie("username", $getRow['cust_id'], time()+60*60*24*100);
-				setcookie("member", $getRow['member'], time()+60*60*24*100, '/');
-				setcookie("wallet_pts", $getRow['wallet_pts'], time()+60*60*24*100, '/');
-				
+				$_SESSION["wallet_pts"] =$getRow['wallet_pts'];
 				$userid = $getRow['cust_id'];
 				$getList = mysqli_query($con, "SELECT * FROM `cart` WHERE `user_id` = '".$userid."'");
 				$getListNum = mysqli_num_rows($getList);

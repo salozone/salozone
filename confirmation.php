@@ -130,7 +130,7 @@ h3 {
 											</div>
 											<div class="hPO8BoyBkYEU2ujeCWJgk _1ovga__v3v_0DJ3-9UggBS H1Lb6afUHKzH-OTelE23x" style="font-size: 14px;">
 												<div class="_1kb-XXNt4wePQ_svwAQnhG">Gross Total</div>
-												<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);">₹ <?php echo $_COOKIE['gTotal']; ?></div>
+												<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);">₹ <?php echo $_COOKIE['gTotal']; 	 ?></div>
 											</div>
 										</div>
 									</ul>

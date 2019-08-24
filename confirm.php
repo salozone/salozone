@@ -246,6 +246,16 @@ EOF;
 		$payment_type = 3;
 		$payment_status = 1;
 	}
+	if(isset($_SESSION['walletPointsUsed']) && $_SESSION['walletPointsUsed'] == true)
+		{
+			$insert = mysqli_query($con, "UPDATE `customer` SET  `wallet_pts` = 0 where cust_id = '".$userId."'");
+			$_SESSION['wallet_pts'] == 0;
+			$_SESSION['walletPointsUsed'] = false ;
+		}	
+		$wallet_pts = floor($gTotal*0.1);
+		// $sql = "INSERT INTO customer(wallet_pts) values ($wallet_pts) where user_id = $userid";
+		$insert = mysqli_query($con, "UPDATE `customer` SET  `wallet_pts` = '".$wallet_pts."' where cust_id = '".$userId."'");
+		$_SESSION['wallet_pts'] += $wallet_pts;
 		
 	//	$insert = mysqli_query($con, "INSERT INTO `order_items` SET `cname` = '".$fname."', `cemail` = '".$email."', `chouse` = '".$house_no."', `clocality` = '".$locality."', `clandmark` = '".$landmark."', `cmessage` = '".$message."', `user_id` = '".$userId."', `order_item` = '".$order_item."', `order_amt` = '".$order_amt."', `order_qty` = '".$order_qty."', `tot_qty` = '".$tot_qty."', `order_tot_amt` = '".$order_tot_amt."', `coupon_id` = '".$coupon_id."', `coupon_amt` = '".$coupon_amt."', `delivery_amt` = '".$delivery_amt."', `gross_amt` = '".$gross_amt."', `order_date` = '".date('Y-m-d', strtotime($date))."', `order_time` = '".$time."', `order_status` = '0', `payment_type` = '".$payment_type."', `payment_status` = '".$payment_status."', `datetime` = '".$dateTime."', `order_id` = '".$order_id."'");
 	$insert = mysqli_query($con, "INSERT INTO `order_items` SET  `user_id` = '".$userId."', `order_item` = '".$order_item."', `order_amt` = '".$order_amt."', `order_qty` = '".$order_qty."', `tot_qty` = '".$tot_qty."', `order_tot_amt` = '".$order_tot_amt."', `coupon_id` = '".$coupon_id."', `coupon_amt` = '".$coupon_amt."', `delivery_amt` = '".$delivery_amt."', `gross_amt` = '".$gross_amt."', `order_date` = '".date('Y-m-d', strtotime($date))."', `order_time` = '".$time."', `order_status` = '0', `payment_type` = '".$payment_type."', `payment_status` = '".$payment_status."', `datetime` = '".$dateTime."', `order_id` = '".$order_id."'");

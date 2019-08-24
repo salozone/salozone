@@ -215,9 +215,7 @@ function save_to_bd(cart_id, new_quantity) {
                                 $_SESSION["noQty"] = $noQty;
 								if($total >= 100) { $delivery = 0; } else { $delivery = 0; }
 								$_SESSION["delivery"] = $delivery;
-								if(isset($_COOKIE["wallet_pts"]) && $_COOKIE["wallet_pts"] > 0){
-								$_SESSION["wallet_pts"] = $_COOKIE["wallet_pts"];
-								
+								if(isset($_SESSION["wallet_pts"]) && $_SESSION["wallet_pts"] > 0){
 								echo '
 								<br><form name = "walletPointsNotif" action = "" method = "POST">
 								<input type="submit" id = "useWalletPoints" name="useWalletPoints" value="Use Wallet Points: '. $_SESSION["wallet_pts"] . '" style = "border-radius: 5px; color: grey; "/>
