@@ -1,17 +1,17 @@
-<?php 
+<?php
 //session_start();
 #payment.php
 include('header.php');
 
 if(isset($_SESSION["total"])) {
 	$total = isset($_SESSION["total"]) ? $_SESSION["total"] : 0;
-	$delivery = $_SESSION['delivery'];
-	$amount = isset($_SESSION['newtotal']) ? (($_SESSION['gtotal']) - 0) : ($_SESSION['gtotal']);
+	if($total >= 100) { $delivery = 0; $_SESSION['delivery'] = $delivery; } else { $delivery = 0; $_SESSION['delivery'] = $delivery; }
+	$amount = isset($_SESSION['newtotal']) ? ($_SESSION["gtotal"]-0) : ($_SESSION["gtotal"]);
 
 	if(isset($_POST['do']) && $_POST['do'] == 'Paynow') {
 		header("Location:paymentnow.php");
 	}
-	
+
 ?>
 <link rel="stylesheet" href="css/qaModalChunk-0c3d9f415163febe1e74.css">
 <script type="text/javascript">
@@ -30,8 +30,8 @@ function ShowHideDiv2() {
 				<div class="col-md-6 col-md-offset-3 animate-box">
 					<h3 class="text-center">Payment Page</h3>
 					<div class="col-md-12">
-						
-					
+
+
 					<ul class="_2mioG8IfFu0HyLapNQp2db">
 						<div class="_3pUB-LDjlpx6e9ACL8E_1x _1ztQTskd2_GRzGb0OH6YwR" style="">
 							<?php if(isset($_GET['promo']) && $_GET['promo'] == '2') {
@@ -42,7 +42,7 @@ function ShowHideDiv2() {
 									echo "<h4 class='text-center text-danger'><b>Promo Code Expired.</b></h4>";
 							}
 							?>
-							
+
 							<form action="logininsert.php" name="promoForm" id="promoForm" method="post">
 								<input type="hidden" name="do" value="Promo"/>
 								<div class="col-md-12 form-group">
@@ -119,10 +119,10 @@ function ShowHideDiv2() {
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
-	</div>	
-<?php 
+	</div>
+<?php
 	} else {
 		header("Location:checkout.php");
 	}

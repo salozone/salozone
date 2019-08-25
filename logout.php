@@ -33,6 +33,7 @@ if(isset($_SESSION["total"])){
 
 unset($_COOKIE['isLogin']);
 unset($_COOKIE['username']);
+
 // Finally, destroy the session. 
 setcookie("isLogin", '', time()-3600);
 setcookie("username", '', time()-3600); 

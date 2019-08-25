@@ -1,4 +1,4 @@
-<?php //session_start();
+<?php
 #checkout.php
 include('header.php');
 ?>
@@ -94,7 +94,7 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-</style>	
+</style>
 <script>
 function increaseValue() {
   var value = parseInt(document.getElementById('number').value, 10);
@@ -121,8 +121,8 @@ function increment_quantity(cart_id) {
 
 function decrement_quantity(cart_id) {
     var inputQuantityElement = document.getElementById('input-quantity-'+cart_id).value;
-	
-    if(inputQuantityElement > 1) 
+
+    if(inputQuantityElement > 1)
     {
     var newQuantity = parseInt(inputQuantityElement) - 1;
 		//document.getElementById("input-quantity-"+cart_id).value = newQuantity;
@@ -157,7 +157,7 @@ function save_to_bd(cart_id, new_quantity) {
 		}
 	});
 }
-</script>	
+</script>
 	<div id="fh5co-product">
 		<div class="container">
 			<div class="row">
@@ -199,7 +199,7 @@ function save_to_bd(cart_id, new_quantity) {
 													<input type="number" class="number" id="input-quantity-<?php echo $i; ?>" value="<?php if($_SESSION["qty"][$i] != '') { echo $_SESSION["qty"][$i]; } else { echo 1; } ?>" min="1" style="color:#000"/>
 													<div class="value-button" id="increase" onClick="increment_quantity('<?php echo $i?>');" value="Increase Value">+</div>
 													<span>-</span>
-													
+
 												</div>
 												<h3>₹ <?php echo $_SESSION["price"][$i]; ?></h3>
 											</div>
@@ -207,6 +207,7 @@ function save_to_bd(cart_id, new_quantity) {
 									</ul>
 								</div>
                             <?php
+
 									$total = $total + $_SESSION["amounts"][$i];
 									$noQty += $_SESSION["qty"][$i];
 									$n++;
@@ -214,23 +215,22 @@ function save_to_bd(cart_id, new_quantity) {
                                 $_SESSION["total"] = $total;
                                 $_SESSION["noQty"] = $noQty;
 								if($total >= 100) { $delivery = 0; } else { $delivery = 0; }
-								$_SESSION["delivery"] = $delivery;
-								if(isset($_SESSION["wallet_pts"]) && $_SESSION["wallet_pts"] > 0){
-								echo '
-								<br><form name = "walletPointsNotif" action = "" method = "POST">
-								<input type="submit" id = "useWalletPoints" name="useWalletPoints" value="Use Wallet Points: '. $_SESSION["wallet_pts"] . '" style = "border-radius: 5px; color: grey; "/>
-								</form><br>';
-								if(isset($_POST['useWalletPoints']))
-								{
-
-									$total = $total - $_SESSION["wallet_pts"];
-									$_SESSION['walletPointsUsed'] = true;
-									echo '<script> document.getElementById("useWalletPoints").style.visibility = "hidden";
-									</script>';
-								}
-								}
-								$_SESSION["gtotal"] = $total+$delivery;
-								
+                                $_SESSION["delivery"] = $delivery;
+																if(isset($_SESSION["wallet_pts"]) && $_SESSION["wallet_pts"] > 0)
+																echo '
+																<br><form name = "walletPointsNotif" action = "" method = "POST">
+																<input type="submit" id = "useWalletPoints" name="useWalletPoints" value="Use Wallet Points: '. $_SESSION["wallet_pts"] . '" style = "border-radius: 5px; color: grey; "/>
+																</form><br>';
+																if(isset($_POST['useWalletPoints']))
+																{
+																	$_SESSION['gtotal'] = $_SESSION['gtotal']-$_SESSION["wallet_pts"];
+																	$_SESSION['walletPointsUsed'] = true;
+																	echo '<script> document.getElementById("useWalletPoints").style.visibility = "hidden";
+																	</script>';
+																}
+																else {
+                                $_SESSION["gtotal"] = $total+$delivery;
+																}
                             ?>
 								<ul class="_2mioG8IfFu0HyLapNQp2db">
 									<div class="_3pUB-LDjlpx6e9ACL8E_1x _1ztQTskd2_GRzGb0OH6YwR" style="">
@@ -241,28 +241,29 @@ function save_to_bd(cart_id, new_quantity) {
 										<div class="hPO8BoyBkYEU2ujeCWJgk H1Lb6afUHKzH-OTelE23x" style="font-size: 14px;">
 											<div class="_1kb-XXNt4wePQ_svwAQnhG">Delivery Charges</div>
 											<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);">₹ <?php echo($delivery); ?></div>
+											<br>
 										</div>
 										<div class="hPO8BoyBkYEU2ujeCWJgk _1ovga__v3v_0DJ3-9UggBS H1Lb6afUHKzH-OTelE23x" style="font-size: 14px;">
 											<div class="_1kb-XXNt4wePQ_svwAQnhG">Total</div>
-											<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);">₹ <?php echo($total+$delivery); ?></div>
+											<div class="_36rMyLl0yKiOS-udBUSM8a" style="color: rgb(117, 117, 117);">₹ <?php echo($_SESSION["gtotal"]); ?></div>
 										</div>
 									</div>
 								</ul>
 							<br>
                             <br>
                             <br>
-                            
+
                             <?php
                                 } else {
                             ?>
 								<span>Your Cart is Empty...</span>
-							
+
 							<?php } ?>
-							<a class="btn btn-primary btn-outline btn-lg" href="index.php">Continue Shopping</a>
+							<a class="btn btn-primary btn-outline btn-lg" href="main.php">Continue Shopping</a>
 							<?php if(isset($total) && $total != '') {
 						     ?>
 									<a class="btn btn-primary btn-outline btn-lg" href="added.php">Continue Checkout</a>
-									
+
 							<?php } else { ?>
 							<a class="btn btn-primary btn-outline btn-lg" href="main.php">Continue Checkout</a>
 							<?php } ?>
@@ -270,7 +271,7 @@ function save_to_bd(cart_id, new_quantity) {
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 		<?php if ( isset($_SESSION["cart"]) ) { ?>
 		<div id="cartFooter" class="_1LETt-B9P8OaDZEUDWkA1R clearfix">
@@ -322,6 +323,8 @@ function save_to_bd(cart_id, new_quantity) {
 			</div>
 		</div>
 	</div>
+	<?php
+	 ?>
 	<?php } ?>
 <?php
 	include('footer.php');

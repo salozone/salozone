@@ -21,7 +21,7 @@ if(isset($_POST['do']) && $_POST['do'] == 'Register') {
 		$phoneCount = mysqli_num_rows($phone);
 		if($getCount == 0 ) {
 			if($phoneCount == 0) {
-			$insert = mysqli_query($con, "INSERT INTO `customer` SET `cust_name` = '".$fname."', `cust_email` = '".$email."', `cust_mobile` = '".$mobile."', `cust_password` = '".$password."', `cust_added` = '".$dateTime."'");
+			$insert = mysqli_query($con, "INSERT INTO `customer` SET `cust_name` = '".$fname."', `cust_email` = '".$email."', `cust_mobile` = '".$mobile."', `cust_password` = '".$password."', `wallet_pts` = 0,  `cust_added` = '".$dateTime."'");
 			header("Location:login.php?success=Done");
 			}else {
 				header("Location:login.php?success=phone");
@@ -35,7 +35,6 @@ if(isset($_POST['do']) && $_POST['do'] == 'Register') {
 	}
 }
 
-//login with uname and pass
 if(isset($_POST['do']) && $_POST['do'] == 'Login') {
 	$uname = $_POST['uname'];
 	$pass= $_POST['pword'];
@@ -44,12 +43,19 @@ if(isset($_POST['do']) && $_POST['do'] == 'Login') {
 		$getCount = mysqli_num_rows($getList);
 		if($getCount == 1 ) {
 				$getRow = mysqli_fetch_array($getList);
-				
+
 				$update = mysqli_query($con, "UPDATE `customer` SET `cust_logs` = '".$dateTime."' WHERE `cust_id` = '".$getRow['cust_id']."'");
 				setcookie("isLogin", 1, time()+60*60*24*100);
 				setcookie("username", $getRow['cust_id'], time()+60*60*24*100);
-				setcookie("member", $getRow['member'], time()+60*60*24*100, '/');
+				setcookie("wallet_pts", $getRow['wallet_pts'], time()+60*60*24*100);
+				if(isset($_SESSION["redirect"]) && $_SESSION["redirect"] == true)
+				{
+					header('Location: membership.php');
+					$_SESSION["redirect"] == false;
+					exit();
+				}
 				$userid = $getRow['cust_id'];
+				setcookie("userid", $userid, time()+60*60*24*100);
 				$getList = mysqli_query($con, "SELECT * FROM `cart` WHERE `user_id` = '".$userid."'");
 				$getListNum = mysqli_num_rows($getList);
 				if($getListNum > 0){
@@ -62,12 +68,11 @@ if(isset($_POST['do']) && $_POST['do'] == 'Login') {
 				$_SESSION["amounts"][$item] = $price;
 				$_SESSION["qty"][$item] = $qty;
 				$_SESSION["price"][$item] = $amounts[$item];
-				
 				}
-				
+
 				$sql = "DELETE FROM cart WHERE user_id='".$getRow['cust_id']."'";
 				$con->query($sql);
-				
+
 				$numbers = "";
 				$total = 0;
 				$noQty = 0;
@@ -85,11 +90,7 @@ if(isset($_POST['do']) && $_POST['do'] == 'Login') {
 				}
 
 
-				if((isset($_POST['member']) && $_POST['member'] == 0) || $getRow['member'] == 1) 	{
-					header("Location:index.php?success=Login");
-					}elseif($_POST['member'] == 1){
-						header("Location:member.php");
-					}
+				header("Location:index.php?success=Login");
 		}else{
 			header("Location:login.php?success=2");
 		}
@@ -113,8 +114,15 @@ if(isset($_POST['do']) && $_POST['do'] == 'sendOtp') {
 				unset($_SESSION['login_otp']);
 				setcookie("isLogin", 1, time()+60*60*24*100);
 				setcookie("username", $getRow['cust_id'], time()+60*60*24*100);
-				$_SESSION["wallet_pts"] =$getRow['wallet_pts'];
+				$_SESSION["wallet_pts"] = $getRow['wallet_pts'];
+				if(isset($_SESSION["redirect"]) && $_SESSION["redirect"] == true)
+				{
+					header('Location: membership.php');
+					$_SESSION["redirect"] = false;
+					exit();
+				}
 				$userid = $getRow['cust_id'];
+				setcookie("userid", $userid, time()+60*60*24*100);
 				$getList = mysqli_query($con, "SELECT * FROM `cart` WHERE `user_id` = '".$userid."'");
 				$getListNum = mysqli_num_rows($getList);
 				if($getListNum > 0){
@@ -127,12 +135,12 @@ if(isset($_POST['do']) && $_POST['do'] == 'sendOtp') {
 				$_SESSION["amounts"][$item] = $price;
 				$_SESSION["qty"][$item] = $qty;
 				$_SESSION["price"][$item] = $amounts[$item];
-				
+
 				}
-				
+
 				$sql = "DELETE FROM cart WHERE user_id='".$getRow['cust_id']."'";
 				$con->query($sql);
-				
+
 				$numbers = "";
 				$total = 0;
 				$noQty = 0;
@@ -148,12 +156,8 @@ if(isset($_POST['do']) && $_POST['do'] == 'sendOtp') {
 				$_SESSION["noQty"] = $noQty;
 
 				}
-	
-			if((isset($_POST['member']) && $_POST['member'] == 0) || $getRow['member'] == 1) 	{
+
 			header("Location:index.php?success=Login");
-			}elseif($_POST['member'] == 1){
-				header("Location:member.php");
-			}
 			} else {
 				header("Location:login.php?success=2");
 			}
@@ -174,7 +178,7 @@ if(isset($_POST['do']) && $_POST['do'] == 'Billing') {
 	$landmark = $_POST['landmark'];
 	$message = $_POST['message'];
 	if(trim($fname) != '' && trim($email) != '' && trim($house_no) != '' && trim($locality) != '') {
-		//Set Session 
+		//Set Session
 		$_SESSION['fname'] = $fname;
 		$_SESSION['email'] = $email;
 		$_SESSION['house_no'] = $house_no;
@@ -182,7 +186,7 @@ if(isset($_POST['do']) && $_POST['do'] == 'Billing') {
 		$_SESSION['landmark'] = $landmark;
 		$_SESSION['message'] = $message;
 		header("Location:timing.php");
-	
+
 	} else {
 		header("Location:timing.php?success=Failed");
 	}

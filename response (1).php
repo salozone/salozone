@@ -6,7 +6,8 @@ $msg = '';
 $status = '';
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
-	$salt				=   "yPny25lkcE";
+	// $salt				=   $postdata['salt'];
+	$salt				=   "fuOTFzjTgU";
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
@@ -16,7 +17,7 @@ if (isset($postdata ['key'])) {
 	$mihpayid			=	$postdata['mihpayid'];
 	$status				= 	$postdata['status'];
 	$resphash				= 	$postdata['hash'];
-	//Calculate response hash to verify	
+	//Calculate response hash to verify
 	$keyString 	  		=  	$key.'|'.$txnid.'|'.$amount.'|'.$productInfo.'|'.$firstname.'|'.$email.'|||||'.$udf5.'|||||';
 	$keyArray 	  		= 	explode("|",$keyString);
 	$reverseKeyArray 	= 	array_reverse($keyArray);
@@ -24,17 +25,26 @@ if (isset($postdata ['key'])) {
 	$CalcHashString 	= 	strtolower(hash('sha512', $salt.'|'.$status.'|'.$reverseKeyString));
 	$dateTime = date('Y-m-d H:i:s');
 	$orderId = strtotime(date('Y-m-d H:i:s'));
-	
+
 	if ($status == 'success'  && $resphash == $CalcHashString) {
-		
+		/* Wallet update */
+		$userid = $_COOKIE[$userid];
 		$msg = "Transaction Successful and Hash Verified...";
+		$wallet_pts = floor($amount*10/100);
+		$sql = "INSERT INTO customer(wallet_pts) values ($wallet_pts) where user_id = $userid";
+    $query = mysqli_query($con, $sql);
+		if(isset($_SESSION['walletPointsUsed']) && $_SESSION['walletPointsUsed'] == true)
+		{
+			$sql2 = "UPDATE customer SET wallet_pts = 0 WHERE user_id = $userid";
+	    $query2 = mysqli_query($con, $sql2);
+		}
 		//Do success order processing here...
-		#$payInsert = mysqli_query($con, "INSERT INTO `tbl_payment` SET `customer_id` = '".$_COOKIE['username']."', `customer_email` = '".$email."', `payment_date` = '".$dateTime."', `txnid` = '".$txnid."', `paid_amount` = '".$amount."', `payment_status` = '".$status."', `payment_id` = '".$orderId."'"); 
+		#$payInsert = mysqli_query($con, "INSERT INTO `tbl_payment` SET `customer_id` = '".$_COOKIE['username']."', `customer_email` = '".$email."', `payment_date` = '".$dateTime."', `txnid` = '".$txnid."', `paid_amount` = '".$amount."', `payment_status` = '".$status."', `payment_id` = '".$orderId."'");
 	}
 	else {
 		//tampered or failed
 		$msg = "Payment failed for Hasn not verified...";
-	} 
+	}
 }
 else exit(0);
 ?>
@@ -61,8 +71,9 @@ else exit(0);
 //Using setTimeout to execute a function after 5 seconds.
 setTimeout(function () {
    //Redirect with JavaScript
-   window.location.href= 'https://salozone.com/confirm.php';
-}, 1000);
+//    window.location.href= 'https://salozone.com/confirm.php';
+window.location.href= 'confirm.php';
+}, 5000);
 </script>
 			</div>
 		</div>
